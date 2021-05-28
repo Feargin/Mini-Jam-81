@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5690440643936430898}
   - component: {fileID: 2563087152094722717}
   - component: {fileID: 6235142382457754159}
+  - component: {fileID: 2899245457530560387}
   m_Layer: 0
   m_Name: Mounty
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e79bf5e6d8637f64783ff0a762419b8b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,3 +96,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2899245457530560387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3399103389136481902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095e97ef93d19bc40866466e736c37f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnKaujy: 0
+  SpawnPlane: 0
+  SpawnPanzer: 0
+  SpawnArtillery: 0

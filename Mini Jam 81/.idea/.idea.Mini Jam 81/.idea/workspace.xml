@@ -10,11 +10,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MapGeneratorTwoType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/TileParameters.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapGeneratorTwoType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
       </list>
     </option>
   </component>
@@ -61,6 +68,11 @@
       <workItem from="1622185958070" duration="1000" />
       <workItem from="1622186168320" duration="32000" />
       <workItem from="1622202219274" duration="1783000" />
+      <workItem from="1622204619593" duration="643000" />
+      <workItem from="1622205286997" duration="672000" />
+      <workItem from="1622205992159" duration="1379000" />
+      <workItem from="1622207399745" duration="1781000" />
+      <workItem from="1622209421322" duration="1085000" />
     </task>
     <servers />
   </component>

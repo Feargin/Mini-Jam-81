@@ -279,8 +279,17 @@
           <e p="HierarchyEditor.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="MapGeneratorOneType.cs" t="Include" />
-          <e p="MapGeneratorTwoType.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="Attak.cs" t="Include" />
+            <e p="Entity.cs" t="Include" />
+            <e p="Move.cs" t="Include" />
+            <e p="Spawn.cs" t="Include" />
+          </e>
+          <e p="Map" t="Include">
+            <e p="MapGeneratorOneType.cs" t="Include" />
+            <e p="MapGeneratorTwoType.cs" t="Include" />
+            <e p="TileParameters.cs" t="Include" />
+          </e>
           <e p="UIManager.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
