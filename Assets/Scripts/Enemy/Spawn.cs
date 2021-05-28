@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -77,7 +77,7 @@ public class Spawn : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("нельзя выделить");
+                        //Debug.Log("нельзя выделить");
                     }
                 }
             }

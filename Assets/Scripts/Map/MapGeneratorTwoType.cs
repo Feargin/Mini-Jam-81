@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,14 +17,15 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
     [SerializeField] private string seed;
     [Space]
     [Header("--------------------------- Системное ---------------------------")]
-    [SerializeField] private Transform CellTypeOne;
-    [SerializeField] private Transform CellTypeTwo;
-    [SerializeField] private Transform CellTypeThree;
-    private int[,] coordinates;
+    [SerializeField] private Tile CellTypeOne;
+    [SerializeField] private Tile CellTypeTwo;
+    [SerializeField] private Tile CellTypeThree;
+	private int[,] coordinates;
+	public Map map;
     
     private void Start()
-    {
-        coordinates = new int[xSize, ySize];
+	{
+		coordinates = new int[xSize, ySize];
         Generation();
     }
 
@@ -58,6 +59,8 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
     {
 	    if (coordinates != null)
 	    {
+	    	Tile[,] tiles = new Tile[xSize, ySize];
+	    	
 		    string nameGroupOne = "Ocean";
 		    string nameGroupTwo = "Forest";
 		    string nameGroupThree = "Desert";
@@ -111,30 +114,32 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 		    {
 			    for (int y = 0; y < ySize; y++)
 			    {
+			    	Tile newCell = null;
 				    if (coordinates[x, y] == 0)
 				    {
-					    Vector3 cellPosition = new Vector3(-xSize / 2 + 0.5f + x, 0, -ySize / 2 + 0.5f + y);
-					    Transform newCell = Instantiate(CellTypeOne, cellPosition, Quaternion.identity) as Transform;
-					    newCell.localScale = Vector3.one * (1 - border);
-					    newCell.parent = mapGroupOne;
+					    Vector3 cellPosition = new Vector3(x, 0, y) * map.GridSize;
+					    newCell = Instantiate(CellTypeOne, cellPosition, Quaternion.identity) ;
+					    newCell.transform.localScale = Vector3.one * (1 - border);
+					    newCell.transform.parent = mapGroupOne;
 				    }
-
-				    if (coordinates[x, y] == 1)
+				    else if (coordinates[x, y] == 1)
 				    {
-					    Vector3 cellPosition = new Vector3(-xSize / 2 + 0.5f + x, 0, -ySize / 2 + 0.5f + y);
-					    Transform newECell = Instantiate(CellTypeTwo, cellPosition + Vector3.up * 0.2f, Quaternion.identity) as Transform;
-					    newECell.localScale = Vector3.one * (1 - border);
-					    newECell.parent = mapGroupTwo;
+					    Vector3 cellPosition = new Vector3(x, 0, y) * map.GridSize;
+					    newCell = Instantiate(CellTypeTwo, cellPosition + Vector3.up * 0.2f, Quaternion.identity);
+					    newCell.transform.localScale = Vector3.one * (1 - border);
+					    newCell.transform.parent = mapGroupTwo;
 				    }
-				    if (coordinates[x, y] == 2)
+				    else if (coordinates[x, y] == 2)
 				    {
-					    Vector3 cellPosition = new Vector3(-xSize / 2 + 0.5f + x, 0, -ySize / 2 + 0.5f + y);
-					    Transform newECell = Instantiate(CellTypeThree, cellPosition + Vector3.up * 0.5f, Quaternion.identity) as Transform;
-					    newECell.localScale = Vector3.one * (1 - border);
-					    newECell.parent = mapGroupTwo;
+					    Vector3 cellPosition = new Vector3(x, 0, y) * map.GridSize;
+					    newCell = Instantiate(CellTypeThree, cellPosition + Vector3.up * 0.5f, Quaternion.identity);
+					    newCell.transform.localScale = Vector3.one * (1 - border);
+					    newCell.transform.parent = mapGroupTwo;
 				    }
+				    tiles[x,y] = newCell;
 			    }
 		    }
+		    map.Init(xSize, ySize, tiles);
 	    }
     }
 }

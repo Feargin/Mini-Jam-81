@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.1
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.033333335
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -136,12 +136,12 @@ GameObject:
   - component: {fileID: 22012000}
   - component: {fileID: 22011999}
   - component: {fileID: 22011998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &22011998
 MonoBehaviour:
@@ -248,12 +248,12 @@ GameObject:
   - component: {fileID: 23261816}
   - component: {fileID: 23261815}
   - component: {fileID: 23261814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &23261814
 MonoBehaviour:
@@ -360,12 +360,12 @@ GameObject:
   - component: {fileID: 25937482}
   - component: {fileID: 25937481}
   - component: {fileID: 25937480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &25937480
 MonoBehaviour:
@@ -472,12 +472,12 @@ GameObject:
   - component: {fileID: 26957964}
   - component: {fileID: 26957963}
   - component: {fileID: 26957962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &26957962
 MonoBehaviour:
@@ -584,12 +584,12 @@ GameObject:
   - component: {fileID: 49815679}
   - component: {fileID: 49815678}
   - component: {fileID: 49815677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &49815677
 MonoBehaviour:
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 51561228}
   - component: {fileID: 51561227}
   - component: {fileID: 51561226}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mounty(Clone) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 151605983}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &133333587
 MonoBehaviour:
@@ -1001,12 +1001,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151605982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 50, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1280379915}
+  - {fileID: 972994949}
   - {fileID: 549971706}
+  - {fileID: 590886047}
+  - {fileID: 1280379915}
   - {fileID: 133333586}
+  - {fileID: 1206592095}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1023,12 +1026,12 @@ GameObject:
   - component: {fileID: 158903464}
   - component: {fileID: 158903463}
   - component: {fileID: 158903462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &158903462
 MonoBehaviour:
@@ -1135,12 +1138,12 @@ GameObject:
   - component: {fileID: 167151921}
   - component: {fileID: 167151920}
   - component: {fileID: 167151919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &167151919
 MonoBehaviour:
@@ -1247,12 +1250,12 @@ GameObject:
   - component: {fileID: 231519880}
   - component: {fileID: 231519879}
   - component: {fileID: 231519878}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &231519878
 MonoBehaviour:
@@ -1359,12 +1362,12 @@ GameObject:
   - component: {fileID: 238272865}
   - component: {fileID: 238272864}
   - component: {fileID: 238272863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &238272863
 MonoBehaviour:
@@ -1471,7 +1474,7 @@ GameObject:
   - component: {fileID: 256293684}
   - component: {fileID: 256293683}
   - component: {fileID: 256293682}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mounty(Clone) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,12 +1586,12 @@ GameObject:
   - component: {fileID: 258186521}
   - component: {fileID: 258186520}
   - component: {fileID: 258186519}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &258186519
 MonoBehaviour:
@@ -1695,12 +1698,12 @@ GameObject:
   - component: {fileID: 284451266}
   - component: {fileID: 284451265}
   - component: {fileID: 284451264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &284451264
 MonoBehaviour:
@@ -1807,12 +1810,12 @@ GameObject:
   - component: {fileID: 288398564}
   - component: {fileID: 288398563}
   - component: {fileID: 288398562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &288398562
 MonoBehaviour:
@@ -1919,12 +1922,12 @@ GameObject:
   - component: {fileID: 307078534}
   - component: {fileID: 307078533}
   - component: {fileID: 307078532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &307078532
 MonoBehaviour:
@@ -2031,12 +2034,12 @@ GameObject:
   - component: {fileID: 403271251}
   - component: {fileID: 403271250}
   - component: {fileID: 403271249}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &403271249
 MonoBehaviour:
@@ -2243,12 +2246,12 @@ GameObject:
   - component: {fileID: 443190136}
   - component: {fileID: 443190135}
   - component: {fileID: 443190134}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &443190134
 MonoBehaviour:
@@ -2355,12 +2358,12 @@ GameObject:
   - component: {fileID: 458810996}
   - component: {fileID: 458810995}
   - component: {fileID: 458810994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &458810994
 MonoBehaviour:
@@ -2467,7 +2470,7 @@ GameObject:
   - component: {fileID: 471845343}
   - component: {fileID: 471845342}
   - component: {fileID: 471845341}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hill(Clone) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2643,7 +2646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: -3.68, y: 5.26, z: -3.5}
+  m_LocalPosition: {x: -0.11, y: 5.26, z: -0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2662,12 +2665,12 @@ GameObject:
   - component: {fileID: 535553183}
   - component: {fileID: 535553182}
   - component: {fileID: 535553181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &535553181
 MonoBehaviour:
@@ -2774,12 +2777,12 @@ GameObject:
   - component: {fileID: 541422722}
   - component: {fileID: 541422721}
   - component: {fileID: 541422720}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &541422720
 MonoBehaviour:
@@ -2886,12 +2889,12 @@ GameObject:
   - component: {fileID: 542151244}
   - component: {fileID: 542151243}
   - component: {fileID: 542151242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &542151242
 MonoBehaviour:
@@ -2995,8 +2998,9 @@ GameObject:
   m_Component:
   - component: {fileID: 549971706}
   - component: {fileID: 549971707}
+  - component: {fileID: 549971708}
   m_Layer: 0
-  m_Name: MapGenerator
+  m_Name: Map Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3036,9 +3040,23 @@ MonoBehaviour:
   Purity_CellTypeThree: 51
   randomSeed: 1
   seed: 
-  CellTypeOne: {fileID: 2458780726144988217, guid: 22ec06641fcbc7445a07522f12f0a40f, type: 3}
-  CellTypeTwo: {fileID: 8770912151800176166, guid: 9659dfdac22ffa24fa0a690549db25d9, type: 3}
-  CellTypeThree: {fileID: 5780301763060947715, guid: 95109cf2dea17d546896cfe8641b570a, type: 3}
+  CellTypeOne: {fileID: 6259334921386315615, guid: 22ec06641fcbc7445a07522f12f0a40f, type: 3}
+  CellTypeTwo: {fileID: 1525046815126828720, guid: 9659dfdac22ffa24fa0a690549db25d9, type: 3}
+  CellTypeThree: {fileID: 5293331596503837652, guid: 95109cf2dea17d546896cfe8641b570a, type: 3}
+  map: {fileID: 549971708}
+--- !u!114 &549971708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549971705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb0eadce0bf9e8478756efd971c0023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GridSize: 1
 --- !u!1 &550163677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,12 +3070,12 @@ GameObject:
   - component: {fileID: 550163680}
   - component: {fileID: 550163679}
   - component: {fileID: 550163678}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &550163678
 MonoBehaviour:
@@ -3284,6 +3302,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550201658}
   m_CullTransparentMesh: 1
+--- !u!1 &590886046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590886047}
+  - component: {fileID: 590886048}
+  m_Layer: 0
+  m_Name: Pathfinding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &590886047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590886046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 151605983}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &590886048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590886046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 549971708}
 --- !u!1 &650867651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,7 +3359,7 @@ GameObject:
   - component: {fileID: 650867654}
   - component: {fileID: 650867653}
   - component: {fileID: 650867652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mounty(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3409,12 +3471,12 @@ GameObject:
   - component: {fileID: 692982496}
   - component: {fileID: 692982495}
   - component: {fileID: 692982494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &692982494
 MonoBehaviour:
@@ -3521,12 +3583,12 @@ GameObject:
   - component: {fileID: 711315444}
   - component: {fileID: 711315443}
   - component: {fileID: 711315442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &711315442
 MonoBehaviour:
@@ -3633,12 +3695,12 @@ GameObject:
   - component: {fileID: 754381646}
   - component: {fileID: 754381645}
   - component: {fileID: 754381644}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &754381644
 MonoBehaviour:
@@ -3745,12 +3807,12 @@ GameObject:
   - component: {fileID: 754664875}
   - component: {fileID: 754664874}
   - component: {fileID: 754664873}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &754664873
 MonoBehaviour:
@@ -3857,12 +3919,12 @@ GameObject:
   - component: {fileID: 788632909}
   - component: {fileID: 788632908}
   - component: {fileID: 788632907}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &788632907
 MonoBehaviour:
@@ -3969,12 +4031,12 @@ GameObject:
   - component: {fileID: 807663219}
   - component: {fileID: 807663218}
   - component: {fileID: 807663217}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &807663217
 MonoBehaviour:
@@ -4081,12 +4143,12 @@ GameObject:
   - component: {fileID: 807993151}
   - component: {fileID: 807993150}
   - component: {fileID: 807993149}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &807993149
 MonoBehaviour:
@@ -4193,12 +4255,12 @@ GameObject:
   - component: {fileID: 826248769}
   - component: {fileID: 826248768}
   - component: {fileID: 826248767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &826248767
 MonoBehaviour:
@@ -4371,12 +4433,12 @@ GameObject:
   - component: {fileID: 883995075}
   - component: {fileID: 883995074}
   - component: {fileID: 883995073}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &883995073
 MonoBehaviour:
@@ -4483,12 +4545,12 @@ GameObject:
   - component: {fileID: 903584587}
   - component: {fileID: 903584586}
   - component: {fileID: 903584585}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &903584585
 MonoBehaviour:
@@ -4595,12 +4657,12 @@ GameObject:
   - component: {fileID: 922921050}
   - component: {fileID: 922921049}
   - component: {fileID: 922921048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &922921048
 MonoBehaviour:
@@ -4707,12 +4769,12 @@ GameObject:
   - component: {fileID: 927250956}
   - component: {fileID: 927250955}
   - component: {fileID: 927250954}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &927250954
 MonoBehaviour:
@@ -4819,12 +4881,12 @@ GameObject:
   - component: {fileID: 963833543}
   - component: {fileID: 963833542}
   - component: {fileID: 963833541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &963833541
 MonoBehaviour:
@@ -4918,6 +4980,69 @@ Transform:
   m_Father: {fileID: 977006517}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &972994948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 972994949}
+  - component: {fileID: 972994950}
+  - component: {fileID: 972994951}
+  m_Layer: 0
+  m_Name: Player Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &972994949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972994948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 151605983}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &972994950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972994948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbaf2dce5ec7cb459016a0ab56fca36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedPlayer: {fileID: 0}
+  _playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &972994951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972994948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9a3191be0bdae46a87546f28d9b717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkableMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &977006516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,7 +5058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &977006517
 Transform:
   m_ObjectHideFlags: 0
@@ -5159,12 +5284,12 @@ GameObject:
   - component: {fileID: 1080625709}
   - component: {fileID: 1080625708}
   - component: {fileID: 1080625707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1080625707
 MonoBehaviour:
@@ -5271,12 +5396,12 @@ GameObject:
   - component: {fileID: 1142973372}
   - component: {fileID: 1142973371}
   - component: {fileID: 1142973370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1142973370
 MonoBehaviour:
@@ -5383,12 +5508,12 @@ GameObject:
   - component: {fileID: 1145484469}
   - component: {fileID: 1145484468}
   - component: {fileID: 1145484467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1145484467
 MonoBehaviour:
@@ -5588,7 +5713,7 @@ GameObject:
   - component: {fileID: 1163679852}
   - component: {fileID: 1163679851}
   - component: {fileID: 1163679850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hill(Clone) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5687,6 +5812,49 @@ Transform:
   m_Father: {fileID: 977006517}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1206592094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206592095}
+  - component: {fileID: 1206592096}
+  m_Layer: 0
+  m_Name: Cheats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1206592095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206592094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 151605983}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206592096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206592094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c2139ba9ad5a6429dd5a4649cdc476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1211467487
 GameObject:
   m_ObjectHideFlags: 0
@@ -5700,12 +5868,12 @@ GameObject:
   - component: {fileID: 1211467490}
   - component: {fileID: 1211467489}
   - component: {fileID: 1211467488}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1211467488
 MonoBehaviour:
@@ -5812,7 +5980,7 @@ GameObject:
   - component: {fileID: 1221433914}
   - component: {fileID: 1221433913}
   - component: {fileID: 1221433912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hill(Clone) (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5922,7 +6090,7 @@ GameObject:
   - component: {fileID: 1280379915}
   - component: {fileID: 1280379916}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: UI Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5940,7 +6108,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 151605983}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1280379916
 MonoBehaviour:
@@ -6112,7 +6280,7 @@ GameObject:
   - component: {fileID: 1430254496}
   - component: {fileID: 1430254495}
   - component: {fileID: 1430254494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hill(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6224,12 +6392,12 @@ GameObject:
   - component: {fileID: 1461061821}
   - component: {fileID: 1461061820}
   - component: {fileID: 1461061819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1461061819
 MonoBehaviour:
@@ -6336,12 +6504,12 @@ GameObject:
   - component: {fileID: 1501020762}
   - component: {fileID: 1501020761}
   - component: {fileID: 1501020760}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1501020760
 MonoBehaviour:
@@ -6448,12 +6616,12 @@ GameObject:
   - component: {fileID: 1506644005}
   - component: {fileID: 1506644004}
   - component: {fileID: 1506644003}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1506644003
 MonoBehaviour:
@@ -6681,6 +6849,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524309699}
   m_CullTransparentMesh: 1
+--- !u!1 &1533054962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533054963}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1533054963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533054962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599970416
 GameObject:
   m_ObjectHideFlags: 0
@@ -6694,12 +6892,12 @@ GameObject:
   - component: {fileID: 1599970419}
   - component: {fileID: 1599970418}
   - component: {fileID: 1599970417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1599970417
 MonoBehaviour:
@@ -6806,12 +7004,12 @@ GameObject:
   - component: {fileID: 1600642684}
   - component: {fileID: 1600642683}
   - component: {fileID: 1600642682}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1600642682
 MonoBehaviour:
@@ -6918,12 +7116,12 @@ GameObject:
   - component: {fileID: 1732380835}
   - component: {fileID: 1732380834}
   - component: {fileID: 1732380833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1732380833
 MonoBehaviour:
@@ -7030,12 +7228,12 @@ GameObject:
   - component: {fileID: 1768227376}
   - component: {fileID: 1768227375}
   - component: {fileID: 1768227374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1768227374
 MonoBehaviour:
@@ -7142,12 +7340,12 @@ GameObject:
   - component: {fileID: 1778930773}
   - component: {fileID: 1778930772}
   - component: {fileID: 1778930771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1778930771
 MonoBehaviour:
@@ -7254,12 +7452,12 @@ GameObject:
   - component: {fileID: 1779097791}
   - component: {fileID: 1779097790}
   - component: {fileID: 1779097789}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1779097789
 MonoBehaviour:
@@ -7366,12 +7564,12 @@ GameObject:
   - component: {fileID: 1820479421}
   - component: {fileID: 1820479420}
   - component: {fileID: 1820479419}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1820479419
 MonoBehaviour:
@@ -7478,12 +7676,12 @@ GameObject:
   - component: {fileID: 1855443851}
   - component: {fileID: 1855443850}
   - component: {fileID: 1855443849}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1855443849
 MonoBehaviour:
@@ -7590,12 +7788,12 @@ GameObject:
   - component: {fileID: 1865660379}
   - component: {fileID: 1865660378}
   - component: {fileID: 1865660377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1865660377
 MonoBehaviour:
@@ -7702,12 +7900,12 @@ GameObject:
   - component: {fileID: 1885759667}
   - component: {fileID: 1885759666}
   - component: {fileID: 1885759665}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1885759665
 MonoBehaviour:
@@ -7814,12 +8012,12 @@ GameObject:
   - component: {fileID: 1958766586}
   - component: {fileID: 1958766585}
   - component: {fileID: 1958766584}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1958766584
 MonoBehaviour:
@@ -7926,12 +8124,12 @@ GameObject:
   - component: {fileID: 1961759508}
   - component: {fileID: 1961759507}
   - component: {fileID: 1961759506}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &1961759506
 MonoBehaviour:
@@ -8038,12 +8236,12 @@ GameObject:
   - component: {fileID: 2022711109}
   - component: {fileID: 2022711108}
   - component: {fileID: 2022711107}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &2022711107
 MonoBehaviour:
@@ -8150,12 +8348,12 @@ GameObject:
   - component: {fileID: 2039953436}
   - component: {fileID: 2039953435}
   - component: {fileID: 2039953434}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &2039953434
 MonoBehaviour:
@@ -8262,12 +8460,12 @@ GameObject:
   - component: {fileID: 2045127597}
   - component: {fileID: 2045127596}
   - component: {fileID: 2045127595}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &2045127595
 MonoBehaviour:
@@ -8374,12 +8572,12 @@ GameObject:
   - component: {fileID: 2047663637}
   - component: {fileID: 2047663636}
   - component: {fileID: 2047663635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &2047663635
 MonoBehaviour:
@@ -8564,12 +8762,12 @@ GameObject:
   - component: {fileID: 2132247480}
   - component: {fileID: 2132247479}
   - component: {fileID: 2132247478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane(Clone) (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &2132247478
 MonoBehaviour:
