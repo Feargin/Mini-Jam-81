@@ -330,13 +330,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 10, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &549971705
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,11 +381,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   border: 0.0322
-  xSize: 15
-  ySize: 15
-  Purity_CellTypeOne: 3
-  Purity_CellTypeTwo: 47
-  Purity_CellTypeThree: 16
+  xSize: 8
+  ySize: 8
+  Purity_CellTypeOne: 37
+  Purity_CellTypeTwo: 45
+  Purity_CellTypeThree: 51
   randomSeed: 1
   seed: 
   CellTypeOne: {fileID: 2458780726144988217, guid: 22ec06641fcbc7445a07522f12f0a40f, type: 3}
