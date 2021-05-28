@@ -5,7 +5,7 @@ using TMPro;
 
 public sealed class UIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _initialPanel;
+    /*[SerializeField] private GameObject _initialPanel;
     private GameObject _lastPanel;
     public static UIManager Instance;
 
@@ -30,5 +30,5 @@ public sealed class UIManager : MonoBehaviour
             _lastPanel.SetActive(false);
         _lastPanel = panel;
         _lastPanel.SetActive(true);
-    }
+    }*/
 }
