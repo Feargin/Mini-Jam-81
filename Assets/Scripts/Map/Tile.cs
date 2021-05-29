@@ -10,7 +10,7 @@ public class Tile : MonoBehaviour
 	{
 		get
 		{
-			return (_walkable);
+			return (_walkable && EntityIn == null);
 		}
 		private set
 		{

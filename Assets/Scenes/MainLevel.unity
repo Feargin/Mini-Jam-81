@@ -770,9 +770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 549971708}
-  _walkableMask:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!1 &827139863
 GameObject:
   m_ObjectHideFlags: 0
