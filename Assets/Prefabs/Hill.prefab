@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityIn: {fileID: 0}
   _meshRender: {fileID: 7359796359261329607}
-  _walkable: 1
+  _walkable: 0
 --- !u!33 &952511385000431366
 MeshFilter:
   m_ObjectHideFlags: 0

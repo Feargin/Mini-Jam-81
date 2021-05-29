@@ -193,6 +193,8 @@ GameObject:
   - component: {fileID: 176161488001588911}
   - component: {fileID: 5137001938906677703}
   - component: {fileID: 3994415981362808403}
+  - component: {fileID: -1433885455803210353}
+  - component: {fileID: -6254472678165206597}
   m_Layer: 6
   m_Name: PlaneFly
   m_TagString: Untagged
@@ -256,3 +258,35 @@ MonoBehaviour:
   _maxDamage: 0
   RangeAttak: []
   _vfx: {fileID: 0}
+--- !u!114 &-1433885455803210353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8080142712091540559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f62ce80f4f6214eafb021f316abf76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 0
+  _currentHealth: 0
+  movement: {fileID: 0}
+  _healtBar: {fileID: 0}
+--- !u!54 &-6254472678165206597
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8080142712091540559}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
