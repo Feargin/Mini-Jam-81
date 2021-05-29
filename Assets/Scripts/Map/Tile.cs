@@ -6,16 +6,11 @@ public class Tile : MonoBehaviour
 	[SerializeField] private MeshRenderer _meshRender;
 	
 	[SerializeField] private bool _walkable = true;
-	public bool Passable
+	
+	public bool IsPassable(bool withEntity)
 	{
-		get
-		{
-			return (_walkable && EntityIn == null);
-		}
-		private set
-		{
-			_walkable = value;
-		}
+		return (_walkable && EntityIn == null && withEntity == false) 
+			|| (_walkable && EntityIn != null && withEntity == true);
 	}
 	
 	public void SetColor(Color color)

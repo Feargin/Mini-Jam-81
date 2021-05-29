@@ -43,17 +43,18 @@ public class GridGraph
     /// <summary>
     /// Checks whether the neighbouring Node is a wall or not
     /// </summary>
-	public bool Passable(Vector2Int pos)
-    {
-	    return _map.Passable(pos);
-    }
+	public bool Passable(Vector2Int pos, bool withEntity = false)
+	{
+		return _map.Passable(pos, withEntity);
+	}
 
     /// <summary>
     /// Returns a List of neighbouring Nodes
     /// </summary>
-    public List<Node> Neighbours(Node n)
+	public List<Node> Neighbours(Node n, out List<Node> obstacles)
     {
         List<Node> results = new List<Node>();
+	    obstacles = new List<Node>();
 
         List<Vector2> directions = new List<Vector2>()
         {
@@ -74,10 +75,43 @@ public class GridGraph
             {
                 results.Add(Grid[(int)newVector.x, (int)newVector.y]);
             }
+	        if (InBounds(newVector) && Passable(WorldToIndex(newVector), true))
+	        {
+	        	if(!obstacles.Contains(Grid[(int)newVector.x, (int)newVector.y]))
+		        	obstacles.Add(Grid[(int)newVector.x, (int)newVector.y]);
+	        }
         }
 
         return results;
     }
+    
+	public List<Node> Neighbours(Node n)
+	{
+		List<Node> results = new List<Node>();
+
+		List<Vector2> directions = new List<Vector2>()
+		{
+			new Vector2( -1, 0 ), // left
+			//new Vector2(-1, 1 ),  // top-left, comment it out for 4-direction movement
+			new Vector2( 0, 1 ),  // top
+			//new Vector2( 1, 1 ),  // top-right, comment it out for 4-direction movement
+			new Vector2( 1, 0 ),  // right
+			//new Vector2( 1, -1 ), // bottom-right, comment it out for 4-direction movement
+			new Vector2( 0, -1 ), // bottom
+			//new Vector2( -1, -1 ) // bottom-left, comment it out for 4-direction movement
+        };
+
+		foreach (Vector2 v in directions)
+		{
+			Vector2 newVector = v + n.Position;
+			if (InBounds(newVector) && Passable(WorldToIndex(newVector), false))
+			{
+				results.Add(Grid[(int)newVector.x, (int)newVector.y]);
+			}
+		}
+
+		return results;
+	}
     
 	public Vector2Int WorldToLocal(Vector3 pos)
 	{

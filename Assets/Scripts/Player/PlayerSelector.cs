@@ -33,7 +33,11 @@ public class PlayerSelector : MonoBehaviour
 		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask, QueryTriggerInteraction.Ignore))
 		{
 			SelectedPlayer = hit.transform.gameObject.GetComponent<PlayerEntity>();
-			OnPlayerSelect?.Invoke(SelectedPlayer);
+			if(SelectedPlayer != null)
+			{
+				//MoveHelper.Instance.SelectEntity(SelectedPlayer);
+				OnPlayerSelect?.Invoke(SelectedPlayer);
+			}
 		}
 	}
 	

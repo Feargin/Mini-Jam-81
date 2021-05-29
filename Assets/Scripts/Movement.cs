@@ -2,17 +2,22 @@
 using UnityEngine;
 using DG.Tweening;
 
+[RequireComponent(typeof(PF_AStar))]
 public class Movement : MonoBehaviour
 {
 	[Header("----------- SETTINGS ----------")]
-	[SerializeField] private int MoveDistance = 4;
-	private PF_AStar pathfinding;
+	public int MoveDistance = 4;
+	[HideInInspector] public PF_AStar pathfinding;
+	
 	private List<Node> path;
 	private Entity entity;
 	
+	[HideInInspector] public DisplayAvailableMove DisplayMoveArea;
+	
 	private void Awake()
 	{
-		pathfinding = PF_AStar.Instance;
+		DisplayMoveArea = GetComponent<DisplayAvailableMove>();
+		pathfinding = GetComponent<PF_AStar>();
 		entity = GetComponent<Entity>();
 	}
 	
@@ -29,7 +34,9 @@ public class Movement : MonoBehaviour
 			pathL.Add(v3);
 		}
 		if(pathL.Count > 0 && pathL.Count <= MoveDistance)
+		{
 			transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
+		}
 	}
 	
 	protected void OnTriggerEnter(Collider other)

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2066971244915185988}
   - component: {fileID: 3093038144774664345}
   - component: {fileID: 3558802539719490588}
+  - component: {fileID: -8816152302581555763}
   m_Layer: 6
   m_Name: Marine
   m_TagString: Untagged
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveDistance: 4
 --- !u!65 &7821084891220369104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -194,3 +196,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &-8816152302581555763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6620909046267814744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveDistance: 4
