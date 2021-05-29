@@ -40,9 +40,9 @@ public class Spawn : MonoBehaviour
             {
                 
                 if (hit.transform.GetComponent<TileParameters>() != null &&
-                    hit.transform.GetComponent<TileParameters>().SpawnPanzer)
+                    hit.transform.GetComponent<TileParameters>().SpawnPanzer &&
+                    hit.transform.GetComponent<Attak>() == null)
                 {
-                    print(ray + " ray  " + hit.transform.position + "  -  " + hit.transform.GetComponent<TileParameters>().SpawnPanzer);
                     Instantiate(_enemy[Random.Range(0, 3)], spawnCoord + Vector3.up, Quaternion.identity);
                 }
                 else
@@ -73,8 +73,10 @@ public class Spawn : MonoBehaviour
             if (_countKaujy <= 0)
             {
                 _spawnPanel.SetActive(false);
-                ClearSpawnCoord();
             }
+
+            _targetCell.GetComponent<TileParameters>().SpawnKaujy = false;
+            ClearSpawnCoord();
         }
         else
         {
