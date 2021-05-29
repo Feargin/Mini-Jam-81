@@ -5,6 +5,8 @@ public class Entity : MonoBehaviour
 {
 	[Header("------------------ Настройки кайдзю -----------------")]
 	public int _health;
+	public int MaxActionPoints = 4;
+	public int _currentActionPoints;
 	[SerializeField] private int _currentHealth;
 	[Space]
 	[Header("--------------------- Системные --------------------")]
@@ -13,6 +15,7 @@ public class Entity : MonoBehaviour
 	
 	private void Awake()
 	{
+		_currentActionPoints = MaxActionPoints;
 		movement = GetComponent<Movement>();
 	}
 

@@ -72,7 +72,7 @@ public class MoveHelper : Singleton<MoveHelper>
 	{
 		//if(_passablePath != null)
 			//_passablePath.Clear();
-		_passablePath = _pathfinding.FindPossibleMovement(_selectedEntity.transform.position, _selectedEntity.movement.MoveDistance, out _obstacles);
+		_passablePath = _pathfinding.FindPossibleMovement(_selectedEntity.transform.position, _selectedEntity._currentActionPoints, out _obstacles);
 	}
 	
 	private void ShowArea()

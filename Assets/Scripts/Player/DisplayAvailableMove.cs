@@ -69,7 +69,7 @@ public class DisplayAvailableMove : MonoBehaviour
 		{
 			if(_passablePath != null)
 				_passablePath.Clear();
-			_passablePath = _pathfinding.FindPossibleMovement(transform.position, _movement.MoveDistance, out _entities);
+			//_passablePath = _pathfinding.FindPossibleMovement(transform.position, _entities._currentActionPoints, out _entities);
 			Debug.Log(_entities.Count);
 		}
 	}

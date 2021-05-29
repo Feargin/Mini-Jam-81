@@ -6,7 +6,7 @@ using DG.Tweening;
 public class Movement : MonoBehaviour
 {
 	[Header("----------- SETTINGS ----------")]
-	public int MoveDistance = 4;
+	//public int MoveDistance = 4;
 	[HideInInspector] public PF_AStar pathfinding;
 	
 	private List<Node> path;
@@ -33,8 +33,9 @@ public class Movement : MonoBehaviour
 			v3.z = v.Position.y * pathfinding.map.GridSize;
 			pathL.Add(v3);
 		}
-		if(pathL.Count > 0 && pathL.Count <= MoveDistance)
+		if(pathL.Count > 0 && pathL.Count <= entity._currentActionPoints)
 		{
+			entity._currentActionPoints = 0;
 			transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
 		}
 	}
