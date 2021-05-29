@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
 	private void Awake()
 	{
 		pathfinding = PF_AStar.Instance;
+		entity = GetComponent<Entity>();
 	}
 	
 	public void MoveTo(Vector3 position)

@@ -58,13 +58,13 @@ public class GridGraph
         List<Vector2> directions = new List<Vector2>()
         {
             new Vector2( -1, 0 ), // left
-            new Vector2(-1, 1 ),  // top-left, comment it out for 4-direction movement
+	        //new Vector2(-1, 1 ),  // top-left, comment it out for 4-direction movement
             new Vector2( 0, 1 ),  // top
-            new Vector2( 1, 1 ),  // top-right, comment it out for 4-direction movement
+	        //new Vector2( 1, 1 ),  // top-right, comment it out for 4-direction movement
             new Vector2( 1, 0 ),  // right
-            new Vector2( 1, -1 ), // bottom-right, comment it out for 4-direction movement
+	        //new Vector2( 1, -1 ), // bottom-right, comment it out for 4-direction movement
             new Vector2( 0, -1 ), // bottom
-            new Vector2( -1, -1 ) // bottom-left, comment it out for 4-direction movement
+	        //new Vector2( -1, -1 ) // bottom-left, comment it out for 4-direction movement
         };
 
         foreach (Vector2 v in directions)
