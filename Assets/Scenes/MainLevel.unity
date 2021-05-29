@@ -169,7 +169,7 @@ MonoBehaviour:
   _countKaujy: 2
   _countPanzer: 2
   _countPlane: 2
-  _countMariner: 0
+  _countMariner: 2
   _countArtillery: 3
   _tileMask:
     serializedVersion: 2
