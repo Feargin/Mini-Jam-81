@@ -174,7 +174,7 @@ MonoBehaviour:
   _tileMask:
     serializedVersion: 2
     m_Bits: 128
-  _kaujy: {fileID: 6115293160697941040, guid: f7fdfa036e0c3784097b64104e955b06, type: 3}
+  Kaujy: {fileID: 6115293160697941040, guid: f7fdfa036e0c3784097b64104e955b06, type: 3}
   _enemy:
   - {fileID: 1274926669815720520, guid: 8e338fbd130c9f849bcd9650f588082e, type: 3}
   - {fileID: 352592113627311189, guid: 29ecade1de235e2429848216f81b8b9a, type: 3}
@@ -925,7 +925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &972994949
 Transform:
   m_ObjectHideFlags: 0
@@ -988,6 +988,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _passableColor: {r: 0.38781595, g: 0.38939044, b: 0.7830189, a: 1}
+  _enemyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &977006516
 GameObject:
   m_ObjectHideFlags: 0

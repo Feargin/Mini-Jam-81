@@ -1,20 +1,31 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ChangeTurn : Singleton<ChangeTurn>
 {
-    [SerializeField] private Button _nextTurn;
+	[SerializeField] private Button _nextTurn;
     public int CountTurn = 0;
     
     #region Events
-    public static event System.Action<bool> TheNextTurn;
+	public static event System.Action<bool> TheNextTurn;
+    
     #endregion
-    void Start()
-    {
-        
-    }
+	protected void OnEnable()
+	{
+		Spawn.OnGameStart += OnGameStart;
+	}
+	
+	protected void OnDisable()
+	{
+		Spawn.OnGameStart -= OnGameStart;
+	}
+	
+	private void OnGameStart()
+	{
+		
+	}
 
     public void NextTurn()
     {

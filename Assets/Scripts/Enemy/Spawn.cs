@@ -26,7 +26,9 @@ public class Spawn : Singleton<Spawn>
     
     private bool _readySpawn;
     private Vector3 _coordCell;
-    private Transform _targetCell;
+	private Transform _targetCell;
+    
+	public static event System.Action OnGameStart;
 
     public Spawn(bool readySpawn)
     {
@@ -73,9 +75,13 @@ public class Spawn : Singleton<Spawn>
                     hit.transform.GetComponent<TileParameters>().SpawnKaujy && setUnset)
                 {
                     hit.transform.gameObject.GetComponent<Tile>().SetColor(new Color(0f, 0.7f, 1f));
-                    
+	                hit.transform.gameObject.GetComponent<Tile>().CanBuild = true;
                 }
-                else hit.transform.gameObject.GetComponent<Tile>().SetColor(Color.white);
+                else 
+                {
+                	hit.transform.gameObject.GetComponent<Tile>().SetColor(Color.white);
+	                hit.transform.gameObject.GetComponent<Tile>().CanBuild = false;
+                }
             }
         }
     }
@@ -144,7 +150,11 @@ public class Spawn : Singleton<Spawn>
             ClearSpawnCoord();
             if (_countKaujy <= 0)
             {
-                GridSpawnKaujy(2, false);
+	            GridSpawnKaujy(2, false);
+                
+	            PlayerControler.SetActive(true);
+	            OnGameStart?.Invoke();
+                
                 _spawnPanel.SetActive(false);
                 return;
             }
@@ -158,6 +168,7 @@ public class Spawn : Singleton<Spawn>
             Debug.Log("нельзя создать");
         }
     }
+    
     private void Update()
     {
         if (!Input.GetMouseButtonDown(0)) return;
@@ -168,9 +179,8 @@ public class Spawn : Singleton<Spawn>
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
         
-	    if (!(Physics.Raycast(ray, out hit, 100f, _tileMask, QueryTriggerInteraction.Ignore) && 
-              PlayerControler.GetComponent<PlayerMovement>().isActiveAndEnabled &&
-              hit.transform.gameObject.GetComponent<Tile>().TileColor == new Color(0f, 0.7f, 1f))) return;
+	    if (!(Physics.Raycast(ray, out hit, 100f, _tileMask, QueryTriggerInteraction.Ignore) &&
+              hit.transform.gameObject.GetComponent<Tile>().CanBuild)) return;
         if(hit.transform.GetComponent<TileParameters>() != null && hit.transform.GetComponent<TileParameters>().SpawnKaujy)
         {
             print((hit.transform.gameObject.GetComponent<Tile>().TileColor));
