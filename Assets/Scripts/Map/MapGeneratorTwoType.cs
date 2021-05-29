@@ -59,7 +59,10 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
     {
 	    if (coordinates != null)
 	    {
-	    	Tile[,] tiles = new Tile[xSize, ySize];
+		    
+		    
+
+			    Tile[,] tiles = new Tile[xSize, ySize];
 	    	
 		    string nameGroupOne = "Ocean";
 		    string nameGroupTwo = "Forest";
@@ -114,6 +117,12 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 		    {
 			    for (int y = 0; y < ySize; y++)
 			    {
+				    int shance = Random.Range(0, 100);
+				    int yRotation = 0;
+				    if (shance < 25) yRotation = 0;
+				    else if(shance < 50) yRotation = 90;
+				    else if(shance < 75) yRotation = 180;
+				    else if(shance < 100) yRotation = 270;
 			    	Tile newCell = null;
 				    if (coordinates[x, y] == 0)
 				    {
@@ -121,6 +130,7 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 					    newCell = Instantiate(CellTypeOne, cellPosition, Quaternion.identity) ;
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupOne;
+					    newCell.transform.rotation = new Quaternion(0, yRotation, 0, 0);
 				    }
 				    else if (coordinates[x, y] == 1)
 				    {
@@ -128,6 +138,7 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 					    newCell = Instantiate(CellTypeTwo, cellPosition + Vector3.up * 0.2f, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupTwo;
+					    newCell.transform.rotation = new Quaternion(0, yRotation, 0, 0);
 				    }
 				    else if (coordinates[x, y] == 2)
 				    {
@@ -135,6 +146,7 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 					    newCell = Instantiate(CellTypeThree, cellPosition + Vector3.up * 0.5f, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupTwo;
+					    newCell.transform.rotation = new Quaternion(0, yRotation, 0, 0);
 				    }
 				    tiles[x,y] = newCell;
 			    }

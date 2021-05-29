@@ -13,6 +13,13 @@ public class Entity : MonoBehaviour
 	[HideInInspector] public Movement movement;
 	[SerializeField] private Image _healtBar;
 	
+	private void OnEnable() => ChangeTurn.TheNextTurn += ResetActionPoints;
+	private void OnDisable() => ChangeTurn.TheNextTurn -= ResetActionPoints;
+
+	private void ResetActionPoints(bool f)
+	{
+		_currentActionPoints = MaxActionPoints;
+	}
 	private void Awake()
 	{
 		_currentActionPoints = MaxActionPoints;

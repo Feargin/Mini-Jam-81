@@ -7,6 +7,7 @@ public class PlayerSelector : MonoBehaviour
 	
 	[Header("------------- Dependencies --------------")]
 	[SerializeField] private LayerMask _playerMask;
+	[SerializeField] private LayerMask _walkableMask;
 	
 	#region Events
 	public static event System.Action<Entity> OnPlayerSelect;
@@ -26,6 +27,15 @@ public class PlayerSelector : MonoBehaviour
 	    {
 	    	SelectPlayerEntity();
 	    }
+	    RaycastHit hit;
+	    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity, _walkableMask, QueryTriggerInteraction.Ignore))
+	    {
+		    if(hit.transform.GetComponent<Tile>() && hit.transform.GetComponent<Tile>().EntityIn)
+		    {
+			    Map.Instance.ReloadSelectTiles();
+			    hit.transform.GetComponent<Tile>().Selected = true;
+		    }
+	    }
     }
     
 	private void SelectPlayerEntity()
@@ -40,7 +50,7 @@ public class PlayerSelector : MonoBehaviour
 			}
 		}
 	}
-	
+
 	public void Deselect()
 	{
 		if(SelectedPlayer != null)
