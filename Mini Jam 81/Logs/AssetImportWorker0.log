@@ -241,3 +241,4 @@ Received Import Request.
 Start importing Assets/Godzilla/Prefab/TurtleMonster2.prefab using Guid(cd1d9dfd8f6e4764189e9ab323c03eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e1634264b326340a9bd67c7384d562a') in 0.024290 seconds
   Import took 0.027309 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
