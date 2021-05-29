@@ -13,7 +13,8 @@ public class Spawn : MonoBehaviour
     [Header("---------------------------- Системные --------------------------")]
     [SerializeField] private Transform _kaujy;
     [SerializeField] private Transform [] _enemy;
-    
+    public List<Transform> Enemyes;
+    public List<Transform> Players;
     [SerializeField] private GameObject _spawnPanel;
     [SerializeField] private TMP_Text _countText;
     
@@ -43,7 +44,8 @@ public class Spawn : MonoBehaviour
                     hit.transform.GetComponent<TileParameters>().SpawnPanzer &&
                     hit.transform.GetComponent<Attak>() == null)
                 {
-                    Instantiate(_enemy[Random.Range(0, 3)], spawnCoord + Vector3.up, Quaternion.identity);
+                    var enemy = Instantiate(_enemy[Random.Range(0, 3)], spawnCoord + Vector3.up, Quaternion.identity);
+                    Enemyes.Add(enemy);
                 }
                 else
                 {
@@ -67,9 +69,10 @@ public class Spawn : MonoBehaviour
     {
         if (_targetCell != null)
         {
-            Instantiate(_kaujy, _coordCell, Quaternion.identity);
+            var player = Instantiate(_kaujy, _coordCell, Quaternion.identity);
             _countKaujy -= 1;
             _countText.text = "Left: " + _countKaujy;
+            Enemyes.Add(player);
             if (_countKaujy <= 0)
             {
                 _spawnPanel.SetActive(false);
