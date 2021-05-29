@@ -176,6 +176,7 @@ MonoBehaviour:
   Players: []
   _spawnPanel: {fileID: 2096298720}
   _countText: {fileID: 137846137}
+  PlayerControler: {fileID: 972994948}
 --- !u!1 &137846135
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +344,7 @@ Transform:
   - {fileID: 1280379915}
   - {fileID: 133333586}
   - {fileID: 1206592095}
+  - {fileID: 1375391393}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1248,6 +1250,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862bdb32a2764c64cbbe1e7dd8e3fac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1375391392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375391393}
+  - component: {fileID: 1375391394}
+  m_Layer: 0
+  m_Name: Turns Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1375391393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375391392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 151605983}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1375391394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375391392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a88952f14d97c147bc32b7e6d049632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextTurn: {fileID: 2115669519}
 --- !u!1 &1401608247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,7 +1867,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2115669520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1375391394}
+        m_TargetAssemblyTypeName: ChangeTurn, Assembly-CSharp
+        m_MethodName: NextTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2115669520
 MonoBehaviour:
   m_ObjectHideFlags: 0
