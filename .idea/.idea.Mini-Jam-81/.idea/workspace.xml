@@ -24,10 +24,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attak.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/Tile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Egg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
       </list>
     </option>
   </component>
@@ -85,7 +87,9 @@
       <workItem from="1622283721442" duration="1470000" />
       <workItem from="1622285544161" duration="1779000" />
       <workItem from="1622287398781" duration="1782000" />
-      <workItem from="1622289211148" duration="1700000" />
+      <workItem from="1622289211148" duration="1782000" />
+      <workItem from="1622291400301" duration="1631000" />
+      <workItem from="1622293209181" duration="736000" />
     </task>
     <servers />
   </component>

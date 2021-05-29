@@ -16,7 +16,7 @@ public class Spawn : Singleton<Spawn>
     [Space]
     [Header("---------------------------- Системные --------------------------")]
     [SerializeField] private LayerMask _tileMask;
-	[SerializeField] private Transform _kaujy;
+	public Transform Kaujy;
     [SerializeField] private Transform [] _enemy;
     public List<Transform> Enemyes;
     public List<Transform> Players;
@@ -136,7 +136,7 @@ public class Spawn : Singleton<Spawn>
     {
         if (_targetCell != null)
         {
-            var player = Instantiate(_kaujy, _coordCell, Quaternion.identity);
+            var player = Instantiate(Kaujy, _coordCell, Quaternion.identity);
             _countKaujy -= 1;
             _countText.text = "Left: " + _countKaujy;
             Players.Add(player);

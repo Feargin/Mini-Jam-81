@@ -1402,6 +1402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextTurn: {fileID: 2115669519}
+  CountTurn: 0
 --- !u!1 &1401608247
 GameObject:
   m_ObjectHideFlags: 0
