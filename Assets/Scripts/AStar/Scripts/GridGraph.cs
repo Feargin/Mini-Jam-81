@@ -69,8 +69,8 @@ public class GridGraph
 
         foreach (Vector2 v in directions)
         {
-            Vector2 newVector = v + n.Position;
-	        if (InBounds(newVector) && Passable(WorldToLocal(newVector)))
+	        Vector2 newVector = v + n.Position;
+	        if (InBounds(newVector) && Passable(WorldToIndex(newVector)))
             {
                 results.Add(Grid[(int)newVector.x, (int)newVector.y]);
             }
@@ -91,6 +91,14 @@ public class GridGraph
 	{
 		int newX = Mathf.RoundToInt(pos.x / GridSize);
 		int newY = Mathf.RoundToInt(pos.z / GridSize);
+		Vector2Int local = new Vector2Int(newX, newY);
+		return local;
+	}
+	
+	public Vector2Int WorldToIndex(Vector2 pos)
+	{
+		int newX = Mathf.RoundToInt(pos.x / GridSize);
+		int newY = Mathf.RoundToInt(pos.y / GridSize);
 		Vector2Int local = new Vector2Int(newX, newY);
 		return local;
 	}

@@ -14,6 +14,7 @@ public class Map : MonoBehaviour
 	
 	public bool Passable(Vector2Int pos)
 	{
+		//tiles[pos.x, pos.y].transform.position += Vector3.up * 0.3f;
 		return tiles[pos.x, pos.y].Passable;
 	}
 }
