@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
 	private PF_AStar pathfinding;
 	private List<Node> path;
+	private Entity entity;
 	
 	private void Awake()
 	{
@@ -26,6 +27,22 @@ public class Movement : MonoBehaviour
 		}
 		if(pathL.Count > 0)
 			transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
+	}
+	
+	protected void OnTriggerEnter(Collider other)
+	{
+		if(other.TryGetComponent<Tile>(out Tile tile))
+		{
+			tile.EntityIn = GetComponent<Entity>();
+		}
+	}
+	
+	protected void OnTriggerExit(Collider other)
+	{
+		if(other.TryGetComponent<Tile>(out Tile tile) && tile.EntityIn == entity)
+		{
+			tile.EntityIn = null;
+		}
 	}
 	
 	//protected void OnDrawGizmos()
