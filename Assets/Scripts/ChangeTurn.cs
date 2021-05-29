@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeTurn : MonoBehaviour
+public class ChangeTurn : Singleton<ChangeTurn>
 {
     [SerializeField] private Button _nextTurn;
     
