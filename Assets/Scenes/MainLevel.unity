@@ -1396,7 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a88952f14d97c147bc32b7e6d049632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextTurn: {fileID: 2115669519}
+  _nextTurn: {fileID: 0}
 --- !u!1 &1401608247
 GameObject:
   m_ObjectHideFlags: 0

@@ -93,32 +93,18 @@ public class Spawn : Singleton<Spawn>
     private void Update()
     {
         if (!Input.GetMouseButtonDown(0)) return;
-        if (EventSystem.current.IsPointerOverGameObject()) return;
-        ClearSpawnCoord();
+	    if (EventSystem.current.IsPointerOverGameObject()) return;
+        
+	    ClearSpawnCoord();
+        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
-        if (!(Physics.Raycast(ray, out hit, 100f) && PlayerControler.GetComponent<PlayerMovement>().isActiveAndEnabled)) return;
+	    if (!(Physics.Raycast(ray, out hit, 100f, _tileMask, QueryTriggerInteraction.Ignore) && PlayerControler.GetComponent<PlayerMovement>().isActiveAndEnabled)) return;
         if(hit.transform.GetComponent<TileParameters>() != null && hit.transform.GetComponent<TileParameters>().SpawnKaujy)
         {
-            if(!EventSystem.current.IsPointerOverGameObject())
-            {
-                ClearSpawnCoord();
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit = new RaycastHit();
-                {
-                    if(hit.transform.GetComponent<TileParameters>() != null && hit.transform.GetComponent<TileParameters>().SpawnKaujy)
-                    {
-                        _coordCell = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.8f, hit.transform.position.z);
-	                    hit.transform.gameObject.GetComponent<Tile>().SetColor(Color.blue);
-                        _targetCell = hit.transform;
-                    }
-                    else
-                    {
-                        //Debug.Log("нельзя выделить");
-                    }
-                }
-            }
-	            if (Physics.Raycast(ray, out hit, 100f, _tileMask, QueryTriggerInteraction.Ignore))
+            _coordCell = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.8f, hit.transform.position.z);
+            hit.transform.gameObject.GetComponent<Tile>().SetColor(Color.blue);
+            _targetCell = hit.transform;
         }
         else
         {
