@@ -8,16 +8,12 @@ public class Tile : MonoBehaviour
 	public Color TileColor = Color.white;
 	private Color _oldColor;
 	[SerializeField] private bool _walkable = true;
-	public bool Passable
+	public bool CanBuild = false;
+	
+	public bool IsPassable(bool withEntity)
 	{
-		get
-		{
-			return (_walkable && EntityIn == null);
-		}
-		private set
-		{
-			_walkable = value;
-		}
+		return (_walkable && EntityIn == null && withEntity == false) 
+			|| (_walkable && EntityIn != null && withEntity == true);
 	}
 
 	public void ResetColor()

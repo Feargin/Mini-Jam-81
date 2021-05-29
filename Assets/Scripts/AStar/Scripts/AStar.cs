@@ -53,6 +53,56 @@ public static class AStar
 
         return path;
     }
+    
+	public static List<Node> FindAllPassable(GridGraph graph, Node start, int distance, out List<Node> _obstacles)
+	{
+		Dictionary<Node, Node> came_from = new Dictionary<Node, Node>();
+		Dictionary<Node, float> cost_so_far = new Dictionary<Node, float>();
+		_obstacles = new List<Node>();
+
+		List<Node> path = new List<Node>();
+
+		SimplePriorityQueue<Node> frontier = new SimplePriorityQueue<Node>();
+		frontier.Enqueue(start, 0);
+
+		came_from.Add(start, start);
+		cost_so_far.Add(start, 0);
+
+		Node current = new Node(0,0);
+		while (frontier.Count > 0)
+		{
+			current = frontier.Dequeue();
+			if (distance == 0) break; // Early exit
+			
+			List<Node> obstacles;
+			foreach (Node next in graph.Neighbours(current, out obstacles))
+			{
+				float new_cost = cost_so_far[current] + graph.Cost(next);
+				
+				if (!cost_so_far.ContainsKey(next) || new_cost < cost_so_far[next])
+				{
+					cost_so_far[next] = new_cost;
+					float priority = new_cost;
+					frontier.Enqueue(next, priority);
+					next.Priority = new_cost;
+				}
+				
+				if(new_cost <= distance + 1 && !path.Contains(current))
+				{
+					path.Add(current);
+				}
+				
+				foreach(Node n2 in obstacles)
+				{
+					if(new_cost <= distance + 1 && !_obstacles.Contains(n2))
+					{
+						_obstacles.Add(n2);
+					}
+				}
+			}
+		}
+		return path;
+	}
 
     public static float Heuristic(Node a, Node b)
     {

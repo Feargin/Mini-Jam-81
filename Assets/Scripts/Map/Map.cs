@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class Map : MonoBehaviour
+public class Map : Singleton<Map>
 {
 	public float GridSize = 1f;
 	public GridGraph nodemap;
@@ -12,9 +13,8 @@ public class Map : MonoBehaviour
 		this.tiles = tiles;
 	}
 	
-	public bool Passable(Vector2Int pos)
+	public bool Passable(Vector2Int pos, bool withEntity = false)
 	{
-		//tiles[pos.x, pos.y].transform.position += Vector3.up * 0.3f;
-		return tiles[pos.x, pos.y].Passable;
+		return tiles[pos.x, pos.y].IsPassable(withEntity);
 	}
 }
