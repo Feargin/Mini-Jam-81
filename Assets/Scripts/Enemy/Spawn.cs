@@ -58,7 +58,7 @@ public class Spawn : MonoBehaviour
     public void ClearSpawnCoord()
     {
         _coordCell = Vector3.zero;
-        if (_targetCell is { }) _targetCell.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+	    if (_targetCell is { }) _targetCell.gameObject.GetComponent<Tile>().SetColor(Color.white);
         _targetCell = null;
     }
 
@@ -97,7 +97,7 @@ public class Spawn : MonoBehaviour
                     if(hit.transform.GetComponent<TileParameters>() != null && hit.transform.GetComponent<TileParameters>().SpawnKaujy)
                     {
                         _coordCell = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.8f, hit.transform.position.z);
-                        hit.transform.gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+	                    hit.transform.gameObject.GetComponent<Tile>().SetColor(Color.blue);
                         _targetCell = hit.transform;
                     }
                     else
