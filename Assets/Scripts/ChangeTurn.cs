@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeTurn : MonoBehaviour
+public class ChangeTurn : Singleton<ChangeTurn>
 {
     [SerializeField] private Button _nextTurn;
+    public int CountTurn = 0;
     
     #region Events
     public static event System.Action<bool> TheNextTurn;
@@ -27,6 +28,7 @@ public class ChangeTurn : MonoBehaviour
         _nextTurn.interactable = true;
         Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = true;
         TheNextTurn?.Invoke(false);
+        CountTurn += 1;
     }
     void Update()
     {

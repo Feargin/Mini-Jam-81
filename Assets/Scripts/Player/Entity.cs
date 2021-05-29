@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Entity : MonoBehaviour
 {
 	[Header("------------------ Настройки кайдзю -----------------")]
-	[SerializeField] private int _health;
+	public int _health;
 	[SerializeField] private int _currentHealth;
 	[Space]
 	[Header("--------------------- Системные --------------------")]

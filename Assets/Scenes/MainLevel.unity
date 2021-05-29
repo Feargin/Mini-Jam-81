@@ -166,15 +166,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a4d159a96e74c48b588c01c17faefb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _countKaujy: 3
+  _countKaujy: 2
+  _countPanzer: 2
+  _countPlane: 2
+  _countMariner: 2
+  _countArtillery: 3
   _tileMask:
     serializedVersion: 2
     m_Bits: 128
   _kaujy: {fileID: 6115293160697941040, guid: f7fdfa036e0c3784097b64104e955b06, type: 3}
   _enemy:
-  - {fileID: 4828637454455347319, guid: 21fd883f8f4554b44981fb957ad49a77, type: 3}
-  - {fileID: 3397112587954418498, guid: 835fa2171865d804097b4685b4a2ff38, type: 3}
   - {fileID: 1274926669815720520, guid: 8e338fbd130c9f849bcd9650f588082e, type: 3}
+  - {fileID: 352592113627311189, guid: 29ecade1de235e2429848216f81b8b9a, type: 3}
+  - {fileID: 3397112587954418498, guid: 835fa2171865d804097b4685b4a2ff38, type: 3}
+  - {fileID: 4828637454455347319, guid: 21fd883f8f4554b44981fb957ad49a77, type: 3}
   Enemyes: []
   Players: []
   _spawnPanel: {fileID: 2096298720}
@@ -578,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746255b6c3deb1345a223a1fd7dc4f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: 0.0322
+  border: 0.01
   xSize: 8
   ySize: 8
   Purity_CellTypeOne: 37
@@ -1370,6 +1375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextTurn: {fileID: 2115669519}
+  CountTurn: 0
 --- !u!1 &1401608247
 GameObject:
   m_ObjectHideFlags: 0
