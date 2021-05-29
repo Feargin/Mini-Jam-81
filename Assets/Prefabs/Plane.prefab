@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2652968448129472589}
   - component: {fileID: 8133646117027792830}
   - component: {fileID: 5451105680371662093}
+  - component: {fileID: 1878001657328104208}
   m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
@@ -49,7 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityIn: {fileID: 0}
   _meshRender: {fileID: 8800553440426453018}
+  TileColor: {r: 1, g: 1, b: 1, a: 1}
   _walkable: 1
+  _attak: 0
+  CanBuild: 0
 --- !u!65 &2652968448129472589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8, z: 0.8}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.8, y: 0.17230028, z: 0.8}
+  m_Center: {x: 0, y: 0.6861502, z: 0}
 --- !u!65 &8133646117027792830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92,6 +96,18 @@ MonoBehaviour:
   SpawnPlane: 1
   SpawnPanzer: 1
   SpawnArtillery: 1
+--- !u!114 &1878001657328104208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59705506593062767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5946c3cb5a1c184a8eedd82901c6534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &143402698789058686
 GameObject:
   m_ObjectHideFlags: 0

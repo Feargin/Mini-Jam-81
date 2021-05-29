@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
 		pathfinding = GetComponent<PF_AStar>();
 		entity = GetComponent<Entity>();
 	}
-	
+
 	public void MoveTo(Vector3 position)
 	{
 		path = pathfinding.FindPath(transform.position, position);

@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 185042959906060418}
   - component: {fileID: -2984314876228452400}
   - component: {fileID: 6056889782206426629}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Panzer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveDistance: 4
+  pathfinding: {fileID: 0}
+  DisplayMoveArea: {fileID: 0}
 --- !u!65 &5917615209057552346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -348,6 +349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 0
+  MaxActionPoints: 4
+  _currentActionPoints: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}

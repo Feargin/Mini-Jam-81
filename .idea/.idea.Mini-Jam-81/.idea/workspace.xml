@@ -18,18 +18,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/PanzerStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SelectEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attak.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Tile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Egg.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapGeneratorTwoType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SelectTille.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/SelectTille.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Tile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Map.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
       </list>
     </option>
   </component>
@@ -90,6 +96,14 @@
       <workItem from="1622289211148" duration="1782000" />
       <workItem from="1622291400301" duration="1631000" />
       <workItem from="1622293209181" duration="736000" />
+      <workItem from="1622297530953" duration="1133000" />
+      <workItem from="1622299587360" duration="1778000" />
+      <workItem from="1622301394814" duration="1777000" />
+      <workItem from="1622303198246" duration="1801000" />
+      <workItem from="1622305030461" duration="1784000" />
+      <workItem from="1622306861659" duration="1787000" />
+      <workItem from="1622308686722" duration="1777000" />
+      <workItem from="1622310489519" duration="1482000" />
     </task>
     <servers />
   </component>
