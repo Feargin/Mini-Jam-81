@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3994415981362808403}
   - component: {fileID: -1433885455803210353}
   - component: {fileID: -6254472678165206597}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PlaneFly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveDistance: 4
+  pathfinding: {fileID: 0}
+  tile: {fileID: 0}
 --- !u!65 &5137001938906677703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -172,6 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 0
+  MaxActionPoints: 4
+  _currentActionPoints: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}

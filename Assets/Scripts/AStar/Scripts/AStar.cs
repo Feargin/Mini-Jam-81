@@ -8,10 +8,16 @@ using UnityEngine;
 /// </summary>
 public static class AStar
 {
+	
+	public static int GetWalkDistance(GridGraph graph, Node start, Node goal, bool makeEndWalkable = false)
+	{
+		return Search(graph, start, goal, makeEndWalkable).Count;
+	}
+	
     /// <summary>
     /// Returns the best path as a List of Nodes
     /// </summary>
-    public static List<Node> Search(GridGraph graph, Node start, Node goal)
+	public static List<Node> Search(GridGraph graph, Node start, Node goal, bool makeEndWalkable = false)
     {
         Dictionary<Node, Node> came_from = new Dictionary<Node, Node>();
         Dictionary<Node, float> cost_so_far = new Dictionary<Node, float>();
@@ -49,6 +55,12 @@ public static class AStar
             path.Add(current);
             current = came_from[current];
         }
+        
+	    if(makeEndWalkable && !came_from.ContainsKey(goal))
+	    {
+		    path.Add(goal);
+	    }
+        
         path.Reverse();
 
         return path;

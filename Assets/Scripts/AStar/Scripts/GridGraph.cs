@@ -136,6 +136,12 @@ public class GridGraph
 		Vector2Int local = new Vector2Int(newX, newY);
 		return local;
 	}
+	
+	public Node WorldToNode(Vector3 pos)
+	{
+		Vector2Int index = WorldToIndex(pos);
+		return Grid[index.x, index.y];
+	}
 
     public int Cost(Node b)
     {
