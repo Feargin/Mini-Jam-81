@@ -12,7 +12,8 @@ public class Spawn : MonoBehaviour
     [Space]
     [Header("---------------------------- Системные --------------------------")]
     [SerializeField] private Transform _kaujy;
-    [SerializeField] private Transform _panzer;
+    [SerializeField] private Transform [] _enemy;
+    
     [SerializeField] private GameObject _spawnPanel;
     [SerializeField] private TMP_Text _countText;
     
@@ -24,10 +25,33 @@ public class Spawn : MonoBehaviour
     {
         _spawnPanel.SetActive(true);
         _countText.text = "Left: " + _countKaujy;
+        Invoke("SpawnEnemy", 0.2f);
     }
 
     private void SpawnEnemy()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            Vector3 spawnCoord = new Vector3(Random.Range(0, 8), 0, Random.Range(0, 8));
+            Ray ray = new Ray(new Vector3(spawnCoord.x, 6, spawnCoord.z), Vector3.down);
+            RaycastHit hit = new RaycastHit();
+            
+            if (Physics.Raycast(ray, out hit, 100f ))
+            {
+                
+                if (hit.transform.GetComponent<TileParameters>() != null &&
+                    hit.transform.GetComponent<TileParameters>().SpawnPanzer)
+                {
+                    print(ray + " ray  " + hit.transform.position + "  -  " + hit.transform.GetComponent<TileParameters>().SpawnPanzer);
+                    Instantiate(_enemy[Random.Range(0, 3)], spawnCoord + Vector3.up, Quaternion.identity);
+                }
+                else
+                {
+                    //Debug.Log("нельзя выделить");
+                }
+            }
+
+        }
         
     }
 
@@ -61,7 +85,6 @@ public class Spawn : MonoBehaviour
     {
         if (Input.GetMouseButtonDown (0))
         {
-            
             if(!EventSystem.current.IsPointerOverGameObject())
             {
                 ClearSpawnCoord();

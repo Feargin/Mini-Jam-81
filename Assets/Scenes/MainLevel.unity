@@ -840,7 +840,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _countKaujy: 3
   _kaujy: {fileID: 6115293160697941040, guid: f7fdfa036e0c3784097b64104e955b06, type: 3}
-  _panzer: {fileID: 0}
+  _enemy:
+  - {fileID: 4828637454455347319, guid: 21fd883f8f4554b44981fb957ad49a77, type: 3}
+  - {fileID: 3397112587954418498, guid: 835fa2171865d804097b4685b4a2ff38, type: 3}
+  - {fileID: 1274926669815720520, guid: 8e338fbd130c9f849bcd9650f588082e, type: 3}
   _spawnPanel: {fileID: 2096298720}
   _countText: {fileID: 137846137}
 --- !u!1 &137846135

@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Attak : MonoBehaviour
 {
-    [SerializeField] private int _minDamage;
-    [SerializeField] private int _maxDamage;
+    public int _minDamage;
+    public int _maxDamage;
     public List<Vector3> RangeAttak;
+    [SerializeField] private GameObject _vfx;
     void Start()
     {
         
     }
 
-    private void Attaktarget()
-    {
-        
-    }
+    
     void Update()
     {
         
