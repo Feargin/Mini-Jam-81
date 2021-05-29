@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Attak : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private int _minDamage;
+    [SerializeField] private int _maxDamage;
+    public List<Vector3> RangeAttak;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    private void Attaktarget()
+    {
+        
+    }
     void Update()
     {
         

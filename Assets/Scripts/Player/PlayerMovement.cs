@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 	[Header("------------- Dependencies --------------")]
 	[SerializeField] private LayerMask _walkableMask;
 	
-	private PlayerEntity _selectedPlayer;
+	private Entity _selectedPlayer;
 	
 	private Camera _main;
 	
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 		_main = Camera.main;
 	}
 	
-	private void OnPlayerSelect(PlayerEntity player)
+	private void OnPlayerSelect(Entity player)
 	{
 		_selectedPlayer = player;
 	}

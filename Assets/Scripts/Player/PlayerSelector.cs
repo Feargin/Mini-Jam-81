@@ -3,13 +3,13 @@
 public class PlayerSelector : MonoBehaviour
 {
 	[Header("------------- Info ----------------------")]
-	[ReadOnly] public PlayerEntity SelectedPlayer;
+	[ReadOnly] public Entity SelectedPlayer;
 	
 	[Header("------------- Dependencies --------------")]
 	[SerializeField] private LayerMask _playerMask;
 	
 	#region Events
-	public static event System.Action<PlayerEntity> OnPlayerSelect;
+	public static event System.Action<Entity> OnPlayerSelect;
 	#endregion
 	
 	private Camera _main;
@@ -31,7 +31,7 @@ public class PlayerSelector : MonoBehaviour
 	{
 		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask))
 		{
-			SelectedPlayer = hit.transform.gameObject.GetComponent<PlayerEntity>();
+			SelectedPlayer = hit.transform.gameObject.GetComponent<Entity>();
 			OnPlayerSelect?.Invoke(SelectedPlayer);
 		}
 	}
