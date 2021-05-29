@@ -11,7 +11,8 @@ public class Spawn : MonoBehaviour
     [SerializeField] private int _countKaujy = 3;
     [Space]
     [Header("---------------------------- Системные --------------------------")]
-    [SerializeField] private Transform _kaujy;
+    [SerializeField] private LayerMask _tileMask;
+	[SerializeField] private Transform _kaujy;
     [SerializeField] private Transform [] _enemy;
     public List<Transform> Enemyes;
     public List<Transform> Players;
@@ -95,7 +96,7 @@ public class Spawn : MonoBehaviour
                 ClearSpawnCoord();
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit = new RaycastHit();
-                if (Physics.Raycast(ray, out hit, 100f))
+	            if (Physics.Raycast(ray, out hit, 100f, _tileMask, QueryTriggerInteraction.Ignore))
                 {
                     if(hit.transform.GetComponent<TileParameters>() != null && hit.transform.GetComponent<TileParameters>().SpawnKaujy)
                     {

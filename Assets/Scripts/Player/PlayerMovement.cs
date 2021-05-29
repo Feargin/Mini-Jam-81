@@ -9,8 +9,17 @@ public class PlayerMovement : MonoBehaviour
 	
 	private Camera _main;
 	
-	private void OnEnable() => PlayerSelector.OnPlayerSelect += OnPlayerSelect;
-	private void OnDisable() => PlayerSelector.OnPlayerSelect -= OnPlayerSelect;
+	private void OnEnable() 
+	{
+		PlayerSelector.OnPlayerSelect += OnPlayerSelect;
+		PlayerSelector.OnPlayerDeselect += OnPlayerDeselect;
+	}
+	
+	private void OnDisable() 
+	{
+		PlayerSelector.OnPlayerSelect -= OnPlayerSelect;
+		PlayerSelector.OnPlayerDeselect -= OnPlayerDeselect;
+	}
 	
 	private void Start()
 	{
@@ -20,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
 	private void OnPlayerSelect(Entity player)
 	{
 		_selectedPlayer = player;
+	}
+	
+	private void OnPlayerDeselect(Entity player)
+	{
+		_selectedPlayer = null;
 	}
 	
 	private void Update()
@@ -32,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     
 	private void SelectTile()
 	{
-		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _walkableMask))
+		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _walkableMask, QueryTriggerInteraction.Ignore))
 		{
 			_selectedPlayer.movement.MoveTo(hit.transform.position);
 		}

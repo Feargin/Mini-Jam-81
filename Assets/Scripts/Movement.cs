@@ -4,6 +4,8 @@ using DG.Tweening;
 
 public class Movement : MonoBehaviour
 {
+	[Header("----------- SETTINGS ----------")]
+	[SerializeField] private int MoveDistance = 4;
 	private PF_AStar pathfinding;
 	private List<Node> path;
 	private Entity entity;
@@ -26,7 +28,7 @@ public class Movement : MonoBehaviour
 			v3.z = v.Position.y * pathfinding.map.GridSize;
 			pathL.Add(v3);
 		}
-		if(pathL.Count > 0)
+		if(pathL.Count > 0 && pathL.Count <= MoveDistance)
 			transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
 	}
 	

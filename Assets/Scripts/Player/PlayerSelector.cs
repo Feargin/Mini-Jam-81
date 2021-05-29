@@ -10,6 +10,7 @@ public class PlayerSelector : MonoBehaviour
 	
 	#region Events
 	public static event System.Action<Entity> OnPlayerSelect;
+	public static event System.Action<Entity> OnPlayerDeselect;
 	#endregion
 	
 	private Camera _main;
@@ -29,10 +30,19 @@ public class PlayerSelector : MonoBehaviour
     
 	private void SelectPlayerEntity()
 	{
-		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask))
+		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask, QueryTriggerInteraction.Ignore))
 		{
 			SelectedPlayer = hit.transform.gameObject.GetComponent<PlayerEntity>();
 			OnPlayerSelect?.Invoke(SelectedPlayer);
+		}
+	}
+	
+	public void Deselect()
+	{
+		if(SelectedPlayer != null)
+		{
+			SelectedPlayer = null;
+			OnPlayerDeselect?.Invoke(SelectedPlayer);
 		}
 	}
 }
