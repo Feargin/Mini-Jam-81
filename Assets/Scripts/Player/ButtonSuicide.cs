@@ -24,8 +24,9 @@ public class ButtonSuicide : MonoBehaviour
     }
 
     private void NextTurn(bool b)
-    {
-        _suicideButton.interactable = false;
+	{
+		if(_suicideButton != null)
+        	_suicideButton.interactable = false;
     }
 
     private void Start()

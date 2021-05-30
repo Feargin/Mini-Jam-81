@@ -116,7 +116,7 @@ public class MoveHelper : Singleton<MoveHelper>
 
 	private void InfoPanel()
 	{
-		if (_selectedEntity is { } && _selectedEntity.gameObject.layer == 8)
+		if (_selectedEntity != null && _selectedEntity.gameObject.layer == 8)
 		{
 			infoPanel.SetActive(true);
 			imalePanel.sprite = imageInfo[_selectedEntity.TypeEnemy];
