@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
 			var sequence = DOTween.Sequence();
 			sequence.Append(transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear));
 			sequence.OnComplete(CompliteMove);
-			print(completeEvent);
+			//print(completeEvent);
 			if(completeEvent != null)
 				sequence.OnComplete(completeEvent);
 		}
