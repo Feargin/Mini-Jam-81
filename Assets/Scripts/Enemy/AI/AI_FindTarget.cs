@@ -18,6 +18,20 @@ public class AI_FindTarget : AI
 	
 	private void SelectPlayerTarget()
 	{
-		Target = _spawn.Players[Random.Range(0, _spawn.Players.Count)].GetComponent<Entity>();
+		foreach(var p in _spawn.Players)
+		{
+			if(Target != null)
+			{
+				if((p.transform.position - transform.position).magnitude 
+					< (Target.transform.position - transform.position).magnitude)
+				{
+					Target = p.GetComponent<Entity>();
+				}
+			}
+			else
+			{
+				Target = p.GetComponent<Entity>();
+			}
+		}
 	}
 }

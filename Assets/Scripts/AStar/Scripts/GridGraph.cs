@@ -51,20 +51,20 @@ public class GridGraph
     /// <summary>
     /// Returns a List of neighbouring Nodes
     /// </summary>
-	public List<Node> Neighbours(Node n, out List<Node> obstacles)
+	public List<Node> Neighbours(Node n, out List<Node> obstacles, int distance = 1)
     {
         List<Node> results = new List<Node>();
 	    obstacles = new List<Node>();
 
         List<Vector2> directions = new List<Vector2>()
         {
-            new Vector2( -1, 0 ), // left
+            new Vector2( -distance, 0 ), // left
 	        //new Vector2(-1, 1 ),  // top-left, comment it out for 4-direction movement
-            new Vector2( 0, 1 ),  // top
+            new Vector2( 0, distance ),  // top
 	        //new Vector2( 1, 1 ),  // top-right, comment it out for 4-direction movement
-            new Vector2( 1, 0 ),  // right
+            new Vector2( distance, 0 ),  // right
 	        //new Vector2( 1, -1 ), // bottom-right, comment it out for 4-direction movement
-            new Vector2( 0, -1 ), // bottom
+            new Vector2( 0, -distance ), // bottom
 	        //new Vector2( -1, -1 ) // bottom-left, comment it out for 4-direction movement
         };
 
@@ -140,6 +140,9 @@ public class GridGraph
 	public Node WorldToNode(Vector3 pos)
 	{
 		Vector2Int index = WorldToIndex(pos);
+		if(index.x < 0 || index.x > Grid.GetLength(0) - 1) return null;
+		if(index.y < 0 || index.y > Grid.GetLength(1) - 1) return null;
+		
 		return Grid[index.x, index.y];
 	}
 

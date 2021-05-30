@@ -179,7 +179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3489742531826560216
 Transform:
   m_ObjectHideFlags: 0
@@ -201,14 +201,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4248367144461444520}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a59cedcd4c1f1b04891683dbaf068a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InitialState: 1
   NextState: {fileID: 432638589653208349}
-  Target: {fileID: -2984314876228452400}
+  Target: {fileID: 0}
 --- !u!114 &432638589653208349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4248367144461444520}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 964c2a3abb473a94d90c3a41164bf5da, type: 3}
   m_Name: 
@@ -224,7 +224,7 @@ MonoBehaviour:
   InitialState: 0
   NextState: {fileID: 0}
   AI_Target: {fileID: 47252157214429947}
-  Movement: {fileID: 0}
+  Movement: {fileID: 1667460327289510066}
   Attack: {fileID: 185042959906060418}
 --- !u!1 &6852249841204286847
 GameObject:
@@ -337,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7311511916583123538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7226262, y: -1.7708564, z: 3.5948136}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 5463129417719051416}
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 0
-  MaxActionPoints: 4
+  MaxActionPoints: 2
   _currentActionPoints: 0
   _currentHealth: 0
   movement: {fileID: 0}
@@ -392,7 +392,7 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 0}
   - {x: -2, y: 0, z: 0}
   - {x: -3, y: 0, z: 0}
-  _vfx: {fileID: 0}
+  _projectile: {fileID: 9008995579563573183, guid: 58e0c9168e7643a4ead0248d54ebe152, type: 3}
 --- !u!114 &1667460327289510066
 MonoBehaviour:
   m_ObjectHideFlags: 0

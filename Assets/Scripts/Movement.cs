@@ -37,19 +37,21 @@ public class Movement : MonoBehaviour
 		//}
 	}
 	
-	public void MoveTo(Vector3 position)
+	public void MoveTo(Vector3 position, bool ignoreDistance = false)
 	{
 		path = pathfinding.FindPath(transform.position, position);
 		List<Vector3> pathL = new List<Vector3>();
-		foreach(var v in path)
+		for(int i = 0; i < path.Count; i++)
 		{
+			if(i > entity._currentActionPoints && ignoreDistance)
+				break;
 			Vector3 v3 = Vector3.zero;
-			v3.x = v.Position.x * pathfinding.map.GridSize;
+			v3.x = path[i].Position.x * pathfinding.map.GridSize;
 			v3.y = transform.position.y;
-			v3.z = v.Position.y * pathfinding.map.GridSize;
+			v3.z = path[i].Position.y * pathfinding.map.GridSize;
 			pathL.Add(v3);
 		}
-		if(pathL.Count > 0 && pathL.Count <= entity._currentActionPoints)
+		if(pathL.Count > 0 && (pathL.Count <= entity._currentActionPoints || ignoreDistance))
 		{
 			entity._currentActionPoints = 0;
 			transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
