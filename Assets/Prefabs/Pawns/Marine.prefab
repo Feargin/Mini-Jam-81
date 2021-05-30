@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8f19e90825de643b8465175dccf517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _needVisiable: 0
   _damage: 20
   RangeAttak:
   - {x: 1, y: 0, z: 0}
@@ -158,7 +159,7 @@ MonoBehaviour:
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
-  _vfx: {fileID: 100008, guid: 95cb04c70e05847c0a30450e4c714700, type: 3}
+  _vfx: {fileID: 100004, guid: 417d95259df90e4488eb927fde45cba3, type: 3}
   _isDead: 0
   AI_Behavoiur: {fileID: 1331340389920567309}
   TurnPassed: 0

@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject _winPanel;
     [SerializeField] private GameObject _failPanel;
+    private float _timer = 0;
     private void Start()
     {
         _winPanel.SetActive(false);
@@ -16,18 +17,22 @@ public class GameController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (ChangeTurn.Instance.CountTurn >= 2)
+        if ((Spawn.Instance.Enemyes.Count <= 0 || Spawn.Instance.Players.Count <= 0) && ChangeTurn.Instance.CountTurn >= 2) _timer += Time.deltaTime;
+
+        if (ChangeTurn.Instance.CountTurn >= 2 && _timer >= 2f)
         {
             if (Spawn.Instance.Enemyes.Count <= 0)
             {
-                _winPanel.SetActive(true);
+                UIManager.Instance.EnablePanel(_winPanel);
                 ChangeTurn.Instance.CountTurn = 0;
             }
             else if (Spawn.Instance.Players.Count <= 0)
             {
-                _failPanel.SetActive(true);
+                UIManager.Instance.EnablePanel(_failPanel);
                 ChangeTurn.Instance.CountTurn = 0;
             }
+
+            _timer = 0;
         }
     }
 

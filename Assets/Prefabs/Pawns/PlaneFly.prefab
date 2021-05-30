@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8f19e90825de643b8465175dccf517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _needVisiable: 0
   _damage: 1
   RangeAttak: []
   _projectile: {fileID: 0}
@@ -97,7 +98,10 @@ MonoBehaviour:
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
-  _vfx: {fileID: 100008, guid: 95cb04c70e05847c0a30450e4c714700, type: 3}
+  _vfx: {fileID: 1255101210193260751, guid: a56c4afb6ccddbd4eb08f6ad1a0f186d, type: 3}
+  _isDead: 0
+  AI_Behavoiur: {fileID: 0}
+  TurnPassed: 0
 --- !u!54 &-6254472678165206597
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
 --- !u!1001 &59995859576219665
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -524,6 +524,7 @@ MonoBehaviour:
   Enemyes: []
   Players: []
   PlayerControler: {fileID: 972994948}
+  _vfxKaugySpawn: {fileID: 7596903367324611877, guid: 384200f951b41ad4cbe4103740b4a1ad, type: 3}
 --- !u!114 &133333588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2562,8 +2563,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _numTurn: 0400000007000000
-  _countEnemy: 000000000200000003000000
-  _indexEnemy: 020000000100000001000000
+  _countEnemy: 020000000100000001000000
+  _indexEnemy: 000000000200000003000000
   _nextTurn: {fileID: 2115669519}
   _countTurnText: {fileID: 1625210692}
   CountTurn: 0

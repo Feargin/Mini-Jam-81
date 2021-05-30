@@ -333,7 +333,7 @@ MonoBehaviour:
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 1331999730439473259}
-  _vfx: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
+  _vfx: {fileID: 7001993309038369502, guid: a0b343e96e045ef4abdbc0d1692a32f1, type: 3}
   _isDead: 0
 --- !u!114 &4824105690842836537
 MonoBehaviour:

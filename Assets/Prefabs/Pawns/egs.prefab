@@ -104,7 +104,7 @@ MonoBehaviour:
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
-  _vfx: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
+  _vfx: {fileID: 3156496839308500866, guid: 1c75f41fc2252d64daa60854ec047202, type: 3}
   _isDead: 0
   _CountTurn: 4
 --- !u!65 &2853561995091121345
