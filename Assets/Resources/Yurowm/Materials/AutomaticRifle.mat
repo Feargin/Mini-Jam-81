@@ -20,8 +20,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-<<<<<<< Updated upstream
-=======
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -34,14 +32,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
->>>>>>> Stashed changes
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-<<<<<<< Updated upstream
-    m_Floats: []
-=======
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -86,17 +80,13 @@ Material:
     - _UseNormalMap: 0
     - _UseRoughnessMap: 0
     - _ZWrite: 1
->>>>>>> Stashed changes
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< Updated upstream
-=======
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
     - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
     - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
->>>>>>> Stashed changes
   m_BuildTextureStacks: []
 --- !u!114 &8592801087657273844
 MonoBehaviour:

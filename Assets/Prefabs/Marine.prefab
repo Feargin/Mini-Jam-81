@@ -77,9 +77,10 @@ GameObject:
   - component: {fileID: 7821084891220369104}
   - component: {fileID: 2066971244915185988}
   - component: {fileID: 3093038144774664345}
-  - component: {fileID: 3558802539719490588}
+  - component: {fileID: 8696108128361479887}
   - component: {fileID: -8816152302581555763}
-  m_Layer: 6
+  - component: {fileID: 3558802539719490588}
+  m_Layer: 0
   m_Name: Marine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveDistance: 4
+  pathfinding: {fileID: 0}
+  tile: {fileID: 0}
 --- !u!65 &7821084891220369104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,12 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f62ce80f4f6214eafb021f316abf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  _health: 0
-  _currentHealth: 0
-  movement: {fileID: 0}
-  _healtBar: {fileID: 0}
-=======
   _health: 1
   MaxActionPoints: 2
   _currentActionPoints: 0
@@ -199,7 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathfinding: {fileID: 0}
   tile: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!54 &3558802539719490588
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -212,7 +207,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
@@ -278,16 +273,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2345435878546341627, guid: ffdeef7b33d8e44a28e8a64f9e4ba50b, type: 3}
   m_PrefabInstance: {fileID: 2065830949624281158}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-8816152302581555763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6620909046267814744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDistance: 4

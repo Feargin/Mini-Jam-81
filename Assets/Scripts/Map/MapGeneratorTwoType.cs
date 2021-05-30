@@ -59,7 +59,10 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
     {
 	    if (coordinates != null)
 	    {
-	    	Tile[,] tiles = new Tile[xSize, ySize];
+		    
+		    
+
+			    Tile[,] tiles = new Tile[xSize, ySize];
 	    	
 		    string nameGroupOne = "Ocean";
 		    string nameGroupTwo = "Forest";
@@ -114,8 +117,6 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 		    {
 			    for (int y = 0; y < ySize; y++)
 			    {
-<<<<<<< Updated upstream
-=======
 				    int shance = Random.Range(0, 100);
 				    
 				    float yRotation = 0;
@@ -124,7 +125,6 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 				    else if(shance < 75) yRotation = 180f;
 				    else if(shance < 100) yRotation = 270f;
 				    //print(shance + " rot = " + yRotation);
->>>>>>> Stashed changes
 			    	Tile newCell = null;
 				    if (coordinates[x, y] == 0)
 				    {
@@ -132,10 +132,7 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 					    newCell = Instantiate(CellTypeOne, cellPosition, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupOne;
-<<<<<<< Updated upstream
-=======
 					    newCell.transform.eulerAngles = new Vector3(0, yRotation, 0);
->>>>>>> Stashed changes
 				    }
 				    else if (coordinates[x, y] == 1)
 				    {
@@ -143,10 +140,7 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 					    newCell = Instantiate(CellTypeTwo, cellPosition, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupTwo;
-<<<<<<< Updated upstream
-=======
 					    newCell.transform.eulerAngles = new Vector3(0, yRotation, 0);
->>>>>>> Stashed changes
 				    }
 				    else if (coordinates[x, y] == 2)
 				    {
@@ -154,10 +148,7 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 					    newCell = Instantiate(CellTypeThree, cellPosition, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupTwo;
-<<<<<<< Updated upstream
-=======
 					    newCell.transform.eulerAngles = new Vector3(0, yRotation, 0);
->>>>>>> Stashed changes
 				    }
 				    tiles[x,y] = newCell;
 			    }

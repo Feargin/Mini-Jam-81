@@ -6,6 +6,7 @@ public class Tile : MonoBehaviour
 	[ReadOnly] public Entity EntityIn;
 	[SerializeField] private MeshRenderer _meshRender;
 	public Color TileColor = Color.white;
+	public bool Selected;
 	private Color _oldColor;
 	[SerializeField] private bool _walkable = true;
 	public bool CanBuild = false;
@@ -13,8 +14,9 @@ public class Tile : MonoBehaviour
 
 	public bool IsPassable(bool withEntity)
 	{
-		return (_walkable && EntityIn == null && withEntity == false) 
-			|| (_walkable && EntityIn != null && withEntity == true);
+		return (_walkable && EntityIn == null && withEntity == false)
+			|| (_walkable && EntityIn != null && withEntity == true)
+			|| (_walkable && Selected && EntityIn != null && withEntity == false);
 	}
 
 	public void ResetColor()

@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 
-public class PlayerSelector : MonoBehaviour
+public class PlayerSelector : Singleton<PlayerSelector>
 {
 	[Header("------------- Info ----------------------")]
 	[ReadOnly] public Entity SelectedPlayer;
 	
 	[Header("------------- Dependencies --------------")]
 	[SerializeField] private LayerMask _playerMask;
+	[SerializeField] private LayerMask _walkableMask;
+	public Entity Target;
 	
 	#region Events
 	public static event System.Action<Entity> OnPlayerSelect;
@@ -26,6 +28,16 @@ public class PlayerSelector : MonoBehaviour
 	    {
 	    	SelectPlayerEntity();
 	    }
+	    RaycastHit hit;
+	    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity, _walkableMask, QueryTriggerInteraction.Ignore))
+	    {
+		    if(hit.transform.GetComponent<Tile>() && hit.transform.GetComponent<Tile>().EntityIn)
+		    {
+			    Map.Instance.ReloadSelectTiles();
+			    hit.transform.GetComponent<Tile>().Selected = true;
+			    Target = hit.transform.GetComponent<Tile>().EntityIn;
+		    }
+	    }
     }
     
 	private void SelectPlayerEntity()
@@ -40,7 +52,7 @@ public class PlayerSelector : MonoBehaviour
 			}
 		}
 	}
-	
+
 	public void Deselect()
 	{
 		if(SelectedPlayer != null)

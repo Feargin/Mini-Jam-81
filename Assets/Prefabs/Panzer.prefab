@@ -162,8 +162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &4072543476595375841
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +260,6 @@ MonoBehaviour:
   AI_Target: {fileID: 47252157214429947}
   Movement: {fileID: 1667460327289510066}
   Attack: {fileID: 185042959906060418}
->>>>>>> Stashed changes
 --- !u!1 &6852249841204286847
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,12 +350,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1274926669815720520}
-  - component: {fileID: 1667460327289510066}
-  - component: {fileID: 5917615209057552346}
-  - component: {fileID: 185042959906060418}
   - component: {fileID: -2984314876228452400}
+  - component: {fileID: 185042959906060418}
+  - component: {fileID: 1667460327289510066}
+  - component: {fileID: 3402772359210795241}
   - component: {fileID: 6056889782206426629}
-  m_Layer: 6
+  - component: {fileID: 5917615209057552346}
+  m_Layer: 0
   m_Name: Panzer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,17 +374,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
-<<<<<<< Updated upstream
-  - {fileID: 5463129417719051416}
-  - {fileID: 2429927523196939387}
-  - {fileID: 2068149546666745471}
-=======
   - {fileID: 3262226089691075565}
->>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1667460327289510066
+--- !u!114 &-2984314876228452400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,25 +387,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7311511916583123538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
+  m_Script: {fileID: 11500000, guid: e6f62ce80f4f6214eafb021f316abf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  MoveDistance: 4
---- !u!65 &5917615209057552346
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7311511916583123538}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
-=======
   _health: 1
   MaxActionPoints: 2
   _currentActionPoints: 0
@@ -421,7 +397,6 @@ BoxCollider:
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
   _vfx: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
->>>>>>> Stashed changes
 --- !u!114 &185042959906060418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,10 +423,6 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 0}
   - {x: -2, y: 0, z: 0}
   - {x: -3, y: 0, z: 0}
-<<<<<<< Updated upstream
-  _vfx: {fileID: 0}
---- !u!114 &-2984314876228452400
-=======
   _projectile: {fileID: 9008995579563573183, guid: 58e0c9168e7643a4ead0248d54ebe152, type: 3}
 --- !u!114 &1667460327289510066
 MonoBehaviour:
@@ -468,7 +439,6 @@ MonoBehaviour:
   pathfinding: {fileID: 0}
   tile: {fileID: 0}
 --- !u!114 &3402772359210795241
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,13 +447,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7311511916583123538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f62ce80f4f6214eafb021f316abf76, type: 3}
+  m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 0
-  _currentHealth: 0
-  movement: {fileID: 0}
-  _healtBar: {fileID: 0}
+  map: {fileID: 0}
 --- !u!54 &6056889782206426629
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -496,12 +463,8 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-<<<<<<< Updated upstream
-  m_Constraints: 0
-  m_CollisionDetection: 3
-=======
   m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!65 &5917615209057552346
@@ -517,4 +480,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes

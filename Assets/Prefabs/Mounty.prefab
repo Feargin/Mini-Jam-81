@@ -31,12 +31,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-<<<<<<< Updated upstream
-  m_Children: []
-=======
   m_Children:
   - {fileID: 7837209445429488830}
->>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53,14 +49,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityIn: {fileID: 0}
-<<<<<<< Updated upstream
-  _meshRender: {fileID: 2563087152094722717}
-=======
   _meshRender: {fileID: 6357293130349165871}
   TileColor: {r: 1, g: 1, b: 1, a: 1}
   Selected: 0
->>>>>>> Stashed changes
   _walkable: 0
+  CanBuild: 0
 --- !u!33 &5690440643936430898
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -76,7 +69,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399103389136481902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -88,7 +81,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e79bf5e6d8637f64783ff0a762419b8b, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,8 +132,6 @@ MonoBehaviour:
   SpawnPlane: 0
   SpawnPanzer: 0
   SpawnArtillery: 0
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &2012235591964989579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,4 +199,3 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4887885501304317348, guid: 495769b7f3c5c5542839681edbd875fa, type: 3}
   m_PrefabInstance: {fileID: 2012235591964989579}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes

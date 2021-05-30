@@ -136,8 +136,6 @@ public class GridGraph
 		Vector2Int local = new Vector2Int(newX, newY);
 		return local;
 	}
-<<<<<<< Updated upstream
-=======
 	
 	public Node WorldToNode(Vector3 pos)
 	{
@@ -147,7 +145,6 @@ public class GridGraph
 		
 		return Grid[index.x, index.y];
 	}
->>>>>>> Stashed changes
 
     public int Cost(Node b)
     {

@@ -15,7 +15,7 @@ public class Spawn : Singleton<Spawn>
     [SerializeField] private int _countArtillery = 2;
     [Space]
     [Header("---------------------------- Системные --------------------------")]
-    [SerializeField] private LayerMask _tileMask;
+    public LayerMask _tileMask;
 	public Transform Kaujy;
     public Transform EpicKaujy;
     [SerializeField] private Transform [] _enemy;
@@ -71,7 +71,7 @@ public class Spawn : Singleton<Spawn>
                 Ray ray = new Ray(new Vector3(spawnCoord.x, 6, spawnCoord.z), Vector3.down);
                 RaycastHit hit = new RaycastHit();
                 
-                if (!Physics.Raycast(ray, out hit, 100f)) continue;
+                if (!Physics.Raycast(ray, out hit, 100f, _tileMask, QueryTriggerInteraction.Ignore)) continue;
                 if (hit.transform.GetComponent<TileParameters>() != null &&
                     hit.transform.GetComponent<TileParameters>().SpawnKaujy && setUnset)
                 {
@@ -154,7 +154,7 @@ public class Spawn : Singleton<Spawn>
 	            GridSpawnKaujy(2, false);
                 
 	            PlayerControler.SetActive(true);
-	            OnGameStart?.Invoke();
+	            //OnGameStart?.Invoke();
                 
                 _spawnPanel.SetActive(false);
                 return;
@@ -184,7 +184,6 @@ public class Spawn : Singleton<Spawn>
               hit.transform.gameObject.GetComponent<Tile>().CanBuild)) return;
         if(hit.transform.GetComponent<TileParameters>() != null && hit.transform.GetComponent<TileParameters>().SpawnKaujy)
         {
-            print((hit.transform.gameObject.GetComponent<Tile>().TileColor));
             _coordCell = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.8f, hit.transform.position.z);
             hit.transform.gameObject.GetComponent<Tile>().SetColor(Color.blue);
             _targetCell = hit.transform;

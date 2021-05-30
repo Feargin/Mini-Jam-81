@@ -1,25 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Attak : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    public int _minDamage;
-    public int _maxDamage;
-    public List<Vector3> RangeAttak;
-    [SerializeField] private GameObject _vfx;
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-=======
 	public int _damage = 1;
 	public List<Vector3Int> RangeAttak;
 	[SerializeField] private Projectile _projectile;
@@ -92,5 +75,4 @@ public class Attak : MonoBehaviour
 		}
 		return closest;
 	}
->>>>>>> Stashed changes
 }

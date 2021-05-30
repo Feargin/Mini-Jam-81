@@ -1,18 +1,30 @@
 ﻿using UnityEngine;
+using UnityEngine.tvOS;
 using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
 	[Header("------------------ Настройки кайдзю -----------------")]
 	public int _health;
+	public int MaxActionPoints = 4;
+	public int _currentActionPoints;
 	[SerializeField] private int _currentHealth;
 	[Space]
 	[Header("--------------------- Системные --------------------")]
 	[HideInInspector] public Movement movement;
 	[SerializeField] private Image _healtBar;
+	[SerializeField] private GameObject _vfx;
 	
+	private void OnEnable() => ChangeTurn.TheNextTurn += ResetActionPoints;
+	private void OnDisable() => ChangeTurn.TheNextTurn -= ResetActionPoints;
+
+	private void ResetActionPoints(bool f)
+	{
+		_currentActionPoints = MaxActionPoints;
+	}
 	private void Awake()
 	{
+		_currentActionPoints = MaxActionPoints;
 		movement = GetComponent<Movement>();
 	}
 
@@ -25,20 +37,14 @@ public class Entity : MonoBehaviour
 	public void DealDamage(int damage)
 	{
 		_health -= damage;
-<<<<<<< Updated upstream
-		_healtBar.fillAmount = _health / _currentHealth;
-=======
 		if(_healtBar != null)
 			_healtBar.fillAmount = (float)_health / (float)_currentHealth;
->>>>>>> Stashed changes
 		if (_health <= 0) Kill();
 		
 	}
 
 	private void Kill()
 	{
-<<<<<<< Updated upstream
-=======
 		if(this is Enemy) Spawn.Instance.Enemyes.Remove(transform);
 		else
 		{
@@ -48,7 +54,6 @@ public class Entity : MonoBehaviour
 
 		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
 		Destroy(vfx, 1.5f);
->>>>>>> Stashed changes
 		Destroy(gameObject);
 	}
 }
