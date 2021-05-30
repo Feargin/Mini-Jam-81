@@ -2,8 +2,8 @@
 
 public class Egg : PlayerEntity
 {
-    private int _liveCount = 0;
-    [SerializeField] private int _CountTurn = 0;
+    public int _liveCount = 0;
+    public int _CountTurn = 0;
     private void OnEnable() => ChangeTurn.TheNextTurn += StartCountLive;
     private void OnDisable() => ChangeTurn.TheNextTurn -= StartCountLive;
     

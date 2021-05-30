@@ -9,7 +9,7 @@ public class MoveHelper : Singleton<MoveHelper>
 	[SerializeField] private LayerMask _entityMask;
 	[SerializeField] private Color _passableColor = Color.yellow;
 	[SerializeField] private Color _enemyColor = Color.red;
-	[SerializeField] private GameObject infoPanel;
+	[SerializeField] private GameObject infoPanel, eggPanel;
 	[SerializeField] private TMP_Text[] stats;
 	[SerializeField] private Sprite[] imageInfo;
 	[SerializeField] private Image imalePanel;
@@ -121,15 +121,22 @@ public class MoveHelper : Singleton<MoveHelper>
 			infoPanel.SetActive(true);
 			imalePanel.sprite = imageInfo[_selectedEntity.TypeEnemy];
 			stats[0].text = _selectedEntity.name;
-		if(_selectedEntity.gameObject.TryGetComponent(out Attak attack))
+			if(_selectedEntity.gameObject.TryGetComponent(out Attak attack))
 			stats[1].text = "" + attack._damage;
-		else if(_selectedEntity.gameObject.TryGetComponent(out CollideAttack attack2))
+			else if(_selectedEntity.gameObject.TryGetComponent(out CollideAttack attack2))
 			stats[1].text = "" + attack2.Damage;
-		stats[2].text = "" + _selectedEntity.MaxActionPoints;
+			stats[2].text = "" + _selectedEntity.MaxActionPoints;
+		}
+		else if (_selectedEntity != null && _selectedEntity.TypeEnemy == 4)
+		{
+			eggPanel.SetActive(true);
+			stats[3].text = "" + (_selectedEntity.gameObject.GetComponent<Egg>()._CountTurn -
+			                      _selectedEntity.gameObject.GetComponent<Egg>()._liveCount);
 		}
 		else
 		{
 			infoPanel.SetActive(false);
+			eggPanel.SetActive(false);
 		}
 	}
 	
