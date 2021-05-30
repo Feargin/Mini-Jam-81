@@ -4,22 +4,27 @@ public class AI_FindTarget : AI
 {
 	public Entity Target;
 	private Spawn _spawn;
-    
-	private void Start()
+	protected Spawn Spawn
 	{
-		_spawn = Spawn.Instance;
+		get 
+		{
+			if(_spawn == null)
+				_spawn = Spawn.Instance;
+			return _spawn;
+		}
 	}
     
 	public override void BeginState()
 	{
+		//print(111);
 		SelectPlayerTarget();
-		if(Target != null)
-			ExitState();
+		ExitState();
 	}
 	
 	private void SelectPlayerTarget()
 	{
-		foreach(var p in _spawn.Players)
+		Target = null;
+		foreach(var p in Spawn.Players)
 		{
 			if(p != null && Target != null)
 			{

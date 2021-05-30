@@ -1,23 +1,29 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Attak : MonoBehaviour
 {
 	public int _damage = 1;
 	public List<Vector3Int> RangeAttak;
+	private TweenCallback _onAttackEnd;
 	[SerializeField] private Projectile _projectile;
-	//[SerializeField] private GameObject _vfx;
 	
-	public void Attack(Entity entity)
+	public void Attack(Entity entity, TweenCallback onAttackEnd = null)
 	{
+		_onAttackEnd = onAttackEnd;
 		if(_projectile != null)
 		{
 			Projectile proj = Instantiate(_projectile, transform.position, Quaternion.identity);
 			proj.Init(entity.transform.position);
+			proj.OnExplode += () => { entity.DealDamage(_damage); _onAttackEnd?.Invoke();};
 		}
-		entity.DealDamage(_damage);
+		else
+		{
+			entity.DealDamage(_damage);
+		}
 	}
-    
+	
 	public bool CanAttack(Entity entity)
 	{
 		GridGraph grid = entity.movement.pathfinding.map.nodemap;

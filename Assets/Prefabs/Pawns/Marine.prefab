@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2254138901100733254
 Transform:
   m_ObjectHideFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialState: 1
+  FinalState: 0
   NextState: {fileID: 1170764065092245348}
   Owner: {fileID: 3093038144774664345}
   Target: {fileID: 0}
@@ -61,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialState: 0
+  FinalState: 1
   NextState: {fileID: 0}
   Owner: {fileID: 3093038144774664345}
   AI_Target: {fileID: 7359659050513014328}
@@ -76,12 +78,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3397112587954418498}
   - component: {fileID: 3004330577222140344}
-  - component: {fileID: 7821084891220369104}
   - component: {fileID: 2066971244915185988}
   - component: {fileID: 3093038144774664345}
   - component: {fileID: 8696108128361479887}
   - component: {fileID: -8816152302581555763}
   - component: {fileID: 3558802539719490588}
+  - component: {fileID: 7821084891220369104}
   m_Layer: 8
   m_Name: Marine
   m_TagString: Untagged
@@ -119,19 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathfinding: {fileID: 0}
   tile: {fileID: 0}
---- !u!65 &7821084891220369104
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6620909046267814744}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2066971244915185988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,12 +153,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
-  MaxActionPoints: 2
+  MaxActionPoints: 3
   _currentActionPoints: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
   _vfx: {fileID: 100008, guid: 95cb04c70e05847c0a30450e4c714700, type: 3}
+  _isDead: 0
+  AI_Behavoiur: {fileID: 1331340389920567309}
+  TurnPassed: 0
 --- !u!114 &8696108128361479887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
 --- !u!114 &-8816152302581555763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +204,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!65 &7821084891220369104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6620909046267814744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.27, z: 0}
 --- !u!1001 &332327467785685365
 PrefabInstance:
   m_ObjectHideFlags: 0

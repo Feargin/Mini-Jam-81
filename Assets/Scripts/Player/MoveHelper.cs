@@ -75,7 +75,6 @@ public class MoveHelper : Singleton<MoveHelper>
 	public void DeselectEntity()
 	{
 		HideArea();
-		_lockSelector = false;
 		_mouseOverSelected = false;
 		_selectedEntity = null;
 		_pathfinding = null;
@@ -108,7 +107,10 @@ public class MoveHelper : Singleton<MoveHelper>
 	
 	private void CalculatePath()
 	{
-		_passablePath = _pathfinding.FindPossibleMovement(_selectedEntity.transform.position, _selectedEntity._currentActionPoints, out _obstacles);
+		if(_selectedEntity is Enemy)
+			_passablePath = _pathfinding.FindPossibleMovement(_selectedEntity.transform.position, _selectedEntity.MaxActionPoints, out _obstacles);
+		else
+			_passablePath = _pathfinding.FindPossibleMovement(_selectedEntity.transform.position, _selectedEntity._currentActionPoints, out _obstacles);
 	}
 	
 	private void ShowArea()

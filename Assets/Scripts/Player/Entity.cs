@@ -49,7 +49,7 @@ public class Entity : MonoBehaviour
 	private void Kill()
 	{
 		_isDead = true;
-		if(this is Enemy) Spawn.Instance.Enemyes.Remove(transform);
+		if(this is Enemy) Spawn.Instance.Enemyes.Remove(this as Enemy);
 		else
 		{
 			Spawn.Instance.Players.Remove(transform);

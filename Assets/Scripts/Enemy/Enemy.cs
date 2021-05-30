@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public GameObject AI_Behavoiur;
+	public bool TurnPassed;
+	
+	public void EnableAI()
+	{
+		TurnPassed = false;
+		AI_Behavoiur.SetActive(true);
+	}
+	
+	public void DisableAI()
+	{
+		TurnPassed = true;
+		AI_Behavoiur.SetActive(false);
+	}
 }

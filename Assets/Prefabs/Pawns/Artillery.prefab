@@ -124,12 +124,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4828637454455347319}
-  - component: {fileID: 5014676229011892877}
-  - component: {fileID: 48449487528506853}
   - component: {fileID: 7737780338055467308}
   - component: {fileID: 5586096342175009459}
-  - component: {fileID: -3151390825377288848}
+  - component: {fileID: 5014676229011892877}
   - component: {fileID: 4837625695712049782}
+  - component: {fileID: -3151390825377288848}
+  - component: {fileID: 48449487528506853}
   m_Layer: 8
   m_Name: Artillery
   m_TagString: Untagged
@@ -152,33 +152,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &5014676229011892877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018339493852760173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathfinding: {fileID: 0}
-  tile: {fileID: 0}
---- !u!65 &48449487528506853
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018339493852760173}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7737780338055467308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,12 +200,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
-  MaxActionPoints: 0
+  MaxActionPoints: 1
   _currentActionPoints: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
   _vfx: {fileID: 100008, guid: 95cb04c70e05847c0a30450e4c714700, type: 3}
+  _isDead: 0
+  AI_Behavoiur: {fileID: 5720443418811688080}
+  TurnPassed: 0
+--- !u!114 &5014676229011892877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4018339493852760173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathfinding: {fileID: 0}
+  tile: {fileID: 0}
+--- !u!114 &4837625695712049782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4018339493852760173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &-3151390825377288848
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -249,19 +251,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
---- !u!114 &4837625695712049782
-MonoBehaviour:
+--- !u!65 &48449487528506853
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4018339493852760173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.27, z: 0}
 --- !u!1 &4927255025749885299
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613402337132021393
 Transform:
   m_ObjectHideFlags: 0
@@ -388,8 +390,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialState: 1
+  FinalState: 0
   NextState: {fileID: 4516515971890140306}
-  Owner: {fileID: 0}
+  Owner: {fileID: 5586096342175009459}
   Target: {fileID: 0}
 --- !u!114 &4516515971890140306
 MonoBehaviour:
@@ -404,8 +407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialState: 0
+  FinalState: 1
   NextState: {fileID: 0}
-  Owner: {fileID: 0}
+  Owner: {fileID: 5586096342175009459}
   AI_Target: {fileID: 8609042709155468704}
   Movement: {fileID: 5014676229011892877}
   Attack: {fileID: 7737780338055467308}

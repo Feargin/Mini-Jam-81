@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 	[SerializeField] private ParticleSystem _explosion;
 	[SerializeField] private float _speed = 1f;
 	[SerializeField] private bool _hinged = false;
+	public event System.Action OnExplode;
 	
 	public void Init(Vector3 target)
 	{
@@ -18,6 +19,7 @@ public class Projectile : MonoBehaviour
 	private void Explosion()
 	{
 		_explosion.Play();
+		OnExplode?.Invoke();
 		Destroy(gameObject, 0.1f);
 	}
 }

@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
 		List<Vector3> pathL = new List<Vector3>();
 		for(int i = 0; i < path.Count; i++)
 		{
-			if(i > entity._currentActionPoints && ignoreDistance)
+			if(i >= entity._currentActionPoints && ignoreDistance)
 				break;
 			Vector3 v3 = Vector3.zero;
 			v3.x = path[i].Position.x * pathfinding.map.GridSize;

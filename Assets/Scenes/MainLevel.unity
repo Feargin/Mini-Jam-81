@@ -302,20 +302,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countKaujy: 2
-  _countPanzer: 1
+  _countPanzer: 2
   _countPlane: 0
-  _countMariner: 1
-  _countArtillery: 1
+  _countMariner: 2
+  _countArtillery: 2
   _tileMask:
     serializedVersion: 2
     m_Bits: 128
   Kaujy: {fileID: 6115293160697941040, guid: f7fdfa036e0c3784097b64104e955b06, type: 3}
   EpicKaujy: {fileID: 2068663579295773884, guid: 6c4c42a494cff56469bc61c5b0a29cd7, type: 3}
   _enemy:
-  - {fileID: 1274926669815720520, guid: 8e338fbd130c9f849bcd9650f588082e, type: 3}
-  - {fileID: 352592113627311189, guid: 29ecade1de235e2429848216f81b8b9a, type: 3}
-  - {fileID: 3397112587954418498, guid: 835fa2171865d804097b4685b4a2ff38, type: 3}
-  - {fileID: 4828637454455347319, guid: 21fd883f8f4554b44981fb957ad49a77, type: 3}
+  - {fileID: -2984314876228452400, guid: 8e338fbd130c9f849bcd9650f588082e, type: 3}
+  - {fileID: -1433885455803210353, guid: 29ecade1de235e2429848216f81b8b9a, type: 3}
+  - {fileID: 3093038144774664345, guid: 835fa2171865d804097b4685b4a2ff38, type: 3}
+  - {fileID: 5586096342175009459, guid: 21fd883f8f4554b44981fb957ad49a77, type: 3}
   Enemyes: []
   Players: []
   _spawnPanel: {fileID: 2096298720}
@@ -1193,6 +1193,7 @@ MonoBehaviour:
   _walkableMask:
     serializedVersion: 2
     m_Bits: 128
+  _movement: {fileID: 972994951}
   Target: {fileID: 0}
 --- !u!114 &972994951
 MonoBehaviour:
@@ -1807,6 +1808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1375391393}
   - component: {fileID: 1375391394}
+  - component: {fileID: 1375391395}
   m_Layer: 0
   m_Name: Turns Controller
   m_TagString: Untagged
@@ -1843,6 +1845,19 @@ MonoBehaviour:
   _nextTurn: {fileID: 2115669519}
   _countTurnText: {fileID: 1625210692}
   CountTurn: 0
+--- !u!114 &1375391395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375391392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38afb0db469022c4e92d334f1123f300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawn: {fileID: 133333587}
 --- !u!1 &1401608247
 GameObject:
   m_ObjectHideFlags: 0

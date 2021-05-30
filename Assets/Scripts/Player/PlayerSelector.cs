@@ -8,6 +8,7 @@ public class PlayerSelector : Singleton<PlayerSelector>
 	[Header("------------- Dependencies --------------")]
 	[SerializeField] private LayerMask _playerMask;
 	[SerializeField] private LayerMask _walkableMask;
+	[SerializeField] private PlayerMovement _movement;
 	public Entity Target;
 	
 	#region Events
@@ -26,7 +27,10 @@ public class PlayerSelector : Singleton<PlayerSelector>
     {
 	    if(Input.GetMouseButtonDown(0))
 	    {
-	    	SelectPlayerEntity();
+	    	if(!SelectPlayerEntity())
+	    	{
+	    		_movement.TryMove();
+	    	}
 	    }
 	    RaycastHit hit;
 	    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity, _walkableMask, QueryTriggerInteraction.Ignore))
@@ -40,7 +44,7 @@ public class PlayerSelector : Singleton<PlayerSelector>
 	    }
     }
     
-	private void SelectPlayerEntity()
+	private bool SelectPlayerEntity()
 	{
 		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask, QueryTriggerInteraction.Ignore))
 		{
@@ -48,8 +52,10 @@ public class PlayerSelector : Singleton<PlayerSelector>
 			if(SelectedPlayer != null)
 			{
 				OnPlayerSelect?.Invoke(SelectedPlayer);
+				return true;
 			}
 		}
+		return false;
 	}
 
 	public void Deselect()
