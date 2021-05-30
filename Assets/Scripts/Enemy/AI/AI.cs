@@ -33,4 +33,11 @@ public class AI : MonoBehaviour
 			Owner.DisableAI();
 		}
 	}
+	private void OnDisable()
+	{
+		if(FinalState)
+		{
+			Owner.DisableAI();
+		}
+	}
 }

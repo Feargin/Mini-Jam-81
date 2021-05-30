@@ -11,6 +11,7 @@ public class CollideAttack : MonoBehaviour
 	{
 		if (_enabled && col.transform.TryGetComponent(out PlayerEntity player))
 		{
+			SoundController.Instance.SetClip(4);
 			player.DealDamage(Damage);
 			OnDealDamage?.Invoke();
 		}
