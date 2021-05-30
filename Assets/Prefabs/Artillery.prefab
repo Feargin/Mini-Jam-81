@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2668679793516504606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6501271712031948950}
   - component: {fileID: 3037517289961051105}
   - component: {fileID: 2942958233520699415}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 5586096342175009459}
   - component: {fileID: -3151390825377288848}
   - component: {fileID: 4837625695712049782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Artillery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 8833954016617124448}
   - component: {fileID: 9167006659012933232}
   - component: {fileID: 8228041154619083169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 1613402337132021393}
   - component: {fileID: 8609042709155468704}
   - component: {fileID: 4516515971890140306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: <AI_Behaviour>
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 1931809909486020334}
   - component: {fileID: 4819718386522990391}
   - component: {fileID: 5324539805696706170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
