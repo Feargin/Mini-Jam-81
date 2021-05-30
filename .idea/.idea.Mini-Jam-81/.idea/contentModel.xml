@@ -275,12 +275,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="48 Particle Effect Pack" t="Include">
-          <e p="ShurikenEffectEditor" t="Include">
-            <e p="csShurikenEffectChanger.cs" t="Include" />
-            <e p="csShurikenEffectEditor.cs" t="Include" />
-          </e>
-        </e>
         <e p="Art" t="Include">
           <e p="3D" t="Include">
             <e p="Godzilla" t="Include">
@@ -402,8 +396,10 @@
               <e p="AI.cs" t="Include" />
               <e p="AI_FindTarget.cs" t="Include" />
               <e p="AI_Moving.cs" t="Include" />
+              <e p="AI_MovingFly.cs" t="Include" />
             </e>
             <e p="Attak.cs" t="Include" />
+            <e p="CollideAttack.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemySelector.cs" t="Include" />
             <e p="PanzerStats.cs" t="Include" />

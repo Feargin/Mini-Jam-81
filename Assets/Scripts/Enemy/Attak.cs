@@ -23,6 +23,8 @@ public class Attak : MonoBehaviour
 		{
 			entity.DealDamage(_damage);
 		}
+
+		SoundController.Instance.SetClip(1);
 	}
 	
 	public bool CanAttack(Entity entity)

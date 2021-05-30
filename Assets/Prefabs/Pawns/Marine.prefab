@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canFly: 0
   pathfinding: {fileID: 0}
   tile: {fileID: 0}
 --- !u!114 &2066971244915185988
@@ -158,6 +159,8 @@ MonoBehaviour:
   MaxActionPoints: 3
   _currentActionPoints: 0
   type: 0
+  selectimage: {fileID: 0}
+  TypeEnemy: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
@@ -189,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canFly: 0
   pathfinding: {fileID: 0}
   tile: {fileID: 0}
 --- !u!54 &3558802539719490588
