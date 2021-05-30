@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 1
   NextState: {fileID: 1170764065092245348}
+  Owner: {fileID: 3093038144774664345}
   Target: {fileID: 0}
 --- !u!114 &1170764065092245348
 MonoBehaviour:
@@ -61,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 0
   NextState: {fileID: 0}
+  Owner: {fileID: 3093038144774664345}
   AI_Target: {fileID: 7359659050513014328}
   Movement: {fileID: 3004330577222140344}
   Attack: {fileID: 2066971244915185988}
@@ -150,7 +152,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 1}
   - {x: 0, y: 0, z: -1}
   - {x: -1, y: 0, z: 0}
-  _projectile: {fileID: 0}
+  _projectile: {fileID: 4541432640076719888, guid: f9f51f727cf8c6649bfa71f7f4296ac2, type: 3}
 --- !u!114 &3093038144774664345
 MonoBehaviour:
   m_ObjectHideFlags: 0

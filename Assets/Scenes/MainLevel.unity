@@ -301,10 +301,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countKaujy: 2
-  _countPanzer: 2
+  _countPanzer: 0
   _countPlane: 0
-  _countMariner: 2
-  _countArtillery: 0
+  _countMariner: 0
+  _countArtillery: 1
   _tileMask:
     serializedVersion: 2
     m_Bits: 128

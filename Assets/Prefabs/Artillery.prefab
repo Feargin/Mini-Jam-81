@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7737780338055467308}
   - component: {fileID: 5586096342175009459}
   - component: {fileID: -3151390825377288848}
+  - component: {fileID: 6958065223719541397}
   m_Layer: 0
   m_Name: Artillery
   m_TagString: Untagged
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8f19e90825de643b8465175dccf517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
+  _damage: 25
   RangeAttak:
   - {x: 3, y: 0, z: 0}
   - {x: 4, y: 0, z: 0}
@@ -181,7 +182,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: -5}
   - {x: 1, y: 0, z: -4}
   - {x: -1, y: 0, z: -4}
-  _projectile: {fileID: 0}
+  _projectile: {fileID: 297783246570131822, guid: 8126ddbff85b39f429a0edd19ef1758f, type: 3}
 --- !u!114 &5586096342175009459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +218,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &6958065223719541397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4018339493852760173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
 --- !u!1 &4927255025749885299
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 1
   NextState: {fileID: 4516515971890140306}
+  Owner: {fileID: 5586096342175009459}
   Target: {fileID: 0}
 --- !u!114 &4516515971890140306
 MonoBehaviour:
@@ -359,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 0
   NextState: {fileID: 0}
+  Owner: {fileID: 5586096342175009459}
   AI_Target: {fileID: 8609042709155468704}
   Movement: {fileID: 5014676229011892877}
   Attack: {fileID: 7737780338055467308}

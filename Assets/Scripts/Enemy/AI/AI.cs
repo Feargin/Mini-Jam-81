@@ -4,6 +4,7 @@ public class AI : MonoBehaviour
 {
 	public bool InitialState = false;
 	public AI NextState;
+	public Entity Owner;
 	
 	private void OnEnable() => ChangeTurn.TheNextTurn += TurnBegin;
 	private void OnDisable() => ChangeTurn.TheNextTurn -= TurnBegin;

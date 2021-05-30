@@ -14,16 +14,13 @@ public class Attak : MonoBehaviour
 		{
 			Projectile proj = Instantiate(_projectile, transform.position, Quaternion.identity);
 			proj.Init(entity.transform.position);
-			entity.DealDamage(_damage);
 		}
-		//entity.transform.position += Vector3.up * 0.5f;
+		entity.DealDamage(_damage);
 	}
     
 	public bool CanAttack(Entity entity)
 	{
-		//List<Node> moveArea =  movement.pathfinding.FindPossibleMovement(transform.position, entity._currentActionPoints, out List<Node> _obstacles);
 		GridGraph grid = entity.movement.pathfinding.map.nodemap;
-		print($"{entity} {entity.movement} {entity.movement.pathfinding} {entity.movement.pathfinding.map} {grid}");
 		return CheckInFireRadius(entity, grid);
 	}
     

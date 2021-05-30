@@ -208,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 1
   NextState: {fileID: 432638589653208349}
+  Owner: {fileID: -2984314876228452400}
   Target: {fileID: 0}
 --- !u!114 &432638589653208349
 MonoBehaviour:
@@ -223,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 0
   NextState: {fileID: 0}
+  Owner: {fileID: -2984314876228452400}
   AI_Target: {fileID: 47252157214429947}
   Movement: {fileID: 1667460327289510066}
   Attack: {fileID: 185042959906060418}

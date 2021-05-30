@@ -18,7 +18,6 @@ public class AI_Moving : AI
 		if(Attack.CanAttack(AI_Target.Target) == false)
 		{
 			targetPos = new Vector3();
-			print(Attack +"_"+this.Attack.FindClosestNode(AI_Target.Target));
 			Node closest = this.Attack.FindClosestNode(AI_Target.Target);
 			if(closest == null)
 				return;
@@ -26,7 +25,7 @@ public class AI_Moving : AI
 			targetPos.x = v2.x;
 			targetPos.y = transform.position.y;
 			targetPos.z = v2.y;
-			Movement.MoveTo(targetPos, true);
+			Movement.MoveTo(targetPos, true, OnCompleteMovement);
 		}
 		else
 		{
@@ -34,11 +33,19 @@ public class AI_Moving : AI
 		}
 	}
 	
-	protected void OnDrawGizmos()
+	private void OnCompleteMovement()
 	{
-		if(targetPos == null)
-			return;
-		Gizmos.color = Color.green;
-		Gizmos.DrawWireSphere(targetPos, 0.5f);
+		if(Attack.CanAttack(AI_Target.Target))
+		{
+			this.Attack.Attack(AI_Target.Target);
+		}
 	}
+	
+	//protected void OnDrawGizmos()
+	//{
+	//	if(targetPos == null)
+	//		return;
+	//	Gizmos.color = Color.green;
+	//	Gizmos.DrawWireSphere(targetPos, 0.5f);
+	//}
 }

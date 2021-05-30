@@ -17,7 +17,6 @@ public class PlayerAttak : MonoBehaviour
         
         if (col.transform.GetComponent<Enemy>())
         {
-            print("goo");
             col.transform.GetComponent<Enemy>().DealDamage(100);
         }
     }
