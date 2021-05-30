@@ -7,6 +7,7 @@ using DG.Tweening;
 public class Movement : MonoBehaviour
 {
 	[Header("----------- SETTINGS ----------")]
+	public bool canFly = false;
 	[HideInInspector] public PF_AStar pathfinding;
 	[HideInInspector] public Tile tile;
 	public static event System.Action<Entity> EndMove;
@@ -27,7 +28,10 @@ public class Movement : MonoBehaviour
 	
 	public void MoveTo(Vector3 position, bool ignoreDistance = false, TweenCallback completeEvent = null)
 	{
-		path = pathfinding.FindPath(transform.position, position);
+		if(canFly)
+			path = pathfinding.FindPathFly(transform.position, position);
+		else
+			path = pathfinding.FindPath(transform.position, position);
 		List<Vector3> pathL = new List<Vector3>();
 		for(int i = 0; i < path.Count; i++)
 		{
@@ -45,9 +49,17 @@ public class Movement : MonoBehaviour
 			var sequence = DOTween.Sequence();
 			sequence.Append(transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear));
 			sequence.OnComplete(CompliteMove);
+			print(completeEvent);
 			if(completeEvent != null)
 				sequence.OnComplete(completeEvent);
 		}
+	}
+	
+	public void MoveRandomDir(TweenCallback completeEvent = null)
+	{
+		Vector3 direction = Random.insideUnitCircle.normalized;
+		MoveTo(transform.position + direction * 50f, true, completeEvent);
+		
 	}
 	
 	protected void OnTriggerEnter(Collider other)

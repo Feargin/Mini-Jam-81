@@ -43,6 +43,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
 	    TheNextTurn?.Invoke(false);
 	    CountTurn += 1;
 	    _countTurnText.text = "" + CountTurn;
+	    
 	    foreach (var v in _numTurn)
 	    {
 		    if (v == CountTurn)

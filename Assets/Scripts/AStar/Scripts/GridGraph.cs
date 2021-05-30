@@ -85,7 +85,7 @@ public class GridGraph
         return results;
     }
     
-	public List<Node> Neighbours(Node n)
+	public List<Node> Neighbours(Node n, bool ignoreObstacle = false)
 	{
 		List<Node> results = new List<Node>();
 
@@ -104,7 +104,7 @@ public class GridGraph
 		foreach (Vector2 v in directions)
 		{
 			Vector2 newVector = v + n.Position;
-			if (InBounds(newVector) && Passable(WorldToIndex(newVector), false))
+			if (InBounds(newVector) && (ignoreObstacle || Passable(WorldToIndex(newVector), false)))
 			{
 				results.Add(Grid[(int)newVector.x, (int)newVector.y]);
 			}

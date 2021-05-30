@@ -49,6 +49,7 @@ MonoBehaviour:
   NextState: {fileID: 1170764065092245348}
   Owner: {fileID: 3093038144774664345}
   Target: {fileID: 0}
+  PriorityTarget: 1
 --- !u!114 &1170764065092245348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8f19e90825de643b8465175dccf517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _needVisiable: 0
   _damage: 20
   RangeAttak:
   - {x: 1, y: 0, z: 0}
@@ -155,6 +157,7 @@ MonoBehaviour:
   _health: 1
   MaxActionPoints: 3
   _currentActionPoints: 0
+  type: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
