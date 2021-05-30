@@ -24,7 +24,8 @@ public class Attak : MonoBehaviour
 			entity.DealDamage(_damage);
 		}
 
-		SoundController.Instance.SetClip(1);
+		if(gameObject.GetComponent<Entity>().TypeEnemy != 0) SoundController.Instance.SetClip(1);
+		else SoundController.Instance.SetClip(4);
 	}
 	
 	public bool CanAttack(Entity entity)

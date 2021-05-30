@@ -134,6 +134,7 @@ public class MoveHelper : Singleton<MoveHelper>
 			eggPanel.SetActive(true);
 			stats[3].text = "" + ((_selectedEntity.gameObject.GetComponent<Egg>()._CountTurn -
 			                      _selectedEntity.gameObject.GetComponent<Egg>()._liveCount) / 2);
+			stats[5].text = "" + _selectedEntity._health;
 		}
 		else
 		{

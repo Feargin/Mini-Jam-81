@@ -36,7 +36,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ButtonSuicide.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PF_AStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/AI_Moving.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attak.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/SelectTille.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttak.cs" />
@@ -49,9 +48,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/CollideAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/AI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attak.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveHelper.cs" />
       </list>
     </option>
   </component>
@@ -64,6 +64,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -141,6 +142,7 @@
       <workItem from="1622402868225" duration="1964000" />
       <workItem from="1622405025026" duration="1552000" />
       <workItem from="1622406999059" duration="1775000" />
+      <workItem from="1622410307887" duration="378000" />
     </task>
     <servers />
   </component>
