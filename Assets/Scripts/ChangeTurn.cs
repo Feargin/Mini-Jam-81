@@ -67,6 +67,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
 	    {
 		    if (v == CountTurn)
 		    {
+			    SoundController.Instance.SetClip(2);
 			    for (int i = 0; i < _indexEnemy.Length; i++)
 			    {
 				    Spawn.Instance.Creator(_indexEnemy[i], _countEnemy[i]);
