@@ -22,7 +22,7 @@ public class Spawn : Singleton<Spawn>
 	public List<Enemy> Enemyes;
 	public List<PlayerEntity> Players;
     public GameObject PlayerControler;
-    
+    [SerializeField] private GameObject _vfxKaugySpawn;
     private bool _readySpawn;
     private Vector3 _coordCell;
 	private Transform _targetCell;
@@ -139,6 +139,8 @@ public class Spawn : Singleton<Spawn>
     {
         if (_targetCell != null)
         {
+            var vfx = Instantiate(_vfxKaugySpawn, _coordCell, Quaternion.identity);
+            Destroy(vfx, 3f);
             var player = Instantiate(Kaujy, _coordCell, Quaternion.identity);
             _countKaujy -= 1;
             Players.Add(player);

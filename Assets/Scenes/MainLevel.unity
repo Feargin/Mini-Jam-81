@@ -524,6 +524,7 @@ MonoBehaviour:
   Enemyes: []
   Players: []
   PlayerControler: {fileID: 972994948}
+  _vfxKaugySpawn: {fileID: 7596903367324611877, guid: 384200f951b41ad4cbe4103740b4a1ad, type: 3}
 --- !u!114 &133333588
 MonoBehaviour:
   m_ObjectHideFlags: 0
