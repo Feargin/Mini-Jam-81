@@ -9,7 +9,7 @@ public class EnemyTurnSequence : MonoBehaviour
 	private void OnEnable() => ChangeTurn.TheNextTurn += TurnBegin;
 	private void OnDisable() => ChangeTurn.TheNextTurn -= TurnBegin;
 	
-	private static event System.Action OnNpcEndTurn;
+	public static event System.Action OnNpcEndTurn;
 	
 	private void TurnBegin(bool npc_turn)
 	{

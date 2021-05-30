@@ -510,7 +510,7 @@ MonoBehaviour:
   _countPanzer: 2
   _countPlane: 0
   _countMariner: 2
-  _countArtillery: 1
+  _countArtillery: 2
   _tileMask:
     serializedVersion: 2
     m_Bits: 128
@@ -2605,7 +2605,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593165143}
+  m_GameObject: {fileID: 1401608247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593165143}
+  m_GameObject: {fileID: 1401608247}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1510bdf34d1b52f4b9538b93450a9bad, type: 3}
@@ -2638,7 +2638,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593165143}
+  m_GameObject: {fileID: 1401608247}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -2668,7 +2668,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593165143}
+  m_GameObject: {fileID: 1401608247}
   m_CullTransparentMesh: 1
 --- !u!1 &1625210690
 GameObject:
