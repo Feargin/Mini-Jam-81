@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7879c57bb32b94c97baa91b3dd5ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 20
 --- !u!114 &-1433885455803210353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,11 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
-  MaxActionPoints: 5
+  MaxActionPoints: 4
   _currentActionPoints: 0
   type: 0
   selectimage: {fileID: 0}
   TypeEnemy: 3
+  _immortal: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
@@ -156,8 +158,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9041001316395265700}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3120954, y: -2.4245408, z: 0.08528947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 352592113627311189}
@@ -180,7 +182,7 @@ MonoBehaviour:
   NextState: {fileID: 922357404672604203}
   Owner: {fileID: -1433885455803210353}
   Target: {fileID: 0}
-  PriorityTarget: 0
+  PriorityTarget: 2
 --- !u!114 &922357404672604203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +200,7 @@ MonoBehaviour:
   NextState: {fileID: 0}
   Owner: {fileID: -1433885455803210353}
   AI_Target: {fileID: 7414208788923776234}
+  Attack: {fileID: 8132306906815974351}
   Movement: {fileID: 176161488001588911}
 --- !u!1001 &59995859576219665
 PrefabInstance:

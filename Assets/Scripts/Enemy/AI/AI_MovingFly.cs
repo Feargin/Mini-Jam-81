@@ -3,7 +3,27 @@
 public class AI_MovingFly : AI
 {
 	public AI_FindTarget AI_Target;
+	public CollideAttack Attack;
 	public Movement Movement;
+	private Vector3 _basePosition;
+	private bool IsDealDamage = false;
+	
+	protected void OnEnable()
+	{
+		Attack.OnDealDamage += OnDealDamage;
+	}
+	
+	protected void OnDisable()
+	{
+		Attack.OnDealDamage -= OnDealDamage;
+	}
+	
+	private void OnDealDamage()
+	{
+		IsDealDamage = true;
+		Attack.Disable();
+		//print("Damage!");
+	}
 	
 	public override void BeginState()
 	{
@@ -17,22 +37,39 @@ public class AI_MovingFly : AI
 		}
 	}
 	
-	Vector3 targetPos;
-	private void AttackArea()
+	public override void ExitState()
 	{
-		print(0);
-		Movement.MoveTo(AI_Target.Target.transform.position, true, OnCompleteMovement);
+		IsDealDamage = false;
+		Owner._immortal = false;
+		base.ExitState();
 	}
 	
-	private void OnCompleteMovement()
+	Vector3 targetPos;
+	private void AttackArea()
+	{	
+		_basePosition = transform.position;
+		Owner._immortal = true;
+		Attack.Enable();
+		Movement.MoveTo(AI_Target.Target.transform.position, true, OnCompleteAttack);
+	}
+	
+	private void OnCompleteAttack()
 	{
-		print(1);
-		//Movement.MoveRandomDir(OnCompleteRunAway);
+		if(IsDealDamage)
+		{
+			//print("goBack");
+			Owner._currentActionPoints = Owner.MaxActionPoints;
+			Movement.MoveTo(_basePosition, true, OnCompleteRunAway);
+		}
+		else
+		{
+			ExitState();
+		}
 	}
 	
 	private void OnCompleteRunAway()
 	{
-		print(2);
+		//print("Awayy");
 		ExitState();
 	}
 }

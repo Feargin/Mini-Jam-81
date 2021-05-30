@@ -519,7 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _countKaujy: 2
   _countPanzer: 2
-  _countPlane: 0
+  _countPlane: 2
   _countMariner: 2
   _countArtillery: 2
   _tileMask:
@@ -3151,6 +3151,7 @@ MonoBehaviour:
   _numTurn: 0400000007000000
   _countEnemy: 020000000100000001000000
   _indexEnemy: 000000000200000003000000
+  _playerController: {fileID: 972994948}
   _nextTurn: {fileID: 2115669519}
   _countTurnText: {fileID: 1625210692}
   CountTurn: 0

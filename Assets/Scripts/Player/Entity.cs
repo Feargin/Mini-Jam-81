@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
 	public Type type;
 	public GameObject selectimage;
 	public int TypeEnemy;
+	public bool _immortal = false;
 	[SerializeField] private int _currentHealth;
 	[Space]
 	[Header("--------------------- Системные --------------------")]
@@ -40,7 +41,7 @@ public class Entity : MonoBehaviour
 
 	public void DealDamage(int damage)
 	{
-		if(_isDead) return;
+		if(_isDead || _immortal) return;
 		_health -= damage;
 		if(_healtBar != null)
 			_healtBar.fillAmount = (float)_health / (float)_currentHealth;
@@ -61,8 +62,11 @@ public class Entity : MonoBehaviour
 			}
 		}
 		
-		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
-		Destroy(vfx, 1.5f);
+		if(_vfx != null)
+		{
+			var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
+			Destroy(vfx, 1.5f);
+		}
 		Destroy(gameObject);
 	}
 	
