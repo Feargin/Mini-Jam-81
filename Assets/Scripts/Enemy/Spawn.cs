@@ -21,8 +21,6 @@ public class Spawn : Singleton<Spawn>
 	[SerializeField] private Enemy [] _enemy;
 	public List<Enemy> Enemyes;
     public List<Transform> Players;
-    [SerializeField] private GameObject _spawnPanel;
-    [SerializeField] private TMP_Text _countText;
     public GameObject PlayerControler;
     
     private bool _readySpawn;
@@ -38,8 +36,6 @@ public class Spawn : Singleton<Spawn>
 
     private void Start()
     {
-        _spawnPanel.SetActive(true);
-        _countText.text = "Left: " + _countKaujy;
         Invoke("SpawnPing", 0.2f);
     }
 
@@ -95,7 +91,7 @@ public class Spawn : Singleton<Spawn>
         Creator(3, _countArtillery);
     }
 
-    private void Creator(int index, int count)
+    public void Creator(int index, int count)
     {
         var co = 0;
         while (co < count)
@@ -145,7 +141,6 @@ public class Spawn : Singleton<Spawn>
         {
             var player = Instantiate(Kaujy, _coordCell, Quaternion.identity);
             _countKaujy -= 1;
-            _countText.text = "Left: " + _countKaujy;
             Players.Add(player);
             _targetCell.GetComponent<TileParameters>().SpawnKaujy = false;
             ClearSpawnCoord();
@@ -155,8 +150,7 @@ public class Spawn : Singleton<Spawn>
                 
 	            PlayerControler.SetActive(true);
 	            //OnGameStart?.Invoke();
-                
-                _spawnPanel.SetActive(false);
+
                 return;
             }
             
@@ -187,6 +181,7 @@ public class Spawn : Singleton<Spawn>
             _coordCell = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.8f, hit.transform.position.z);
             hit.transform.gameObject.GetComponent<Tile>().SetColor(Color.blue);
             _targetCell = hit.transform;
+            SpawnKaujy();
         }
         else
         {

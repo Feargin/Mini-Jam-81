@@ -105,7 +105,8 @@ MonoBehaviour:
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
   _vfx: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
-  _liveCount: 2
+  _isDead: 0
+  _CountTurn: 4
 --- !u!65 &2853561995091121345
 BoxCollider:
   m_ObjectHideFlags: 0
