@@ -302,9 +302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countKaujy: 2
-  _countPanzer: 2
+  _countPanzer: 1
   _countPlane: 0
-  _countMariner: 2
+  _countMariner: 1
   _countArtillery: 1
   _tileMask:
     serializedVersion: 2
@@ -1222,9 +1222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selectedEntity: {fileID: 0}
-  _playerMask:
+  _entityMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   _passableColor: {r: 0.38781595, g: 0.38939044, b: 0.7830189, a: 1}
   _enemyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &972994953

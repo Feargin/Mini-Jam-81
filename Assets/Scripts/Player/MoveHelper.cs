@@ -4,20 +4,42 @@ using UnityEngine;
 public class MoveHelper : Singleton<MoveHelper>
 {
 	[ReadOnly] public Entity _selectedEntity;
-	[SerializeField] private LayerMask _playerMask;
+	[SerializeField] private LayerMask _entityMask;
 	[SerializeField] private Color _passableColor = Color.yellow;
 	[SerializeField] private Color _enemyColor = Color.red;
 	
 	private PF_AStar _pathfinding;
 	private List<Node> _passablePath;
-	private bool _checkMouseOver = true;
-	private bool _checkMouseExit = true;
 	private bool _mouseOverSelected = false;
 	private List<Node> _obstacles;
+	private bool _lockSelector = false;
+	
+	private void OnEnable() 
+	{
+		PlayerSelector.OnPlayerSelect += OnPlayerSelect;
+		PlayerSelector.OnPlayerDeselect += OnPlayerDeselect;
+	}
+	
+	private void OnDisable() 
+	{
+		PlayerSelector.OnPlayerSelect -= OnPlayerSelect;
+		PlayerSelector.OnPlayerDeselect -= OnPlayerDeselect;
+	}
+	
+	private void OnPlayerSelect(Entity player)
+	{
+		UnlockSelect();
+		LockSelectTo(player);
+	}
+	
+	private void OnPlayerDeselect(Entity player)
+	{
+		UnlockSelect();
+	}
 	
 	private void Update()
 	{
-		if(_checkMouseOver)
+		if(!_lockSelector)
 		{
 			SelectEntity();
 		}
@@ -25,6 +47,21 @@ public class MoveHelper : Singleton<MoveHelper>
 		{
 			ShowArea();
 		}
+	}
+	
+	public void LockSelectTo(Entity entity)
+	{
+		_lockSelector = true;
+		_mouseOverSelected = true;
+		_selectedEntity = entity;
+		_pathfinding = _selectedEntity.movement.pathfinding;
+		CalculatePath();
+	}
+	
+	public void UnlockSelect()
+	{
+		DeselectEntity();
+		_lockSelector = false;
 	}
 	
 	public void SelectEntity(Entity entity)
@@ -38,6 +75,7 @@ public class MoveHelper : Singleton<MoveHelper>
 	public void DeselectEntity()
 	{
 		HideArea();
+		_lockSelector = false;
 		_mouseOverSelected = false;
 		_selectedEntity = null;
 		_pathfinding = null;
@@ -48,7 +86,7 @@ public class MoveHelper : Singleton<MoveHelper>
 	private void SelectEntity()
 	{
 		RaycastHit hit;
-		if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity, _playerMask, QueryTriggerInteraction.Ignore))
+		if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity, _entityMask, QueryTriggerInteraction.Ignore))
 		{
 			if(hit.transform.TryGetComponent<Entity>(out Entity e) && _selectedEntity != e)
 			{
@@ -70,8 +108,6 @@ public class MoveHelper : Singleton<MoveHelper>
 	
 	private void CalculatePath()
 	{
-		//if(_passablePath != null)
-			//_passablePath.Clear();
 		_passablePath = _pathfinding.FindPossibleMovement(_selectedEntity.transform.position, _selectedEntity._currentActionPoints, out _obstacles);
 	}
 	

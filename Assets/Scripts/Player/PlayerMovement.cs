@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _walkableMask, QueryTriggerInteraction.Ignore))
 		{
 			_selectedPlayer.movement.MoveTo(hit.transform.position);
-			//MoveHelper.Instance.DeselectEntity();
+			MoveHelper.Instance.UnlockSelect();
 		}
 	}
 }

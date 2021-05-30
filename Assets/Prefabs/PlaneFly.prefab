@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1433885455803210353}
   - component: {fileID: -6254472678165206597}
   - component: {fileID: 5172218527805129802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlaneFly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,6 +193,18 @@ PrefabInstance:
     - target: {fileID: 1038585651030613136, guid: 4155d03e3e33120448cd6861abcc15da, type: 3}
       propertyPath: m_Name
       value: plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038585651030613136, guid: 4155d03e3e33120448cd6861abcc15da, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575840817336163438, guid: 4155d03e3e33120448cd6861abcc15da, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172654630436022890, guid: 4155d03e3e33120448cd6861abcc15da, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4155d03e3e33120448cd6861abcc15da, type: 3}

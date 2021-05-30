@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2068149546666745471}
   - component: {fileID: 4269491311439223758}
   - component: {fileID: 2096575734106958463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 5463129417719051416}
   - component: {fileID: 4395557820586096968}
   - component: {fileID: 6439934447019103301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3262226089691075565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 3489742531826560216}
   - component: {fileID: 47252157214429947}
   - component: {fileID: 432638589653208349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: <AI_Behaviour>
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 2429927523196939387}
   - component: {fileID: 6717655034215845852}
   - component: {fileID: 1288792924302289637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 3402772359210795241}
   - component: {fileID: 6056889782206426629}
   - component: {fileID: 5917615209057552346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Panzer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,4 +481,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.37, z: 0}

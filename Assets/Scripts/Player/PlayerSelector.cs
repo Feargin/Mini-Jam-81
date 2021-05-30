@@ -47,7 +47,6 @@ public class PlayerSelector : Singleton<PlayerSelector>
 			SelectedPlayer = hit.transform.gameObject.GetComponent<PlayerEntity>();
 			if(SelectedPlayer != null)
 			{
-				//MoveHelper.Instance.SelectEntity(SelectedPlayer);
 				OnPlayerSelect?.Invoke(SelectedPlayer);
 			}
 		}
