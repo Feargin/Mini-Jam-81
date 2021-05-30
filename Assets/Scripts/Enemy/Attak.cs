@@ -4,6 +4,7 @@ using DG.Tweening;
 
 public class Attak : MonoBehaviour
 {
+	public bool _needVisiable = false;
 	public int _damage = 1;
 	public List<Vector3Int> RangeAttak;
 	private TweenCallback _onAttackEnd;
@@ -27,8 +28,13 @@ public class Attak : MonoBehaviour
 	public bool CanAttack(Entity entity)
 	{
 		GridGraph grid = entity.movement.pathfinding.map.nodemap;
+		
+		//_needVisiable
+		
 		return CheckInFireRadius(entity, grid);
 	}
+	
+	//public bool 
     
 	public bool CheckInFireRadius(Entity entity, GridGraph grid)
 	{

@@ -29,6 +29,5 @@ public class EnemyTurnSequence : MonoBehaviour
 			yield return new WaitUntil(() => _spawn.Enemyes[i].TurnPassed == true);
 		}
 		OnNpcEndTurn?.Invoke();
-		print("end");
 	}
 }
