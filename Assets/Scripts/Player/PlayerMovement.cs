@@ -36,9 +36,9 @@ public class PlayerMovement : MonoBehaviour
 		_selectedPlayer = null;
 	}
 	
-	private void Update()
+	public void TryMove()
 	{
-		if(Input.GetMouseButtonDown(0) && _selectedPlayer != null)
+		if(_selectedPlayer != null)
 		{
 			SelectTile();
 		}

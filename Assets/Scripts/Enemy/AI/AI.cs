@@ -3,15 +3,13 @@
 public class AI : MonoBehaviour
 {
 	public bool InitialState = false;
+	public bool FinalState = false;
 	public AI NextState;
-	public Entity Owner;
+	public Enemy Owner;
 	
-	private void OnEnable() => ChangeTurn.TheNextTurn += TurnBegin;
-	private void OnDisable() => ChangeTurn.TheNextTurn -= TurnBegin;
-	
-	private void TurnBegin(bool npc_turn)
+	private void OnEnable()
 	{
-		if(npc_turn && InitialState)
+		if(InitialState)
 		{
 			BeginState();
 		}
@@ -24,9 +22,15 @@ public class AI : MonoBehaviour
 	
 	public virtual void ExitState()
 	{
+		//print("ex:" + this);
 		if(NextState != null)
 		{
 			NextState.BeginState();
+		}
+		
+		if(FinalState == true || NextState == null)
+		{
+			Owner.DisableAI();
 		}
 	}
 }

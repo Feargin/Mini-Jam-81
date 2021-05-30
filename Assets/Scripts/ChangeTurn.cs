@@ -17,25 +17,16 @@ public class ChangeTurn : Singleton<ChangeTurn>
 
     #region Events
 	public static event System.Action<bool> TheNextTurn;
-    
-    #endregion
-	protected void OnEnable() => Spawn.OnGameStart += OnGameStart;
-
-	protected void OnDisable() => Spawn.OnGameStart -= OnGameStart;
-
-	private void OnGameStart()
+	#endregion
+	
+	protected void OnEnable()
 	{
-		
+		EnemyTurnSequence.OnNpcEndTurn += FinishEnemyTurn;
 	}
-
-	private IEnumerator Timer()
+	
+	protected void OnDisable()
 	{
-		while (true)
-		{
-			yield return new WaitForSeconds(5f);
-			FinishEnemyTurn();
-			yield break;
-		}
+		EnemyTurnSequence.OnNpcEndTurn -= FinishEnemyTurn;
 	}
 
     public void NextTurn()
@@ -43,13 +34,10 @@ public class ChangeTurn : Singleton<ChangeTurn>
         _nextTurn.interactable = false;
         Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = false;
         TheNextTurn?.Invoke(true);
-        StartCoroutine(Timer());
-        
     }
 
     public void FinishEnemyTurn()
     {
-	    StopCoroutine(Timer());
 	    _nextTurn.interactable = true;
 	    Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = true;
 	    TheNextTurn?.Invoke(false);

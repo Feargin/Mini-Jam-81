@@ -18,8 +18,8 @@ public class Spawn : Singleton<Spawn>
     public LayerMask _tileMask;
 	public Transform Kaujy;
     public Transform EpicKaujy;
-    [SerializeField] private Transform [] _enemy;
-    public List<Transform> Enemyes;
+	[SerializeField] private Enemy [] _enemy;
+	public List<Enemy> Enemyes;
     public List<Transform> Players;
     public GameObject PlayerControler;
     
@@ -110,7 +110,7 @@ public class Spawn : Singleton<Spawn>
                     {
                         foreach (var e in Enemyes)
                         {
-                            if (e.position == spawnCoord + Vector3.up)
+	                        if (e.transform.position == spawnCoord + Vector3.up)
                             {
                                 goto to;
                             }
