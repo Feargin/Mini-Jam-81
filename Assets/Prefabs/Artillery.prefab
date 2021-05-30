@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853299575798413487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.385, z: 0}
   m_LocalScale: {x: 1.6666665, y: 1.6666665, z: 1.6666665}
   m_Children:
   - {fileID: 6501271712031948950}
@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: -3151390825377288848}
   - component: {fileID: 4837625695712049782}
   m_Layer: 0
-  - component: {fileID: 6958065223719541397}
   m_Name: Artillery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,10 +149,6 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 2668679793516504606}
-  - {fileID: 6501271712031948950}
-  - {fileID: 1931809909486020334}
-  - {fileID: 8833954016617124448}
-  - {fileID: 1613402337132021393}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -394,6 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 1
   NextState: {fileID: 4516515971890140306}
+  Owner: {fileID: 0}
   Target: {fileID: 0}
 --- !u!114 &4516515971890140306
 MonoBehaviour:
@@ -409,6 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialState: 0
   NextState: {fileID: 0}
+  Owner: {fileID: 0}
   AI_Target: {fileID: 8609042709155468704}
   Movement: {fileID: 5014676229011892877}
   Attack: {fileID: 7737780338055467308}

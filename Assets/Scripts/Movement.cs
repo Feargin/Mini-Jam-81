@@ -27,30 +27,6 @@ public class Movement : MonoBehaviour
 	
 	public void MoveTo(Vector3 position, bool ignoreDistance = false, TweenCallback completeEvent = null)
 	{
-		//path = pathfinding.FindPath(transform.position, position, true);
-		//List<Vector3> pathL = new List<Vector3>();
-		//foreach(var v in path)
-		//{
-		//	Vector3 v3 = Vector3.zero;
-		//	v3.x = v.Position.x * pathfinding.map.GridSize;
-		//	v3.y = transform.position.y;
-		//	v3.z = v.Position.y * pathfinding.map.GridSize;
-		//	pathL.Add(v3);
-		//}
-		//if(pathL.Count > 0 && pathL.Count <= entity._currentActionPoints)
-		//{
-		//	entity._currentActionPoints = 0;
-		//	transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
-		//}
-	}
-
-	private void CompliteMove()
-	{
-		EndMove?.Invoke(entity);
-	}
-	
-	public void MoveTo(Vector3 position, bool ignoreDistance = false)
-	{
 		path = pathfinding.FindPath(transform.position, position);
 		List<Vector3> pathL = new List<Vector3>();
 		for(int i = 0; i < path.Count; i++)
@@ -76,18 +52,18 @@ public class Movement : MonoBehaviour
 	
 	protected void OnTriggerEnter(Collider other)
 	{
-		if(other.TryGetComponent<Tile>(out Tile tile))
+		if(other.TryGetComponent<Tile>(out Tile _tile))
 		{
-			tile.EntityIn = GetComponent<Entity>();
-			tile = tile;
+			_tile.EntityIn = GetComponent<Entity>();
+			tile = _tile;
 		}
 	}
 	
 	protected void OnTriggerExit(Collider other)
 	{
-		if(other.TryGetComponent<Tile>(out Tile tile) && tile.EntityIn == entity)
+		if(other.TryGetComponent<Tile>(out Tile _tile) && _tile.EntityIn == entity)
 		{
-			tile.EntityIn = null;
+			_tile.EntityIn = null;
 		}
 	}
 	

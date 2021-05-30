@@ -31,12 +31,14 @@ public class Entity : MonoBehaviour
 	private void Start()
 	{
 		_currentHealth = _health;
-		_healtBar.fillAmount = 1;
+		if(_healtBar != null)
+			_healtBar.fillAmount = 1;
 	}
 
 	public void DealDamage(int damage)
 	{
 		_health -= damage;
+		print(_healtBar);
 		if(_healtBar != null)
 			_healtBar.fillAmount = (float)_health / (float)_currentHealth;
 		if (_health <= 0) Kill();
