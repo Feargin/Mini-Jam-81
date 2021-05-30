@@ -121,8 +121,11 @@ public class MoveHelper : Singleton<MoveHelper>
 			infoPanel.SetActive(true);
 			imalePanel.sprite = imageInfo[_selectedEntity.TypeEnemy];
 			stats[0].text = _selectedEntity.name;
-			stats[1].text = "" + _selectedEntity.gameObject.GetComponent<Attak>()._damage;
-			stats[2].text = "" + _selectedEntity.MaxActionPoints;
+		if(_selectedEntity.gameObject.TryGetComponent(out Attak attack))
+			stats[1].text = "" + attack._damage;
+		else if(_selectedEntity.gameObject.TryGetComponent(out CollideAttack attack2))
+			stats[1].text = "" + attack2.Damage;
+		stats[2].text = "" + _selectedEntity.MaxActionPoints;
 		}
 		else
 		{
