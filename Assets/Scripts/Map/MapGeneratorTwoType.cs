@@ -127,26 +127,26 @@ public sealed class MapGeneratorTwoType : MonoBehaviour
 				    if (coordinates[x, y] == 0)
 				    {
 					    Vector3 cellPosition = new Vector3(x, 0, y) * map.GridSize;
-					    newCell = Instantiate(CellTypeOne, cellPosition, Quaternion.identity) ;
+					    newCell = Instantiate(CellTypeOne, cellPosition, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupOne;
-					    newCell.transform.rotation = new Quaternion(0, yRotation, 0, 0);
+					    newCell.transform.eulerAngles = new Vector3(0, yRotation, 0);
 				    }
 				    else if (coordinates[x, y] == 1)
 				    {
 					    Vector3 cellPosition = new Vector3(x, 0, y) * map.GridSize;
-					    newCell = Instantiate(CellTypeTwo, cellPosition + Vector3.up * 0.2f, Quaternion.identity);
+					    newCell = Instantiate(CellTypeTwo, cellPosition, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupTwo;
-					    newCell.transform.rotation = new Quaternion(0, yRotation, 0, 0);
+					    newCell.transform.eulerAngles = new Vector3(0, yRotation, 0);
 				    }
 				    else if (coordinates[x, y] == 2)
 				    {
 					    Vector3 cellPosition = new Vector3(x, 0, y) * map.GridSize;
-					    newCell = Instantiate(CellTypeThree, cellPosition + Vector3.up * 0.5f, Quaternion.identity);
+					    newCell = Instantiate(CellTypeThree, cellPosition, Quaternion.identity);
 					    newCell.transform.localScale = Vector3.one * (1 - border);
 					    newCell.transform.parent = mapGroupTwo;
-					    newCell.transform.rotation = new Quaternion(0, yRotation, 0, 0);
+					    newCell.transform.eulerAngles = new Vector3(0, yRotation, 0);
 				    }
 				    tiles[x,y] = newCell;
 			    }

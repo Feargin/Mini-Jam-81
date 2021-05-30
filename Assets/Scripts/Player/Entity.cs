@@ -46,7 +46,12 @@ public class Entity : MonoBehaviour
 	private void Kill()
 	{
 		if(this is Enemy) Spawn.Instance.Enemyes.Remove(transform);
-		else Spawn.Instance.Players.Remove(transform);
+		else
+		{
+			Spawn.Instance.Players.Remove(transform);
+			SpawnEgg.Instance.Spawner(transform.position);
+		}
+
 		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
 		Destroy(vfx, 1.5f);
 		Destroy(gameObject);

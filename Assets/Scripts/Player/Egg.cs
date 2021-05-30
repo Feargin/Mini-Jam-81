@@ -13,7 +13,11 @@ public class Egg : MonoBehaviour
     {
         if (!go) return;
         _liveCount += 1;
-        if(_liveCount >= 2) SpawnEgg.Instance.SpawnEpickKaujy(transform.position);
+        if (_liveCount >= 2)
+        {
+            SpawnEgg.Instance.SpawnEpickKaujy(transform.position);
+            Destroy(gameObject);
+        }
     }
     
 }

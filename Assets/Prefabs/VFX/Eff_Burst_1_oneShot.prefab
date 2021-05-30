@@ -14342,7 +14342,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100006}
   serializedVersion: 7
-  lengthInSec: 1.5
+  lengthInSec: 0.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 1
@@ -14417,7 +14417,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14550,7 +14550,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -15278,8 +15278,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.10276018
-          value: 0.81832576
+          time: 0.032047153
+          value: 0.38049006
           inSlope: 1.1706352
           outSlope: 0.7420771
           tangentMode: 1
@@ -15287,8 +15287,17 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
+          time: 0.38600883
+          value: 0.48131537
+          inSlope: 0.11472255
+          outSlope: 0.11472255
+          tangentMode: 1
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.91918945
+          value: 0.505394
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -19049,12 +19058,12 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 2
+  m_MaxParticleSize: 0.08
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 3.04
   m_SortingFudge: 0
-  m_NormalDirection: 1
+  m_NormalDirection: 0.6
   m_ShadowBias: 0
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}

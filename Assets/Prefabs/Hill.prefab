@@ -49,7 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityIn: {fileID: 0}
   _meshRender: {fileID: 7359796359261329607}
+  TileColor: {r: 1, g: 1, b: 1, a: 1}
+  Selected: 0
   _walkable: 0
+  CanBuild: 0
 --- !u!33 &952511385000431366
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -65,7 +68,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196912465688266728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
