@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2313483438326783018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 260.66724, y: 199.72205, z: -2313.9907}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4019183569459359120}
   m_Father: {fileID: 0}
@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6087a933333fc6041872e742cd0046f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
 --- !u!114 &5929151512011521738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +83,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   _healtBar: {fileID: 409054467959327471}
   _vfx: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
+  _isDead: 0
 --- !u!114 &763948079657260725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 441720, guid: 19826f72392683345a9b8dea2a615c8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.513
+      value: -0.467
       objectReference: {fileID: 0}
     - target: {fileID: 441720, guid: 19826f72392683345a9b8dea2a615c8e, type: 3}
       propertyPath: m_LocalPosition.z

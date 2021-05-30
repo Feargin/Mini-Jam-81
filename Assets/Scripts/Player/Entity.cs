@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.tvOS;
 using UnityEngine.UI;
 
 public class Entity : MonoBehaviour

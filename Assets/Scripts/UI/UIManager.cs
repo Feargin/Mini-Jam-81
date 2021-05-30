@@ -5,12 +5,11 @@ using TMPro;
 
 public sealed class UIManager : MonoBehaviour
 {
-    /*[SerializeField] private GameObject _initialPanel;
+    [SerializeField] private GameObject _initialPanel;
     private GameObject _lastPanel;
     public static UIManager Instance;
-
-    public void Restart() => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    public void Exit() => Application.Quit();
+    
+    
 
     private void Awake() 
     {
@@ -30,5 +29,5 @@ public sealed class UIManager : MonoBehaviour
             _lastPanel.SetActive(false);
         _lastPanel = panel;
         _lastPanel.SetActive(true);
-    }*/
+    }
 }

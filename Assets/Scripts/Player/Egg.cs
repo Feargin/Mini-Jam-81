@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Egg : Entity
 {
-    [SerializeField] private int _liveCount;
+    private int _liveCount = 0;
+    [SerializeField] private int _CountTurn = 0;
     private void OnEnable() => ChangeTurn.TheNextTurn += StartCountLive;
     private void OnDisable() => ChangeTurn.TheNextTurn -= StartCountLive;
     
 
     private void StartCountLive(bool go)
     {
-        if (!go) return;
         _liveCount += 1;
-        if (_liveCount >= 3)
+        if (_liveCount >= _CountTurn)
         {
             SpawnEgg.Instance.SpawnEpickKaujy(transform.position);
             Spawn.Instance.Players.Remove(transform);

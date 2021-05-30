@@ -6,11 +6,15 @@ using TMPro;
 
 public class ChangeTurn : Singleton<ChangeTurn>
 {
+	[SerializeField] private int [] _numTurn;
+	[SerializeField] private int [] _countEnemy;
+	[SerializeField] private int [] _indexEnemy;
+
 	[SerializeField] private Button _nextTurn;
 	[SerializeField] private TMP_Text _countTurnText;
 	private float _timer;
     public int CountTurn = 0;
-    
+
     #region Events
 	public static event System.Action<bool> TheNextTurn;
     
@@ -40,18 +44,29 @@ public class ChangeTurn : Singleton<ChangeTurn>
         Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = false;
         TheNextTurn?.Invoke(true);
         StartCoroutine(Timer());
+        
     }
 
     public void FinishEnemyTurn()
     {
 	    StopCoroutine(Timer());
-        _nextTurn.interactable = true;
-        Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = true;
-        TheNextTurn?.Invoke(false);
-        CountTurn += 1;
-        _countTurnText.text = "" + CountTurn;
-        
+	    _nextTurn.interactable = true;
+	    Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = true;
+	    TheNextTurn?.Invoke(false);
+	    CountTurn += 1;
+	    _countTurnText.text = "" + CountTurn;
+	    foreach (var v in _numTurn)
+	    {
+		    if (v == CountTurn)
+		    {
+			    for (int i = 0; i < _indexEnemy.Length; i++)
+			    {
+				    Spawn.Instance.Creator(_indexEnemy[i], _countEnemy[i]);
+			    }
+		    }
+	    }
     }
+
     void Update()
     {
         
