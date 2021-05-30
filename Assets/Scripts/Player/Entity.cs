@@ -14,6 +14,7 @@ public class Entity : MonoBehaviour
 	[HideInInspector] public Movement movement;
 	[SerializeField] private Image _healtBar;
 	[SerializeField] private GameObject _vfx;
+	public bool _isDead = false;
 	
 	private void OnEnable() => ChangeTurn.TheNextTurn += ResetActionPoints;
 	private void OnDisable() => ChangeTurn.TheNextTurn -= ResetActionPoints;
@@ -37,8 +38,8 @@ public class Entity : MonoBehaviour
 
 	public void DealDamage(int damage)
 	{
+		if(_isDead) return;
 		_health -= damage;
-		print(_healtBar);
 		if(_healtBar != null)
 			_healtBar.fillAmount = (float)_health / (float)_currentHealth;
 		if (_health <= 0) Kill();
@@ -47,13 +48,17 @@ public class Entity : MonoBehaviour
 
 	private void Kill()
 	{
+		_isDead = true;
 		if(this is Enemy) Spawn.Instance.Enemyes.Remove(transform);
 		else
 		{
 			Spawn.Instance.Players.Remove(transform);
-			SpawnEgg.Instance.Spawner(transform.position);
+			if (!(this is Egg))
+			{
+				SpawnEgg.Instance.Spawner(transform.position);
+			}
 		}
-
+		
 		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
 		Destroy(vfx, 1.5f);
 		Destroy(gameObject);

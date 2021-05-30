@@ -8,7 +8,10 @@ public class AI_Moving : AI
 	
 	public override void BeginState()
 	{
-		CheckAttackArea();
+		if (AI_Target.Target != null)
+		{
+			CheckAttackArea();
+		}
 		ExitState();
 	}
 	
