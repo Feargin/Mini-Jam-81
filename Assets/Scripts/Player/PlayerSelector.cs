@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerSelector : MonoBehaviour
+public class PlayerSelector : Singleton<PlayerSelector>
 {
 	[Header("------------- Info ----------------------")]
 	[ReadOnly] public Entity SelectedPlayer;
@@ -8,6 +8,7 @@ public class PlayerSelector : MonoBehaviour
 	[Header("------------- Dependencies --------------")]
 	[SerializeField] private LayerMask _playerMask;
 	[SerializeField] private LayerMask _walkableMask;
+	public Entity Target;
 	
 	#region Events
 	public static event System.Action<Entity> OnPlayerSelect;
@@ -34,6 +35,7 @@ public class PlayerSelector : MonoBehaviour
 		    {
 			    Map.Instance.ReloadSelectTiles();
 			    hit.transform.GetComponent<Tile>().Selected = true;
+			    Target = hit.transform.GetComponent<Tile>().EntityIn;
 		    }
 	    }
     }

@@ -11,8 +11,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/PanzerStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ButtonSuicide.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttak.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Suicide.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -28,14 +30,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapGeneratorTwoType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SelectTille.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/SelectTille.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Tile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/Map.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Tile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttak.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ButtonSuicide.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Suicide.cs" />
       </list>
     </option>
   </component>
@@ -48,6 +53,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -104,6 +110,12 @@
       <workItem from="1622306861659" duration="1787000" />
       <workItem from="1622308686722" duration="1777000" />
       <workItem from="1622310489519" duration="1482000" />
+      <workItem from="1622313484098" duration="1817000" />
+      <workItem from="1622315438615" duration="1276000" />
+      <workItem from="1622352515917" duration="1774000" />
+      <workItem from="1622354322527" duration="1539000" />
+      <workItem from="1622356131092" duration="1782000" />
+      <workItem from="1622357961335" duration="362000" />
     </task>
     <servers />
   </component>
@@ -114,5 +126,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="781" y="165" key="SettingsEditor" timestamp="1622354039871">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="781" y="165" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1622354039871" />
   </component>
 </project>
