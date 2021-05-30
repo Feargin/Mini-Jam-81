@@ -3,11 +3,21 @@ using UnityEngine;
 
 public class PF_AStar : MonoBehaviour
 {
-	[HideInInspector] public Map map;
+	private Map _map;
+
+	[HideInInspector]
+	public Map map
+	{
+		get
+		{
+			if (_map == null) _map = Map.Instance;
+			return _map;
+		}
+	}
 	
 	private void Start()
 	{
-		map = Map.Instance;
+		_map = Map.Instance;
 	}
 	
 	public List<Node> FindPath(Vector3 _from, Vector3 _to, bool makeEndWalkable = false)
