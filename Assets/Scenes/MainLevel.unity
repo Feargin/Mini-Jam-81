@@ -654,10 +654,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countKaujy: 2
-  _countPanzer: 1
-  _countPlane: 2
-  _countMariner: 0
-  _countArtillery: 0
+  _countPanzer: 2
+  _countPlane: 1
+  _countMariner: 3
+  _countArtillery: 1
   _tileMask:
     serializedVersion: 2
     m_Bits: 128
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _egg: {fileID: 4604392514615264581, guid: fc4ed87248a3adb409d79a657a6b00f6, type: 3}
-  _hpNewKaujy: 150
+  _hpNewKaujy: 170
 --- !u!1 &151605982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,10 +3434,10 @@ RectTransform:
   m_Father: {fileID: 521906016}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 53.86}
-  m_SizeDelta: {x: 307.1087, y: 104.69641}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 96, y: 35.9}
+  m_SizeDelta: {x: 216, y: 77.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223854921
 MonoBehaviour:
@@ -3702,9 +3702,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a88952f14d97c147bc32b7e6d049632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numTurn: 0400000007000000
-  _countEnemy: 020000000100000001000000
-  _indexEnemy: 000000000200000003000000
+  _numTurn: 04000000
+  _countEnemy: 01000000010000000200000001000000
+  _indexEnemy: 00000000010000000200000003000000
   _playerController: {fileID: 972994948}
   _nextTurn: {fileID: 2115669519}
   GameGontrollerAudio: {fileID: 1947658907}
@@ -3737,7 +3737,7 @@ GameObject:
   - component: {fileID: 1384879290}
   - component: {fileID: 1384879289}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3757,10 +3757,10 @@ RectTransform:
   m_Father: {fileID: 521906016}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 132.9, y: 50.199997}
-  m_SizeDelta: {x: 265.7912, y: 88.614}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 48.600006, y: -39.799988}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384879289
 MonoBehaviour:
@@ -3826,7 +3826,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 42f3c43da6748e94ab091fdc38df229a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c3761cae9a8e4c599bee23a10ce1b2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4580,8 +4580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -102.72, y: -50}
-  m_SizeDelta: {x: 205.45001, y: 100}
+  m_AnchoredPosition: {x: -110.9, y: -50}
+  m_SizeDelta: {x: 240.4, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794843610
 MonoBehaviour:
@@ -5407,7 +5407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -131.51144, y: 50.199997}
+  m_AnchoredPosition: {x: -118.4, y: 37.5}
   m_SizeDelta: {x: 263.03284, y: 97.378296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115669519
