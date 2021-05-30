@@ -1217,7 +1217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &440181641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1677,7 +1677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &521906016
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2589,10 +2589,12 @@ MonoBehaviour:
   _passableColor: {r: 0.38781595, g: 0.38939044, b: 0.7830189, a: 1}
   _enemyColor: {r: 1, g: 0, b: 0, a: 1}
   infoPanel: {fileID: 246738025}
+  eggPanel: {fileID: 440181640}
   stats:
   - {fileID: 565159519}
   - {fileID: 1087255524}
   - {fileID: 1767786623}
+  - {fileID: 1540589278}
   imageInfo:
   - {fileID: 21300000, guid: ff865161afef2a24fa13ac11ecb26ccc, type: 3}
   - {fileID: 21300000, guid: afd5b15f8d751c14492075b133169be1, type: 3}

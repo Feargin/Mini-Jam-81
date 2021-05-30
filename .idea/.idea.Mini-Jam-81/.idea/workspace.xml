@@ -37,7 +37,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PF_AStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/AI_Moving.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Egg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundController.cs" />
@@ -49,6 +48,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Egg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveHelper.cs" />
       </list>
     </option>
@@ -135,7 +135,7 @@
       <workItem from="1622391848087" duration="1937000" />
       <workItem from="1622393863727" duration="1942000" />
       <workItem from="1622395953843" duration="1776000" />
-      <workItem from="1622401034209" duration="604000" />
+      <workItem from="1622401034209" duration="1007000" />
     </task>
     <servers />
   </component>

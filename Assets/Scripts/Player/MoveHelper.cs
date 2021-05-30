@@ -130,8 +130,8 @@ public class MoveHelper : Singleton<MoveHelper>
 		else if (_selectedEntity != null && _selectedEntity.TypeEnemy == 4)
 		{
 			eggPanel.SetActive(true);
-			stats[3].text = "" + (_selectedEntity.gameObject.GetComponent<Egg>()._CountTurn -
-			                      _selectedEntity.gameObject.GetComponent<Egg>()._liveCount);
+			stats[3].text = "" + ((_selectedEntity.gameObject.GetComponent<Egg>()._CountTurn -
+			                      _selectedEntity.gameObject.GetComponent<Egg>()._liveCount) / 2);
 		}
 		else
 		{

@@ -102,11 +102,15 @@ MonoBehaviour:
   MaxActionPoints: 0
   _currentActionPoints: 0
   type: 1
+  selectimage: {fileID: 0}
+  TypeEnemy: 4
+  _immortal: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
   _vfx: {fileID: 3156496839308500866, guid: 1c75f41fc2252d64daa60854ec047202, type: 3}
   _isDead: 0
+  _liveCount: 0
   _CountTurn: 4
 --- !u!65 &2853561995091121345
 BoxCollider:
@@ -161,5 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canFly: 0
   pathfinding: {fileID: 0}
   tile: {fileID: 0}
