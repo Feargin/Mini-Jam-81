@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,6 +53,6 @@ public class ButtonSuicide : MonoBehaviour
 
     public void SuicideSelectEntity()
     {
-        entitySecelt.DealDamage(1000, "enemy");
+        entitySecelt.DealDamage(1000);
     }
 }

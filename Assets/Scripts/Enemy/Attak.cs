@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class Attak : MonoBehaviour
 {
-    public int _minDamage;
-    public int _maxDamage;
+	public int _damage = 1;
 	public List<Vector3Int> RangeAttak;
 	[SerializeField] private Projectile _projectile;
 	//[SerializeField] private GameObject _vfx;
@@ -15,6 +14,7 @@ public class Attak : MonoBehaviour
 		{
 			Projectile proj = Instantiate(_projectile, transform.position, Quaternion.identity);
 			proj.Init(entity.transform.position);
+			entity.DealDamage(_damage);
 		}
 		//entity.transform.position += Vector3.up * 0.5f;
 	}

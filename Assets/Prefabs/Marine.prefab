@@ -144,14 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8f19e90825de643b8465175dccf517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minDamage: 0
-  _maxDamage: 0
+  _damage: 20
   RangeAttak:
   - {x: 1, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   - {x: 0, y: 0, z: -1}
   - {x: -1, y: 0, z: 0}
-  _vfx: {fileID: 0}
+  _projectile: {fileID: 0}
 --- !u!114 &3093038144774664345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +169,7 @@ MonoBehaviour:
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
+  _vfx: {fileID: 100008, guid: 95cb04c70e05847c0a30450e4c714700, type: 3}
 --- !u!114 &8696108128361479887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,8 +211,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 3
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &332327467785685365
 PrefabInstance:
   m_ObjectHideFlags: 0

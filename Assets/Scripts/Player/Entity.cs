@@ -34,17 +34,18 @@ public class Entity : MonoBehaviour
 		_healtBar.fillAmount = 1;
 	}
 
-	public void DealDamage(int damage, string type)
+	public void DealDamage(int damage)
 	{
 		_health -= damage;
-		if(type == "enemy")_healtBar.fillAmount = _health / _currentHealth;
-		if (_health <= 0) Kill(type);
+		if(_healtBar != null)
+			_healtBar.fillAmount = (float)_health / (float)_currentHealth;
+		if (_health <= 0) Kill();
 		
 	}
 
-	private void Kill(string type)
+	private void Kill()
 	{
-		if(type == "enemy") Spawn.Instance.Enemyes.Remove(transform);
+		if(this is Enemy) Spawn.Instance.Enemyes.Remove(transform);
 		else Spawn.Instance.Players.Remove(transform);
 		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
 		Destroy(vfx, 1.5f);

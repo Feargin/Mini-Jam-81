@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +18,7 @@ public class PlayerAttak : MonoBehaviour
         if (col.transform.GetComponent<Enemy>())
         {
             print("goo");
-            col.transform.GetComponent<Enemy>().DealDamage(100, "player");
+            col.transform.GetComponent<Enemy>().DealDamage(100);
         }
     }
 }

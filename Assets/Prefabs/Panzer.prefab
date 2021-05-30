@@ -378,8 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8f19e90825de643b8465175dccf517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minDamage: 0
-  _maxDamage: 0
+  _damage: 50
   RangeAttak:
   - {x: 1, y: 0, z: 0}
   - {x: 2, y: 0, z: 0}
@@ -435,8 +434,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 3
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!65 &5917615209057552346
 BoxCollider:
   m_ObjectHideFlags: 0
