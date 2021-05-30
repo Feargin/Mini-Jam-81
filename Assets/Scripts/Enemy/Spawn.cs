@@ -16,11 +16,11 @@ public class Spawn : Singleton<Spawn>
     [Space]
     [Header("---------------------------- Системные --------------------------")]
     public LayerMask _tileMask;
-	public Transform Kaujy;
-    public Transform EpicKaujy;
+	public PlayerEntity Kaujy;
+    public PlayerEntity EpicKaujy;
 	[SerializeField] private Enemy [] _enemy;
 	public List<Enemy> Enemyes;
-    public List<Transform> Players;
+	public List<PlayerEntity> Players;
     public GameObject PlayerControler;
     [SerializeField] private GameObject _vfxKaugySpawn;
     private bool _readySpawn;

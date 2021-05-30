@@ -79,6 +79,7 @@ MonoBehaviour:
   _health: 100
   MaxActionPoints: 4
   _currentActionPoints: 0
+  type: 2
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 409054467959327471}

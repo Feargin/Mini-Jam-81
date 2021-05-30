@@ -514,8 +514,8 @@ MonoBehaviour:
   _tileMask:
     serializedVersion: 2
     m_Bits: 128
-  Kaujy: {fileID: 6115293160697941040, guid: f7fdfa036e0c3784097b64104e955b06, type: 3}
-  EpicKaujy: {fileID: 2068663579295773884, guid: 6c4c42a494cff56469bc61c5b0a29cd7, type: 3}
+  Kaujy: {fileID: 766077113986388405, guid: f7fdfa036e0c3784097b64104e955b06, type: 3}
+  EpicKaujy: {fileID: 4812407611113056569, guid: 6c4c42a494cff56469bc61c5b0a29cd7, type: 3}
   _enemy:
   - {fileID: -2984314876228452400, guid: 8e338fbd130c9f849bcd9650f588082e, type: 3}
   - {fileID: -1433885455803210353, guid: 29ecade1de235e2429848216f81b8b9a, type: 3}
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a254f5231d0c684185117e432074594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _egg: {fileID: 4593228864771421185, guid: fc4ed87248a3adb409d79a657a6b00f6, type: 3}
+  _egg: {fileID: 4604392514615264581, guid: fc4ed87248a3adb409d79a657a6b00f6, type: 3}
   _hpNewKaujy: 150
 --- !u!1 &151605982
 GameObject:

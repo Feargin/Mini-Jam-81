@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
-	[Header("------------------ Настройки кайдзю -----------------")]
+	[Header("------------------ Настройки моба -----------------")]
 	public int _health;
 	public int MaxActionPoints = 4;
 	public int _currentActionPoints;
+	public Type type;
 	[SerializeField] private int _currentHealth;
 	[Space]
 	[Header("--------------------- Системные --------------------")]
@@ -51,7 +52,7 @@ public class Entity : MonoBehaviour
 		if(this is Enemy) Spawn.Instance.Enemyes.Remove(this as Enemy);
 		else
 		{
-			Spawn.Instance.Players.Remove(transform);
+			Spawn.Instance.Players.Remove(this as PlayerEntity);
 			if (!(this is Egg))
 			{
 				SpawnEgg.Instance.Spawner(transform.position);
@@ -61,5 +62,12 @@ public class Entity : MonoBehaviour
 		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
 		Destroy(vfx, 1.5f);
 		Destroy(gameObject);
+	}
+	
+	public enum Type
+	{
+		None,
+		Egg,
+		Godzilla
 	}
 }

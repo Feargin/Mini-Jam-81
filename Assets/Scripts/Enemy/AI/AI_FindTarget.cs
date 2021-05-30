@@ -3,6 +3,8 @@
 public class AI_FindTarget : AI
 {
 	public Entity Target;
+	public Entity.Type PriorityTarget;
+	
 	private Spawn _spawn;
 	protected Spawn Spawn
 	{
@@ -29,7 +31,9 @@ public class AI_FindTarget : AI
 			if(p != null && Target != null)
 			{
 				if((p.transform.position - transform.position).magnitude 
-					< (Target.transform.position - transform.position).magnitude)
+					< (Target.transform.position - transform.position).magnitude
+					&& p.type != PriorityTarget
+					|| p.type == PriorityTarget)
 				{
 					Target = p.GetComponent<Entity>();
 				}

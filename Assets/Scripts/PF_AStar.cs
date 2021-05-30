@@ -20,6 +20,16 @@ public class PF_AStar : MonoBehaviour
 		_map = Map.Instance;
 	}
 	
+	public List<Node> FindPathFly(Vector3 _from, Vector3 _to)
+	{
+		Vector2Int from = map.nodemap.WorldToIndex(_from);
+		Vector2Int to = map.nodemap.WorldToIndex(_to);
+		Node nodeFrom = map.nodemap.Grid[from.x, from.y];
+		Node nodeTo = map.nodemap.Grid[to.x, to.y];
+		List<Node> path = AStar.SearchIgnoreObstacle(map.nodemap, nodeFrom, nodeTo, false);
+		return path;
+	}
+	
 	public List<Node> FindPath(Vector3 _from, Vector3 _to, bool makeEndWalkable = false)
 	{
 		Vector2Int from = map.nodemap.WorldToIndex(_from);

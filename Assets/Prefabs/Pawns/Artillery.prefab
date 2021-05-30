@@ -203,6 +203,7 @@ MonoBehaviour:
   _health: 1
   MaxActionPoints: 1
   _currentActionPoints: 0
+  type: 0
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
@@ -222,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1306d03028fb5e3468a765b15f7c9086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canFly: 0
   pathfinding: {fileID: 0}
   tile: {fileID: 0}
 --- !u!114 &4837625695712049782
@@ -395,6 +397,7 @@ MonoBehaviour:
   NextState: {fileID: 4516515971890140306}
   Owner: {fileID: 5586096342175009459}
   Target: {fileID: 0}
+  PriorityTarget: 2
 --- !u!114 &4516515971890140306
 MonoBehaviour:
   m_ObjectHideFlags: 0
