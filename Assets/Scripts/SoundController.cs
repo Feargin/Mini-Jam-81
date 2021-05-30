@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundController : MonoBehaviour
+public class SoundController : Singleton<SoundController>
 {
-    // Start is called before the first frame update
+    public AudioClip[] Clip;
+    private AudioSource _audioSource;
     void Start()
     {
-        
+        _audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetClip(int index)
     {
-        
+        _audioSource.clip = Clip[index];
+        _audioSource.Play();
     }
 }

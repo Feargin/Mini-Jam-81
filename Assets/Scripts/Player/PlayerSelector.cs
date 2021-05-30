@@ -46,11 +46,17 @@ public class PlayerSelector : Singleton<PlayerSelector>
     
 	private bool SelectPlayerEntity()
 	{
+		if (SelectedPlayer != null)
+		{
+			SelectedPlayer.selectimage.SetActive(false);
+		}
+
 		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask, QueryTriggerInteraction.Ignore))
 		{
 			SelectedPlayer = hit.transform.gameObject.GetComponent<PlayerEntity>();
 			if(SelectedPlayer != null)
 			{
+				SelectedPlayer.selectimage.SetActive(true);
 				OnPlayerSelect?.Invoke(SelectedPlayer);
 				return true;
 			}

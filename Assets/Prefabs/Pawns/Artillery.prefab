@@ -205,6 +205,8 @@ MonoBehaviour:
   _currentActionPoints: 0
   type: 0
   _immortal: 0
+  selectimage: {fileID: 0}
+  TypeEnemy: 2
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}

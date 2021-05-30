@@ -8,8 +8,9 @@ public class Entity : MonoBehaviour
 	public int MaxActionPoints = 4;
 	public int _currentActionPoints;
 	public Type type;
+	public GameObject selectimage;
+	public int TypeEnemy;
 	public bool _immortal = false;
-	//public Tile tile;
 	[SerializeField] private int _currentHealth;
 	[Space]
 	[Header("--------------------- Системные --------------------")]

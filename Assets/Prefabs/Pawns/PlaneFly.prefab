@@ -82,6 +82,8 @@ MonoBehaviour:
   MaxActionPoints: 4
   _currentActionPoints: 0
   type: 0
+  selectimage: {fileID: 0}
+  TypeEnemy: 3
   _immortal: 0
   _currentHealth: 0
   movement: {fileID: 0}

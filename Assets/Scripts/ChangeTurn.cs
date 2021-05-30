@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,11 +16,18 @@ public class ChangeTurn : Singleton<ChangeTurn>
 	[SerializeField] private TMP_Text _countTurnText;
 	private float _timer;
     public int CountTurn = 0;
+    public int ToSpawn;
 
     #region Events
 	public static event System.Action<bool> TheNextTurn;
 	#endregion
-	
+
+	private void Start()
+	{
+		ToSpawn = _numTurn[0];
+		_countTurnText.text = "" + ToSpawn;
+	}
+
 	protected void OnEnable()
 	{
 		EnemyTurnSequence.OnNpcEndTurn += FinishEnemyTurn;
@@ -37,7 +45,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
         //Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = false;
         TheNextTurn?.Invoke(true);
     }
-
+    
     public void FinishEnemyTurn()
     {
 	    _nextTurn.interactable = true;
@@ -45,7 +53,13 @@ public class ChangeTurn : Singleton<ChangeTurn>
 	    //Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = true;
 	    TheNextTurn?.Invoke(false);
 	    CountTurn += 1;
-	    _countTurnText.text = "" + CountTurn;
+	    if (ToSpawn != 0)
+	    {
+		    ToSpawn -= 1;
+		    _countTurnText.text = "" + ToSpawn;
+	    }
+	    else _countTurnText.text = "Already arrived";
+	    
 	    
 	    foreach (var v in _numTurn)
 	    {
@@ -55,6 +69,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
 			    {
 				    Spawn.Instance.Creator(_indexEnemy[i], _countEnemy[i]);
 			    }
+			    
 		    }
 	    }
     }

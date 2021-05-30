@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class MoveHelper : Singleton<MoveHelper>
 {
@@ -7,6 +9,10 @@ public class MoveHelper : Singleton<MoveHelper>
 	[SerializeField] private LayerMask _entityMask;
 	[SerializeField] private Color _passableColor = Color.yellow;
 	[SerializeField] private Color _enemyColor = Color.red;
+	[SerializeField] private GameObject infoPanel;
+	[SerializeField] private TMP_Text[] stats;
+	[SerializeField] private Sprite[] imageInfo;
+	[SerializeField] private Image imalePanel;
 	
 	private PF_AStar _pathfinding;
 	private List<Node> _passablePath;
@@ -47,6 +53,8 @@ public class MoveHelper : Singleton<MoveHelper>
 		{
 			ShowArea();
 		}
+
+		InfoPanel();
 	}
 	
 	public void LockSelectTo(Entity entity)
@@ -93,6 +101,7 @@ public class MoveHelper : Singleton<MoveHelper>
 				{
 					_mouseOverSelected = true;
 					_selectedEntity = e;
+					
 					_pathfinding = _selectedEntity.movement.pathfinding;
 					CalculatePath();
 				}
@@ -102,6 +111,22 @@ public class MoveHelper : Singleton<MoveHelper>
 		{
 			_mouseOverSelected = false;
 			DeselectEntity();
+		}
+	}
+
+	private void InfoPanel()
+	{
+		if (_selectedEntity is { } && _selectedEntity.gameObject.layer == 8)
+		{
+			infoPanel.SetActive(true);
+			imalePanel.sprite = imageInfo[_selectedEntity.TypeEnemy];
+			stats[0].text = _selectedEntity.name;
+			stats[1].text = "" + _selectedEntity.gameObject.GetComponent<Attak>()._damage;
+			stats[2].text = "" + _selectedEntity.MaxActionPoints;
+		}
+		else
+		{
+			infoPanel.SetActive(false);
 		}
 	}
 	

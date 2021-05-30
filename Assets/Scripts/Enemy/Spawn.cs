@@ -17,6 +17,7 @@ public class Spawn : Singleton<Spawn>
     [Header("---------------------------- Системные --------------------------")]
     public LayerMask _tileMask;
 	public PlayerEntity Kaujy;
+    [SerializeField] private string[] _names;
     public PlayerEntity EpicKaujy;
 	[SerializeField] private Enemy [] _enemy;
 	public List<Enemy> Enemyes;
@@ -118,6 +119,7 @@ public class Spawn : Singleton<Spawn>
                     }
 
                     var enemy = Instantiate(_enemy[index], spawnCoord + Vector3.up, Quaternion.identity);
+                    enemy.name = _names[index];
                     Enemyes.Add(enemy);
                     co += 1;
 
