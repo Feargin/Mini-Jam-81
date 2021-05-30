@@ -14,16 +14,10 @@ public class ChangeTurn : Singleton<ChangeTurn>
 	public static event System.Action<bool> TheNextTurn;
     
     #endregion
-	protected void OnEnable()
-	{
-		Spawn.OnGameStart += OnGameStart;
-	}
-	
-	protected void OnDisable()
-	{
-		Spawn.OnGameStart -= OnGameStart;
-	}
-	
+	protected void OnEnable() => Spawn.OnGameStart += OnGameStart;
+
+	protected void OnDisable() => Spawn.OnGameStart -= OnGameStart;
+
 	private void OnGameStart()
 	{
 		

@@ -389,7 +389,11 @@
             <e p="ReadOnlyDrawer.cs" t="Include" />
           </e>
           <e p="Enemy" t="Include">
-            <e p="AI.cs" t="Include" />
+            <e p="AI" t="Include">
+              <e p="AI.cs" t="Include" />
+              <e p="AI_FindTarget.cs" t="Include" />
+              <e p="AI_Moving.cs" t="Include" />
+            </e>
             <e p="Attak.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemySelector.cs" t="Include" />
@@ -407,14 +411,16 @@
           <e p="Movement.cs" t="Include" />
           <e p="PF_AStar.cs" t="Include" />
           <e p="Player" t="Include">
-            <e p="DisplayAvailableMove.cs" t="Include" />
+            <e p="ButtonSuicide.cs" t="Include" />
             <e p="Egg.cs" t="Include" />
             <e p="Entity.cs" t="Include" />
             <e p="MoveHelper.cs" t="Include" />
+            <e p="PlayerAttak.cs" t="Include" />
             <e p="PlayerEntity.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerSelector.cs" t="Include" />
             <e p="SpawnEgg.cs" t="Include" />
+            <e p="Suicide.cs" t="Include" />
           </e>
           <e p="Singleton.cs" t="Include" />
           <e p="UI" t="Include">

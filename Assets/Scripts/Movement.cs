@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
 	[Header("----------- SETTINGS ----------")]
 	[HideInInspector] public PF_AStar pathfinding;
 	[HideInInspector] public Tile tile;
+	public static event System.Action<Entity> EndMove;
 	
 	private List<Node> path;
 	private Entity entity;
@@ -36,6 +37,11 @@ public class Movement : MonoBehaviour
 		//	transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
 		//}
 	}
+
+	private void CompliteMove()
+	{
+		EndMove?.Invoke(entity);
+	}
 	
 	public void MoveTo(Vector3 position, bool ignoreDistance = false)
 	{
@@ -54,7 +60,9 @@ public class Movement : MonoBehaviour
 		if(pathL.Count > 0 && (pathL.Count <= entity._currentActionPoints || ignoreDistance))
 		{
 			entity._currentActionPoints = 0;
-			transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear);
+			var sequence = DOTween.Sequence();
+			sequence.Append(transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear));
+			sequence.OnComplete(CompliteMove);
 		}
 	}
 	

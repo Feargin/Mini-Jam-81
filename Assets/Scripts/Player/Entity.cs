@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.tvOS;
 using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
@@ -12,6 +13,7 @@ public class Entity : MonoBehaviour
 	[Header("--------------------- Системные --------------------")]
 	[HideInInspector] public Movement movement;
 	[SerializeField] private Image _healtBar;
+	[SerializeField] private GameObject _vfx;
 	
 	private void OnEnable() => ChangeTurn.TheNextTurn += ResetActionPoints;
 	private void OnDisable() => ChangeTurn.TheNextTurn -= ResetActionPoints;
@@ -32,16 +34,20 @@ public class Entity : MonoBehaviour
 		_healtBar.fillAmount = 1;
 	}
 
-	public void DealDamage(int damage)
+	public void DealDamage(int damage, string type)
 	{
 		_health -= damage;
-		_healtBar.fillAmount = _health / _currentHealth;
-		if (_health <= 0) Kill();
+		if(type == "enemy")_healtBar.fillAmount = _health / _currentHealth;
+		if (_health <= 0) Kill(type);
 		
 	}
 
-	private void Kill()
+	private void Kill(string type)
 	{
+		if(type == "enemy") Spawn.Instance.Enemyes.Remove(transform);
+		else Spawn.Instance.Players.Remove(transform);
+		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
+		Destroy(vfx, 1.5f);
 		Destroy(gameObject);
 	}
 }
