@@ -14327,7 +14327,7 @@ GameObject:
   - component: {fileID: 7001993309038266110}
   - component: {fileID: 2966649786883618446}
   m_Layer: 0
-  m_Name: Explosion9
+  m_Name: DeathKodju
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14361,9 +14361,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 222141dd968fb6447b5c790b6d87a27b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7ed9366c9926445fcb078e9f6e9c4700, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.548
   m_Pitch: 1
   Loop: 0
   Mute: 0
