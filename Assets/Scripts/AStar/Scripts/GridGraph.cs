@@ -39,6 +39,15 @@ public class GridGraph
         else
             return false;
     }
+    
+	public bool InBounds(Vector3 v)
+	{
+		if (v.x >= 0 && v.x < this.Width &&
+			v.z >= 0 && v.z < this.Height)
+			return true;
+		else
+			return false;
+	}
 
     /// <summary>
     /// Checks whether the neighbouring Node is a wall or not
@@ -73,12 +82,12 @@ public class GridGraph
 	        Vector2 newVector = v + n.Position;
 	        if (InBounds(newVector) && Passable(WorldToIndex(newVector)))
             {
-                results.Add(Grid[(int)newVector.x, (int)newVector.y]);
+		        results.Add(Grid[Mathf.RoundToInt(newVector.x), Mathf.RoundToInt(newVector.y)]);
             }
 	        if (InBounds(newVector) && Passable(WorldToIndex(newVector), true))
 	        {
-	        	if(!obstacles.Contains(Grid[(int)newVector.x, (int)newVector.y]))
-		        	obstacles.Add(Grid[(int)newVector.x, (int)newVector.y]);
+	        	if(!obstacles.Contains(Grid[Mathf.RoundToInt(newVector.x), Mathf.RoundToInt(newVector.y)]))
+		        	obstacles.Add(Grid[Mathf.RoundToInt(newVector.x), Mathf.RoundToInt(newVector.y)]);
 	        }
         }
 
@@ -106,7 +115,7 @@ public class GridGraph
 			Vector2 newVector = v + n.Position;
 			if (InBounds(newVector) && (ignoreObstacle || Passable(WorldToIndex(newVector), false)))
 			{
-				results.Add(Grid[(int)newVector.x, (int)newVector.y]);
+				results.Add(Grid[Mathf.RoundToInt(newVector.x), Mathf.RoundToInt(newVector.y)]);
 			}
 		}
 
@@ -115,8 +124,8 @@ public class GridGraph
     
 	public Vector2Int WorldToLocal(Vector3 pos)
 	{
-		int newX = (int)(Mathf.Round(pos.x / GridSize) * GridSize);
-		int newY = (int)(Mathf.Round(pos.z / GridSize) * GridSize);
+		int newX = Mathf.RoundToInt((pos.x / GridSize) * GridSize);
+		int newY = Mathf.RoundToInt((pos.z / GridSize) * GridSize);
 		Vector2Int local = new Vector2Int(newX, newY);
 		return local;
 	}

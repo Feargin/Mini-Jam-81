@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollideAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public int Damage = 10;
+	private bool _enabled = false;
+	
+	public event System.Action OnDealDamage;
+	
+	private void OnCollisionEnter(Collision col)
+	{
+		if (_enabled && col.transform.TryGetComponent(out PlayerEntity player))
+		{
+			player.DealDamage(Damage);
+			OnDealDamage?.Invoke();
+		}
+	}
+	
+	public void Enable()
+	{
+		_enabled = true;
+	}
+	
+	public void Disable()
+	{
+		_enabled = false;
+	}
 }

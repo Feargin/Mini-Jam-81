@@ -32,33 +32,47 @@ public class Movement : MonoBehaviour
 			path = pathfinding.FindPathFly(transform.position, position);
 		else
 			path = pathfinding.FindPath(transform.position, position);
-		List<Vector3> pathL = new List<Vector3>();
-		for(int i = 0; i < path.Count; i++)
+			
+		if(path != null)
 		{
-			if(i >= entity._currentActionPoints && ignoreDistance)
-				break;
-			Vector3 v3 = Vector3.zero;
-			v3.x = path[i].Position.x * pathfinding.map.GridSize;
-			v3.y = transform.position.y;
-			v3.z = path[i].Position.y * pathfinding.map.GridSize;
-			pathL.Add(v3);
+			List<Vector3> pathL = new List<Vector3>();
+			for(int i = 0; i < path.Count; i++)
+			{
+				if(i >= entity._currentActionPoints && ignoreDistance)
+					break;
+				Vector3 v3 = Vector3.zero;
+				v3.x = path[i].Position.x * pathfinding.map.GridSize;
+				v3.y = transform.position.y;
+				v3.z = path[i].Position.y * pathfinding.map.GridSize;
+				pathL.Add(v3);
+			}
+			
+			if(pathL.Count > 0 && (pathL.Count <= entity._currentActionPoints || ignoreDistance))
+			{
+				entity._currentActionPoints = 0;
+				var sequence = DOTween.Sequence();
+				sequence.Append(transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear));
+				sequence.OnComplete(CompliteMove);
+				if(completeEvent != null)
+					sequence.OnComplete(completeEvent);
+			}
+			else
+			{
+				CompliteMove();
+				completeEvent?.Invoke();
+			}
 		}
-		if(pathL.Count > 0 && (pathL.Count <= entity._currentActionPoints || ignoreDistance))
+		else
 		{
-			entity._currentActionPoints = 0;
-			var sequence = DOTween.Sequence();
-			sequence.Append(transform.DOPath(pathL.ToArray(), 1f).SetEase(Ease.Linear));
-			sequence.OnComplete(CompliteMove);
-			//print(completeEvent);
-			if(completeEvent != null)
-				sequence.OnComplete(completeEvent);
+			CompliteMove();
+			completeEvent?.Invoke();
 		}
 	}
 	
 	public void MoveRandomDir(TweenCallback completeEvent = null)
 	{
-		Vector3 direction = Random.insideUnitCircle.normalized;
-		MoveTo(transform.position + direction * 50f, true, completeEvent);
+		Vector3 direction = Vector3.right;
+		MoveTo(transform.position + direction * 5f, true, completeEvent);
 		
 	}
 	

@@ -8,6 +8,8 @@ public class Entity : MonoBehaviour
 	public int MaxActionPoints = 4;
 	public int _currentActionPoints;
 	public Type type;
+	public bool _immortal = false;
+	//public Tile tile;
 	[SerializeField] private int _currentHealth;
 	[Space]
 	[Header("--------------------- Системные --------------------")]
@@ -38,7 +40,7 @@ public class Entity : MonoBehaviour
 
 	public void DealDamage(int damage)
 	{
-		if(_isDead) return;
+		if(_isDead || _immortal) return;
 		_health -= damage;
 		if(_healtBar != null)
 			_healtBar.fillAmount = (float)_health / (float)_currentHealth;
@@ -59,8 +61,11 @@ public class Entity : MonoBehaviour
 			}
 		}
 		
-		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
-		Destroy(vfx, 1.5f);
+		if(_vfx != null)
+		{
+			var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
+			Destroy(vfx, 1.5f);
+		}
 		Destroy(gameObject);
 	}
 	

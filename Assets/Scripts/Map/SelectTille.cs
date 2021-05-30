@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +14,8 @@ public class SelectTille : MonoBehaviour
             GetComponent<Tile>().SetColor(new Color32(123, 255, 80, 255));
         }
         
+	    //Node n = new Node(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
+	    //print(n.Position);
     }
 
     
