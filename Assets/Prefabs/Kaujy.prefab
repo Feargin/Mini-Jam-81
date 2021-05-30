@@ -83,7 +83,7 @@ MonoBehaviour:
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 1795505890998195318}
-  _vfx: {fileID: 0}
+  _vfx: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
 --- !u!114 &763948079657260725
 MonoBehaviour:
   m_ObjectHideFlags: 0
