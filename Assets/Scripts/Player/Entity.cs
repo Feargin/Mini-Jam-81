@@ -25,13 +25,30 @@ public class Entity : MonoBehaviour
 	public void DealDamage(int damage)
 	{
 		_health -= damage;
+<<<<<<< Updated upstream
 		_healtBar.fillAmount = _health / _currentHealth;
+=======
+		if(_healtBar != null)
+			_healtBar.fillAmount = (float)_health / (float)_currentHealth;
+>>>>>>> Stashed changes
 		if (_health <= 0) Kill();
 		
 	}
 
 	private void Kill()
 	{
+<<<<<<< Updated upstream
+=======
+		if(this is Enemy) Spawn.Instance.Enemyes.Remove(transform);
+		else
+		{
+			Spawn.Instance.Players.Remove(transform);
+			SpawnEgg.Instance.Spawner(transform.position);
+		}
+
+		var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
+		Destroy(vfx, 1.5f);
+>>>>>>> Stashed changes
 		Destroy(gameObject);
 	}
 }

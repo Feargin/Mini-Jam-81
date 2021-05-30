@@ -10,6 +10,7 @@ public class Tile : MonoBehaviour
 	[SerializeField] private bool _walkable = true;
 	public bool CanBuild = false;
 	
+
 	public bool IsPassable(bool withEntity)
 	{
 		return (_walkable && EntityIn == null && withEntity == false) 
@@ -23,8 +24,12 @@ public class Tile : MonoBehaviour
 
 	public void SetColor(Color color)
 	{
-		_oldColor = _meshRender.material.color;
-		_meshRender.material.color = color;
+		if (_meshRender is { })
+		{
+			_oldColor = _meshRender.material.color;
+			_meshRender.material.color = color;
+		}
+
 		TileColor = color;
 	}
 }

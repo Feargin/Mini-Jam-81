@@ -17,6 +17,7 @@ public class Spawn : Singleton<Spawn>
     [Header("---------------------------- Системные --------------------------")]
     [SerializeField] private LayerMask _tileMask;
 	public Transform Kaujy;
+    public Transform EpicKaujy;
     [SerializeField] private Transform [] _enemy;
     public List<Transform> Enemyes;
     public List<Transform> Players;

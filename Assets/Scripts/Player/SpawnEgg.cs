@@ -14,7 +14,7 @@ public class SpawnEgg : Singleton<SpawnEgg>
     
     public void SpawnEpickKaujy(Vector3 position)
     {
-        var kaujy = Instantiate(Spawn.Instance.Kaujy, position, Quaternion.identity);
+        var kaujy = Instantiate(Spawn.Instance.EpicKaujy, position, Quaternion.identity);
         kaujy.GetComponent<PlayerEntity>()._health = _hpNewKaujy;
     }
 
