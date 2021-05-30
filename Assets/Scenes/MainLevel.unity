@@ -4543,7 +4543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Attak:'
+  m_text: 'Attack:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c9a3967beacb024280a24b7d4ceaf0b, type: 2}
   m_sharedMaterial: {fileID: -7645351858112693921, guid: 5c9a3967beacb024280a24b7d4ceaf0b, type: 2}
