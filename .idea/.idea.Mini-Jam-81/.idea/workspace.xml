@@ -34,21 +34,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Suicide.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ButtonSuicide.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PF_AStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/AI_Moving.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SoundController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attak.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/SelectTille.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttak.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Egg.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveHelper.cs" />
       </list>
     </option>
@@ -135,7 +135,9 @@
       <workItem from="1622391848087" duration="1937000" />
       <workItem from="1622393863727" duration="1942000" />
       <workItem from="1622395953843" duration="1776000" />
-      <workItem from="1622401034209" duration="1007000" />
+      <workItem from="1622401034209" duration="1781000" />
+      <workItem from="1622402868225" duration="1964000" />
+      <workItem from="1622405025026" duration="1487000" />
     </task>
     <servers />
   </component>

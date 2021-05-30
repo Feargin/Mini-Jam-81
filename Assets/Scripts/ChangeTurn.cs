@@ -13,6 +13,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
 
 	[SerializeField] private GameObject _playerController;
 	[SerializeField] private Button _nextTurn;
+	[SerializeField] private AudioSource GameGontrollerAudio;
 	[SerializeField] private TMP_Text _countTurnText;
 	private float _timer;
     public int CountTurn = 0;
@@ -42,6 +43,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
     {
 	    _nextTurn.interactable = false;
 	    _playerController.SetActive(false);
+	    GameGontrollerAudio.Play();
         //Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = false;
         TheNextTurn?.Invoke(true);
     }
@@ -59,7 +61,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
 		    _countTurnText.text = "" + ToSpawn;
 	    }
 	    else _countTurnText.text = "Already arrived";
-	    
+	    GameGontrollerAudio.Stop();
 	    
 	    foreach (var v in _numTurn)
 	    {

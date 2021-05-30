@@ -65,7 +65,7 @@ public class Entity : MonoBehaviour
 		if(_vfx != null)
 		{
 			var vfx = Instantiate(_vfx, transform.position, Quaternion.identity);
-			Destroy(vfx, 1.5f);
+			Destroy(vfx, 4f);
 		}
 		Destroy(gameObject);
 	}

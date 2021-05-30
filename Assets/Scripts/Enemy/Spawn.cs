@@ -24,6 +24,7 @@ public class Spawn : Singleton<Spawn>
 	public List<PlayerEntity> Players;
     public GameObject PlayerControler;
     [SerializeField] private GameObject _vfxKaugySpawn;
+    [SerializeField] private GameObject NextTurnButton;
     private bool _readySpawn;
     private Vector3 _coordCell;
 	private Transform _targetCell;
@@ -38,6 +39,7 @@ public class Spawn : Singleton<Spawn>
     private void Start()
     {
         Invoke("SpawnPing", 0.2f);
+        NextTurnButton.SetActive(false);
     }
 
     private void SpawnPing()
@@ -151,7 +153,7 @@ public class Spawn : Singleton<Spawn>
             if (_countKaujy <= 0)
             {
 	            GridSpawnKaujy(2, false);
-                
+                NextTurnButton.SetActive(true);
 	            PlayerControler.SetActive(true);
 	            //OnGameStart?.Invoke();
 

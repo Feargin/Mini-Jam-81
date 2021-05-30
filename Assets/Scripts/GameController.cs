@@ -25,11 +25,13 @@ public class GameController : MonoBehaviour
             {
                 UIManager.Instance.EnablePanel(_winPanel);
                 ChangeTurn.Instance.CountTurn = 0;
+                Camera.main.GetComponent<AudioSource>().Stop();
             }
             else if (Spawn.Instance.Players.Count <= 0)
             {
                 UIManager.Instance.EnablePanel(_failPanel);
                 ChangeTurn.Instance.CountTurn = 0;
+                Camera.main.GetComponent<AudioSource>().Stop();
             }
 
             _timer = 0;

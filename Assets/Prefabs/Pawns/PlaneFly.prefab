@@ -88,7 +88,7 @@ MonoBehaviour:
   _currentHealth: 0
   movement: {fileID: 0}
   _healtBar: {fileID: 0}
-  _vfx: {fileID: 100008, guid: 95cb04c70e05847c0a30450e4c714700, type: 3}
+  _vfx: {fileID: 1255101210193260751, guid: a56c4afb6ccddbd4eb08f6ad1a0f186d, type: 3}
   _isDead: 0
   AI_Behavoiur: {fileID: 9041001316395265700}
   TurnPassed: 0
@@ -115,8 +115,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.3132772, z: 1}
+  m_Center: {x: 0, y: -0.6566379, z: 0}
 --- !u!54 &-6254472678165206597
 Rigidbody:
   m_ObjectHideFlags: 0

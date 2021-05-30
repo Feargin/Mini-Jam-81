@@ -21,7 +21,11 @@ public sealed class UIManager : Singleton<UIManager>
         Instance = this;
     }
 
-    private void Start() => EnablePanel(_initialPanel);
+    private void Start()
+    {
+        EnablePanel(_initialPanel);
+        Camera.main.GetComponent<AudioSource>().Play();
+    }
 
     public void EnablePanel(GameObject panel)
     {

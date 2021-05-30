@@ -13,6 +13,7 @@ public class MoveHelper : Singleton<MoveHelper>
 	[SerializeField] private TMP_Text[] stats;
 	[SerializeField] private Sprite[] imageInfo;
 	[SerializeField] private Image imalePanel;
+	[SerializeField] private string[] _textPriority;
 	
 	private PF_AStar _pathfinding;
 	private List<Node> _passablePath;
@@ -126,6 +127,7 @@ public class MoveHelper : Singleton<MoveHelper>
 			else if(_selectedEntity.gameObject.TryGetComponent(out CollideAttack attack2))
 			stats[1].text = "" + attack2.Damage;
 			stats[2].text = "" + _selectedEntity.MaxActionPoints;
+			stats[4].text = _textPriority[_selectedEntity.TypeEnemy];
 		}
 		else if (_selectedEntity != null && _selectedEntity.TypeEnemy == 4)
 		{

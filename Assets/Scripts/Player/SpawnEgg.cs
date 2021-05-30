@@ -17,6 +17,7 @@ public class SpawnEgg : Singleton<SpawnEgg>
     {
         var kaujy = Instantiate(Spawn.Instance.EpicKaujy, position, Quaternion.identity);
         Spawn.Instance.Players.Add(kaujy);
+        SoundController.Instance.SetClip(3);
         kaujy.GetComponent<PlayerEntity>()._health = _hpNewKaujy;
     }
 
