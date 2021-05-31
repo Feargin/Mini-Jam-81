@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d85ac995595e014d85b53f0925ffcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 120
+  _health: 130
   MaxActionPoints: 4
   _currentActionPoints: 0
   type: 2
