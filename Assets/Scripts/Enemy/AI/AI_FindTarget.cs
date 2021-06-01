@@ -18,20 +18,21 @@ public class AI_FindTarget : AI
     
 	public override void BeginState()
 	{
-		//print(111);
 		SelectPlayerTarget();
 		ExitState();
 	}
 	
 	private void SelectPlayerTarget()
 	{
+		if(Spawn.Players.Count == 0)
+			return;
 		Target = null;
 		foreach(var p in Spawn.Players)
 		{
 			if(p != null && Target != null)
 			{
-				if((p.transform.position - transform.position).magnitude 
-					< (Target.transform.position - transform.position).magnitude
+				if(Vector3.Distance(p.transform.position, transform.position)
+					< Vector3.Distance(Target.transform.position, transform.position)
 					&& p.type != PriorityTarget
 					|| p.type == PriorityTarget)
 				{

@@ -87,4 +87,13 @@ public class Attak : MonoBehaviour
 		}
 		return closest;
 	}
+	
+	//protected void OnDrawGizmos()
+	//{
+	//	Gizmos.color = Color.green;
+	//	foreach(Vector3 pos in RangeAttak)
+	//	{
+	//		Gizmos.DrawWireSphere(transform.position + pos, 0.5f);
+	//	}
+	//}
 }

@@ -29,7 +29,7 @@ public class Spawn : Singleton<Spawn>
     private Vector3 _coordCell;
 	private Transform _targetCell;
     
-	public static event System.Action OnGameStart;
+	//public static event System.Action OnGameStart;
 
     public Spawn(bool readySpawn)
     {

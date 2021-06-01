@@ -3,7 +3,7 @@
 public class CollideAttack : MonoBehaviour
 {
 	public int Damage = 10;
-	private bool _enabled = false;
+	public bool _enabled = false;
 	
 	public event System.Action OnDealDamage;
 	

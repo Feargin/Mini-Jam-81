@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,14 +15,14 @@ public class Suicide : MonoBehaviour
     private void OnEnable()
     {
         Movement.EndMove += CheckSuicide;
-        PlayerAttak.AttakPlayer += SetAttak;
+        //PlayerAttak.AttakPlayer += SetAttak;
         ChangeTurn.TheNextTurn += ChangeAttak;
     }
 
     private void OnDisable()
     {
         Movement.EndMove -= CheckSuicide;
-        PlayerAttak.AttakPlayer -= SetAttak;
+        //PlayerAttak.AttakPlayer -= SetAttak;
         ChangeTurn.TheNextTurn -= ChangeAttak;
     }
 
@@ -36,6 +36,7 @@ public class Suicide : MonoBehaviour
     {
         if (!_atteked && e == GetComponent<Entity>()) _ready = true;
     }
+    
     private void SetAttak()
     {
         _atteked = true;

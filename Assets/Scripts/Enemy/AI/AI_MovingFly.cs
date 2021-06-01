@@ -41,6 +41,7 @@ public class AI_MovingFly : AI
 	{
 		IsDealDamage = false;
 		Owner._immortal = false;
+		Attack.Disable();
 		base.ExitState();
 	}
 	

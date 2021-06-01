@@ -96,18 +96,18 @@ public class Movement : MonoBehaviour
 		if(other.TryGetComponent<Tile>(out Tile _tile) && _tile.EntityIn == entity) _tile.EntityIn = null;
 	}
 	
-	protected void OnDrawGizmos()
-	{
-		if(path == null)
-			return;
-		Gizmos.color = Color.red;
-		foreach(var v in path)
-		{
-			Vector3 v3 = Vector3.zero;
-			v3.x = v.Position.x * pathfinding.map.GridSize;
-			v3.z = v.Position.y * pathfinding.map.GridSize;
+	//protected void OnDrawGizmos()
+	//{
+	//	if(path == null)
+	//		return;
+	//	Gizmos.color = Color.red;
+	//	foreach(var v in path)
+	//	{
+	//		Vector3 v3 = Vector3.zero;
+	//		v3.x = v.Position.x * pathfinding.map.GridSize;
+	//		v3.z = v.Position.y * pathfinding.map.GridSize;
 			
-			Gizmos.DrawWireSphere(v3 + Vector3.up * 0.5f, 0.4f);
-		}
-	}
+	//		Gizmos.DrawWireSphere(v3 + Vector3.up * 0.5f, 0.4f);
+	//	}
+	//}
 }

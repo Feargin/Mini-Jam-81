@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerAttak : MonoBehaviour
 {
     private PlayerSelector _playerSelect;
-    public static event System.Action AttakPlayer;
+    //public static event System.Action AttakPlayer;
     void Start()
     {
         _playerSelect = GetComponent<PlayerSelector>();
