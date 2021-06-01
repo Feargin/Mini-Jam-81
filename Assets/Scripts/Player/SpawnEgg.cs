@@ -6,13 +6,17 @@ public class SpawnEgg : Singleton<SpawnEgg>
 {
 	[SerializeField] private Egg _egg;
     [SerializeField] private int _hpNewKaujy;
+    [SerializeField] private GameObject panelEggInfo;
+    private bool eggInfoReg = false;
     
     public void Spawner(Vector3 position)
     {
         var egg = Instantiate(_egg, position, Quaternion.identity);
         Spawn.Instance.Players.Add(egg);
+        if(!eggInfoReg) panelEggInfo.SetActive(true);
+        eggInfoReg = true;
     }
-    
+
     public void SpawnEpickKaujy(Vector3 position)
     {
         var kaujy = Instantiate(Spawn.Instance.EpicKaujy, position, Quaternion.identity);

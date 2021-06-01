@@ -38,8 +38,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Egg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/CollideAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/AI.cs" />
@@ -56,6 +54,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ButtonSuicide.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
       </list>
     </option>
   </component>
@@ -154,7 +154,8 @@
       <workItem from="1622539878441" duration="1781000" />
       <workItem from="1622541692348" duration="816000" />
       <workItem from="1622545874138" duration="1753000" />
-      <workItem from="1622548342760" duration="602000" />
+      <workItem from="1622548342760" duration="1258000" />
+      <workItem from="1622550254342" duration="368000" />
     </task>
     <servers />
   </component>

@@ -14,8 +14,6 @@ public class Tile : MonoBehaviour
 
 	public bool IsPassable(bool withEntity)
 	{
-		if(Selected)
-			print(Selected);
 		return (_walkable && EntityIn == null && withEntity == false)
 		       || (_walkable && EntityIn != null && withEntity == true)
 		       || (_walkable && Selected && EntityIn != null && EntityIn.type == Entity.Type.None && withEntity == false);
