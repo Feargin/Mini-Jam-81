@@ -50,7 +50,7 @@ public class PlayerSelector : Singleton<PlayerSelector>
 	    }
 
     }
-    
+
 	private bool SelectPlayerEntity()
 	{
 		if (SelectedPlayer != null)
@@ -58,14 +58,17 @@ public class PlayerSelector : Singleton<PlayerSelector>
 			SelectedPlayer.selectimage.SetActive(false);
 		}
 
-		if(Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask, QueryTriggerInteraction.Ignore))
+		if (Physics.Raycast(_main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, float.PositiveInfinity, _playerMask, QueryTriggerInteraction.Ignore))
 		{
-			SelectedPlayer = hit.transform.gameObject.GetComponent<PlayerEntity>();
-			if(SelectedPlayer != null)
+			if (hit.transform.gameObject.GetComponent<PlayerEntity>().type == Entity.Type.Godzilla)
 			{
-				SelectedPlayer.selectimage.SetActive(true);
-				OnPlayerSelect?.Invoke(SelectedPlayer);
-				return true;
+				SelectedPlayer = hit.transform.gameObject.GetComponent<PlayerEntity>();
+				if (SelectedPlayer != null)
+				{
+					SelectedPlayer.selectimage.SetActive(true);
+					OnPlayerSelect?.Invoke(SelectedPlayer);
+					return true;
+				}
 			}
 		}
 		return false;

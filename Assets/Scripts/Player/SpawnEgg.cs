@@ -13,8 +13,17 @@ public class SpawnEgg : Singleton<SpawnEgg>
     {
         var egg = Instantiate(_egg, position, Quaternion.identity);
         Spawn.Instance.Players.Add(egg);
-        if(!eggInfoReg) panelEggInfo.SetActive(true);
-        eggInfoReg = true;
+        if (!eggInfoReg)
+        {
+            Time.timeScale = 0;
+            panelEggInfo.SetActive(true);
+        }
+        eggInfoReg = true; 
+    }
+
+    public void SetTimeScale()
+    {
+        Time.timeScale = 1;
     }
 
     public void SpawnEpickKaujy(Vector3 position)

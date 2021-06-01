@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _needVisiable: 0
-  _damage: 33
+  _damage: 34
   RangeAttak:
   - {x: 3, y: 0, z: 0}
   - {x: 4, y: 0, z: 0}
