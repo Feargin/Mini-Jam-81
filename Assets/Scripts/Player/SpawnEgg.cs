@@ -16,6 +16,7 @@ public class SpawnEgg : Singleton<SpawnEgg>
     public void SpawnEpickKaujy(Vector3 position)
     {
         var kaujy = Instantiate(Spawn.Instance.EpicKaujy, position, Quaternion.identity);
+        kaujy.name = "Super Kaiju";
         Spawn.Instance.Players.Add(kaujy);
         SoundController.Instance.SetClip(3);
         kaujy.GetComponent<PlayerEntity>()._health = _hpNewKaujy;

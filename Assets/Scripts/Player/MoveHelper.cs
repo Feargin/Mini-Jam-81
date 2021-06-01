@@ -9,7 +9,7 @@ public class MoveHelper : Singleton<MoveHelper>
 	[SerializeField] private LayerMask _entityMask;
 	[SerializeField] private Color _passableColor = Color.yellow;
 	[SerializeField] private Color _enemyColor = Color.red;
-	[SerializeField] private GameObject infoPanel, eggPanel;
+	[SerializeField] private GameObject infoPanel, eggPanel, kaujyPanel;
 	[SerializeField] private TMP_Text[] stats;
 	[SerializeField] private Sprite[] imageInfo;
 	[SerializeField] private Image imalePanel;
@@ -136,10 +136,17 @@ public class MoveHelper : Singleton<MoveHelper>
 			                      _selectedEntity.gameObject.GetComponent<Egg>()._liveCount) / 2);
 			stats[5].text = "" + _selectedEntity._health;
 		}
+		else if (_selectedEntity != null && _selectedEntity.type == Entity.Type.Godzilla)
+		{
+			kaujyPanel.SetActive(true);
+			stats[6].text = "" + ((_selectedEntity._health));
+			stats[7].text = "" + _selectedEntity.name;
+		}
 		else
 		{
 			infoPanel.SetActive(false);
 			eggPanel.SetActive(false);
+			kaujyPanel.SetActive(false);
 		}
 	}
 	

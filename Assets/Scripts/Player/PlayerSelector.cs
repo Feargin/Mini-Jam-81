@@ -9,8 +9,8 @@ public class PlayerSelector : Singleton<PlayerSelector>
 	[SerializeField] private LayerMask _playerMask;
 	[SerializeField] private LayerMask _walkableMask;
 	[SerializeField] private PlayerMovement _movement;
-	public Entity Target;
-	
+	[SerializeField] private Tile _selectedTile;
+
 	#region Events
 	public static event System.Action<Entity> OnPlayerSelect;
 	public static event System.Action<Entity> OnPlayerDeselect;
@@ -33,15 +33,22 @@ public class PlayerSelector : Singleton<PlayerSelector>
 	    	}
 	    }
 	    RaycastHit hit;
-	    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity, _walkableMask, QueryTriggerInteraction.Ignore))
-	    {
-		    if(hit.transform.GetComponent<Tile>() && hit.transform.GetComponent<Tile>().EntityIn)
+
+	    if (_selectedTile != null) _selectedTile.Selected = false;
+		    if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity,
+			    _walkableMask, QueryTriggerInteraction.Ignore))
 		    {
-			    Map.Instance.ReloadSelectTiles();
-			    hit.transform.GetComponent<Tile>().Selected = true;
-			    Target = hit.transform.GetComponent<Tile>().EntityIn;
-		    }
+			    
+			    if (hit.transform.TryGetComponent(out Tile tile) && tile.EntityIn != null)
+			    {
+				    _selectedTile = tile;
+				    _selectedTile.Selected = true;
+				    /*Map.Instance.ReloadSelectTiles();
+				    hit.transform.GetComponent<Tile>().Selected = true;*/
+			    }
+		    
 	    }
+
     }
     
 	private bool SelectPlayerEntity()

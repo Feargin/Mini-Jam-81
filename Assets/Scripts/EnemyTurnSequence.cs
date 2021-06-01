@@ -26,7 +26,10 @@ public class EnemyTurnSequence : MonoBehaviour
 		for(int i = 0; i < _spawn.Enemyes.Count; i++)
 		{
 			_spawn.Enemyes[i].EnableAI();
-			yield return new WaitUntil(() => _spawn.Enemyes[i].TurnPassed == true);
+			yield return new WaitUntil(() =>
+			{
+				return _spawn.Enemyes.Count > i && _spawn.Enemyes[i].TurnPassed == true;
+			});
 		}
 		OnNpcEndTurn?.Invoke();
 	}

@@ -146,6 +146,7 @@ public class Spawn : Singleton<Spawn>
             var vfx = Instantiate(_vfxKaugySpawn, _coordCell, Quaternion.identity);
             Destroy(vfx, 3f);
             var player = Instantiate(Kaujy, _coordCell, Quaternion.identity);
+            player.name = "Kaiju";
             _countKaujy -= 1;
             Players.Add(player);
             _targetCell.GetComponent<TileParameters>().SpawnKaujy = false;

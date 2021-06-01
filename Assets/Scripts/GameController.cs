@@ -17,9 +17,9 @@ public class GameController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if ((Spawn.Instance.Enemyes.Count <= 0 || Spawn.Instance.Players.Count <= 0) && ChangeTurn.Instance.CountTurn >= 2) _timer += Time.deltaTime;
+        if ((Spawn.Instance.Enemyes.Count <= 0 || Spawn.Instance.Players.Count <= 0) && ChangeTurn.Instance.CountTurn >= 4) _timer += Time.deltaTime;
 
-        if (ChangeTurn.Instance.CountTurn >= 2 && _timer >= 2f)
+        if (ChangeTurn.Instance.CountTurn >= 4 && _timer >= 2f)
         {
             if (Spawn.Instance.Enemyes.Count <= 0)
             {

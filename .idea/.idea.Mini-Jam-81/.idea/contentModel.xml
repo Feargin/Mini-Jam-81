@@ -409,7 +409,6 @@
           <e p="GameController.cs" t="Include" />
           <e p="Map" t="Include">
             <e p="Map.cs" t="Include" />
-            <e p="MapGeneratorOneType.cs" t="Include" />
             <e p="MapGeneratorTwoType.cs" t="Include" />
             <e p="SelectTille.cs" t="Include" />
             <e p="Tile.cs" t="Include" />

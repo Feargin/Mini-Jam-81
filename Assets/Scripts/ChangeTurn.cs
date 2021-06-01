@@ -42,6 +42,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
     public void NextTurn()
     {
 	    _nextTurn.interactable = false;
+	    _nextTurn.GetComponent<Animator>().enabled = false;
 	    _playerController.SetActive(false);
 	    GameGontrollerAudio.Play();
         //Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = false;
@@ -51,6 +52,7 @@ public class ChangeTurn : Singleton<ChangeTurn>
     public void FinishEnemyTurn()
     {
 	    _nextTurn.interactable = true;
+	    _nextTurn.GetComponent<Animator>().enabled = true;
 	    _playerController.SetActive(true);
 	    //Spawn.Instance.PlayerControler.GetComponent<PlayerMovement>().enabled = true;
 	    TheNextTurn?.Invoke(false);

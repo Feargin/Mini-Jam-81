@@ -30,27 +30,31 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SelectTille.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/Map.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Tile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Suicide.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ButtonSuicide.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PF_AStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/AI_Moving.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/SelectTille.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttak.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Egg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpawnEgg.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/CollideAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/AI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attak.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyTurnSequence.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PF_AStar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/Scripts/GridGraph.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AStar/Scripts/AStar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Cheats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Tile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeTurn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/ButtonSuicide.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveHelper.cs" />
       </list>
     </option>
@@ -142,7 +146,15 @@
       <workItem from="1622402868225" duration="1964000" />
       <workItem from="1622405025026" duration="1552000" />
       <workItem from="1622406999059" duration="1775000" />
-      <workItem from="1622410307887" duration="378000" />
+      <workItem from="1622410307887" duration="948000" />
+      <workItem from="1622529461958" duration="120000" />
+      <workItem from="1622534398440" duration="1770000" />
+      <workItem from="1622536199328" duration="1777000" />
+      <workItem from="1622538061925" duration="1782000" />
+      <workItem from="1622539878441" duration="1781000" />
+      <workItem from="1622541692348" duration="816000" />
+      <workItem from="1622545874138" duration="1753000" />
+      <workItem from="1622548342760" duration="602000" />
     </task>
     <servers />
   </component>

@@ -26,13 +26,12 @@ public class ButtonSuicide : MonoBehaviour
     private void NextTurn(bool b)
 	{
 		if(_suicideButton != null)
-        	_suicideButton.interactable = false;
+        	_suicideButton.gameObject.SetActive(false);
     }
 
     private void Start()
     {
-        _suicideButton.gameObject.SetActive(true);
-        _suicideButton.interactable = false;
+        _suicideButton.gameObject.SetActive(false);
     }
 
     private void SetMoveEnd(Entity e)
@@ -43,13 +42,13 @@ public class ButtonSuicide : MonoBehaviour
     private void SetButtonActive(Entity e)
     {
         entitySecelt = e;
-        if(e.transform.GetComponent<Suicide>()._ready) _suicideButton.interactable = true;
-        else _suicideButton.interactable = false;
+        if(e.transform.GetComponent<Suicide>()._ready) _suicideButton.gameObject.SetActive(true);
+        else _suicideButton.gameObject.SetActive(false);;
     }
     private void UnsetButtonActive(Entity e)
     {
         entitySecelt = null;
-        _suicideButton.interactable = false;
+        _suicideButton.gameObject.SetActive(false);
     }
 
     public void SuicideSelectEntity()

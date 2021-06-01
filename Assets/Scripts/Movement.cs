@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
 	[HideInInspector] public PF_AStar pathfinding;
 	[HideInInspector] public Tile tile;
 	public static event System.Action<Entity> EndMove;
+	private Entity _prevEntity;
 	
 	private List<Node> path;
 	private Entity entity;
@@ -76,21 +77,23 @@ public class Movement : MonoBehaviour
 		
 	}
 	
-	protected void OnTriggerEnter(Collider other)
+	protected void OnTriggerStay(Collider other)
 	{
-		if(other.TryGetComponent<Tile>(out Tile _tile))
+		if (other.TryGetComponent<Tile>(out Tile _tile))
 		{
 			_tile.EntityIn = GetComponent<Entity>();
 			tile = _tile;
 		}
+
+		/*else if(other.TryGetComponent<Tile>(out Tile _tile2) && _tile2.EntityIn == entity)
+		{
+			_tile2.EntityIn = null;
+		}*/
 	}
 	
 	protected void OnTriggerExit(Collider other)
 	{
-		if(other.TryGetComponent<Tile>(out Tile _tile) && _tile.EntityIn == entity)
-		{
-			_tile.EntityIn = null;
-		}
+		if(other.TryGetComponent<Tile>(out Tile _tile) && _tile.EntityIn == entity) _tile.EntityIn = null;
 	}
 	
 	protected void OnDrawGizmos()
